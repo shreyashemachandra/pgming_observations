@@ -1,0 +1,31 @@
+=========================================================================================
+=                               Notes on Shell Scripting				=
+=========================================================================================
+
+Commands:
+=========
+
+1) ls: 
+	Options:
+	--------
+	ls -a
+	ls -l
+2) file:
+	Options:
+	file *
+3) cp:
+	cp <src path> <dest path>
+4) mv:
+	mv <src path> <dest path>
+5) tail:
+	tail +10 <file name>  --> To output the last 10 lines of the file
+6) head:
+	head +10 <file Name>   --> To output the first 10 lines of the file
+
+
+Shell Scpring:
+==============
+
+1) Printing value of 3+3 --> echo `expr 3 + 3`
+2) Printing "Hello - (value of) 3+3" --> echo "Hello - `expr 3 + 3`"
+3) Exit Status of the previous executed program can be got using: "$?"
