@@ -23,6 +23,11 @@ Commands:
 	head +10 <file Name>   --> To output the first 10 lines of the file
 7) ln:
 	ln -s <ActualFile> <Symbolic File Name> ---> To Crete a symbolic link
+8) vi / vim / gvim:
+	gg -> to make the cursor point on top of the file
+	=G -> to Alligh the lines till botom of the file
+	
+9)
 
 
 Shell Scpring:
