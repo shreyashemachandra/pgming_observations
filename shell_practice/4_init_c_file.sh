@@ -1,4 +1,9 @@
 #!/bin/bash
+
+##########################################################################
+# Program to make a C program file, by including main function by Default#
+##########################################################################
+
 fileName="";
 if [ $# -eq 0 ]; then
 	echo "File Name Not given, Please provide the FileName"

@@ -21,6 +21,8 @@ Commands:
 	tail +10 <file name>  --> To output the last 10 lines of the file
 6) head:
 	head +10 <file Name>   --> To output the first 10 lines of the file
+7) ln:
+	ln -s <ActualFile> <Symbolic File Name> ---> To Crete a symbolic link
 
 
 Shell Scpring:
