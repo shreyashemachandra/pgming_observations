@@ -2,19 +2,22 @@
 *					Integrity Kernel					*
 *************************************************************************************************
 
-- Integrity is Secure, High reliability sytems intended to use in mission critical embedded systems.
+- Integrity is Secure, High reliability sytems intended to use in mission critical embedded
+systems.
 - A micro kernel (May be based on the size of the kernel).
 - And Not a Linux Micro Kernel, its an independent OS.
 - Used in M-16, Airbus etc. systems.
-- The INTEGRITY real-time operating system (RTOS) uses hardware memory protection to isolate and protect both itself and user tasks
-from incorrect operation caused by accidental errors or malicious tampering. (Check)
+- The INTEGRITY real-time operating system (RTOS) uses hardware memory protection to isolate and
+protect both itself and user tasks from incorrect operation caused by accidental errors or
+malicious tampering. (Check)
 - It does not scrcrifies proformace for security and protection.
 
 - It Guarantees the following,
 	- Resource Integrity
-		- Follows 'Cabability-Based' Security model. No Programs can access any resource unless it is given the permission to do so.
-		- A program can share access to a resource other program. But however there is no concept of "root password" to circumvent 
-		Integrity kernel's protection.
+		- Follows 'Cabability-Based' Security model. No Programs can access any resource
+		unless it is given the permission to do so.
+		- A program can share access to a resource other program. But however there is no
+		concept of "root password" to circumvent Integrity kernel's protection.
 
 	- Confidentialty 
 		- Again the 'Cabability-Basesd' Security model helps in Confidentiality Garantee.
@@ -22,10 +25,12 @@ from incorrect operation caused by accidental errors or malicious tampering. (Ch
 
 	- Resource
 		- Kernel's Cababilty system forms the basis for all resource garantee.
-		- No Program can convice the kernel to steal the resource from it. eg: No "Fork bomb" attacks.
+		- No Program can convice the kernel to steal the resource from it. eg: No
+		"Fork bomb" attacks.
  
 	- Real-Time Response
-		-INTEGRITY is a true real-time kernel that guarantees a short worst case execution time for all operations.
+		-INTEGRITY is a true real-time kernel that guarantees a short worst case execution
+		time for all operations.
 
 - Functionality of Integrity Kernel
 	- Memory Protection with fine grained MMU Management
@@ -38,22 +43,29 @@ from incorrect operation caused by accidental errors or malicious tampering. (Ch
 
 - Kernel Objects in Integrity - Integrity Object:
 	- INTEGRITY uses Objects to represent all computer system resources.
-	- Integrity Objects represents the right of the program to access the resource in a specific way.
-	- Only kernel can Modify or create a close the objects, the programs if it has to do so, has to kernel to do it for it.
+	- Integrity Objects represents the right of the program to access the resource in a
+	specific way.
+	- Only kernel can Modify or create a close the objects, the programs if it has to do so,
+	has to kernel to do it for it.
 	- Refer page 18 of KernelGuid.pdf for Object and other kernel Objects inheritance relations.
-	- Many Fundamental Integrity functions follows Message Operations on various Integrity Objects.
+	- Many Fundamental Integrity functions follows Message Operations on various Integrity
+	Objects.
 	- There are few Kernel Objects as follows:
 
 		- Address Space (Check)
-			- Address Space in a system are Kernel Space and Zero or more Virtual Address space
-			- Address Space is nothings but a distinct space of memory addresses for Programs, this memory
-			layout is represented as AddressSpace Ojects.
+			- Address Space in a system are Kernel Space and Zero or more Virtual Address
+			space
+			- Address Space is nothings but a distinct space of memory addresses for
+			Programs, this memory layout is represented as AddressSpace Ojects.
 			- When MMU is present, it makes use of Virtual AddressSpace.
-			- Virtual  AddressSpace is the conrner Stone of Integrity, task running in one Virtual AddressSpace
-			can only access memory that has been mapped into that AddressSpace.
+			- Virtual  AddressSpace is the conrner Stone of Integrity, task running in one
+			Virtual AddressSpace can only access memory that has been mapped into that
+			AddressSpace.
 			- ex: NULL pointer Dereferencing causes Exception if the area at 0x0 is unmapped.
-			- Challenges faced by Developers: Partitioning softwares to appropriate number of addressSpaces. System Desighner should
-			decide how to divide software into smaller module for the sake of efficiente developement, degugging, Testing and maintance.
+			- Challenges faced by Developers: Partitioning softwares to appropriate number
+			of addressSpaces. System Desighner should decide how to divide software into
+			smaller module for the sake of efficiente developement, degugging, Testing and
+			maintance.
 
 		- Memory Region (Check)
 			- It is simply a continious space of address in the address space.
@@ -64,23 +76,25 @@ from incorrect operation caused by accidental errors or malicious tampering. (Ch
 			- The Mapped Virtual memory region to the physical:
 				- must be the same size.
 				- mem Region must be aligned to a page boundry.
-				- if two mem regions must be mapped, they must begin and end at page boundaries.
-				- Physical and Virtual Mem must allow SAME operation attributes(ie, Read, Write, Modify)
+				- if two mem regions must be mapped, they must begin and end at page
+				boundaries.
+				- Physical and Virtual Mem must allow SAME operation attributes (ie
+				Read, Write, Modify)
 				
 	
-		///// Tasks and Semaphore can be ignored, for now since POSIX standards are implemented in INTEGRITY ///////
+		// Tasks and Semaphore can be ignored, for now since POSIX standards are implemented in INTEGRITY //
 		- Task
 			- Task is nothing but Threads in Linux. Each task has its own Address Space.
-			Task can reside in kernel Address Space, called as Kernel Task.
-			Task can reside in Virtual Address Space, called as Virtual Tasks. (Check)
-			There can be multiple tasks in the same Address Space, with each tasks having its own 
-			stack, but common code, Data and Heap Segments.
-			Difference b/w pThread and Tasks;
+			- Task can reside in kernel Address Space, called as Kernel Task.
+			- Task can reside in Virtual Address Space, called as Virtual Tasks. (Check)
+			- There can be multiple tasks in the same Address Space, with each tasks having
+			its own stack, but common code, Data and Heap Segments.
+			- Difference b/w pThread and Tasks;
 				pThread				Tasks
-			- pthread_create()		- CommonCreateThread() + RunTask()
+			 pthread_create()		- CommonCreateThread() + RunTask()
 
 		- Semaphore	
-		///////////////////////////////////////////////////////////////////////////////////////////////////////////
+		////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 		- Clock
 			- Temers in Integrity.
@@ -94,8 +108,10 @@ from incorrect operation caused by accidental errors or malicious tampering. (Ch
 		
 		- Connection
 			- IPC can be obtained using Connection Object.
-			- Connections are two ended, meaning, if the connection is obtained it is always Full Deplex.
-			- It can be used to transfer kernel Objects and data, and it has no size limit to transfer the data.
+			- Connections are two ended, meaning, if the connection is obtained it is always Full
+			Deplex.
+			- It can be used to transfer kernel Objects and data, and it has no size limit to
+			transfer the data.
 			- Common APIs:
 				CreateConnection()
 	                   	Send(), Receive()
@@ -112,14 +128,17 @@ from incorrect operation caused by accidental errors or malicious tampering. (Ch
 			- Used to control H/W devices in the system.
 			- 4 types of data can be controlled by IODevice Objects.
 				- Register:
-					Small values, of a size smaller than or equal to the word size of the system.
+					- Small values, of a size smaller than or equal to the word size of the
+					system.
 					API's: ReadIODeviceRegister(); and WriteIODeviceRegister();
 				- Status:
-					Somewhat larger values, up to 32 bytes, do not correspond to actual hardware registers.
+					- Somewhat larger values, up to 32 bytes, do not correspond to actual
+					hardware registers.
 					API's: ReadIODeviceStatus(); And WriteIODeviceStatus();
 				- Block and Buffer:
-					Large values, or a size determined by the user.
-					Block API: ReadBlockFromIODevice(),ReadSubBlockFromIODevice(),WriteBlockToIODevice(),WriteSubBlockToIODevice()
+					- Large values, or a size determined by the user.
+					Block API: ReadBlockFromIODevice(), ReadSubBlockFromIODevice(),
+					WriteBlockToIODevice(),WriteSubBlockToIODevice()
 					Buffer API: ReadBuffersFromIODevice(), WriteBuffersToIODevice()
 					
 		- Link	
@@ -128,8 +147,8 @@ from incorrect operation caused by accidental errors or malicious tampering. (Ch
 - Data Types in Integrity:
 	- Address & Value
 		- typedef for usigned int - same size as ponter 
-		- Address & Value are used conventionally, ie, if we want to store memory addresses or pointer value - Address is used
-		and if the variable is used to store the value - Value is used.
+		- Address & Value are used conventionally, ie, if we want to store memory addresses or pointer
+		value - Address is used and if the variable is used to store the value - Value is used.
 
 	- ExtendedAddress
 		- used if the 32bit system wants to address to memory location more than 4GB.
@@ -149,5 +168,7 @@ from incorrect operation caused by accidental errors or malicious tampering. (Ch
 
 	- Error
 		- Most kernel calls return a result of type Error.
-		- When an API call is successful, it usually returns the value Success, which has a numeric value of 0.
-		- When a call fails, it returns a value other than Success that indicates the Error Code, or reason for the failure.
+		- When an API call is successful, it usually returns the value Success, which has a numeric value
+		of 0.
+		- When a call fails, it returns a value other than Success that indicates the Error Code, or reason
+		for the failure.
