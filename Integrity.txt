@@ -168,7 +168,17 @@ malicious tampering. (Check)
 
 	- Error
 		- Most kernel calls return a result of type Error.
-		- When an API call is successful, it usually returns the value Success, which has a numeric value
-		of 0.
-		- When a call fails, it returns a value other than Success that indicates the Error Code, or reason
-		for the failure.
+		- When an API call is successful, it usually returns the value Success, which has a numeric
+		value of 0.
+		- When a call fails, it returns a value other than Success that indicates the Error Code, or
+		reason for the failure.
+
+*********************************************************************************************************
+*					BSP and Driver Development					*
+*********************************************************************************************************
+
+- BSP: (Board Support Package)
+	
+	
+	
+

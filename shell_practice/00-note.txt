@@ -26,8 +26,22 @@ Commands:
 8) vi / vim / gvim:
 	gg -> to make the cursor point on top of the file
 	=G -> to Alligh the lines till botom of the file
+	Shift + k on a lib fuction, takes you to the man page of the function
 	
-9)
+9)  find . -name "*vpu*.c"
+	Finds the specific pattern file in the Current Directory (.)
+
+10) ctags
+	install "ctags"  and use to jump to variables and functions.
+	- ctags -R . --> Execute ths command in the current directory,
+			This produces a "tags" file
+	- in vi editor --> :set <the path of the "tags" file>
+	- ctrl + ]  --> to jump to the functions and variables
+	- ctrl + t  --> to jump back to the previous position
+
+11) cscope
+	install "cscope" to do the same as ctags, its a differnt tool.
+	- cscope -R .
 
 
 Shell Scpring:
