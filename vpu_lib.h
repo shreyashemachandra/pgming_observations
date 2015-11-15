@@ -692,7 +692,7 @@ static inline int type## _rev (int rev)         \
 
 MXC_REV(cpu_is_mx27);
 
-RetCode vpu_Init(void);
+RetCode vpu_Init(void *);
 void vpu_UnInit(void);
 RetCode vpu_GetVersionInfo(vpu_versioninfo * verinfo);
 
