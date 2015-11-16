@@ -71,3 +71,6 @@ extern int vpu_lib_dbg_level;
 
 void dump_regs(Uint32 base, int cnt);
 #endif
+
+/* Error Throw */
+#define ETE( n ) { Error __et_e = ( n ); if ( __et_e != Success ) { printf("%s:%d\n\t\"%s\"\n\tfailed with error (%d)\n", __FILE__, __LINE__, #n, __et_e ); exit(__et_e); }}

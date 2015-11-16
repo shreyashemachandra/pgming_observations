@@ -14,6 +14,7 @@
  *
  * @ingroup VPU
  */
+#include <INTEGRITY.h>
 
 #ifndef __VPU__IO__H
 #define __VPU__IO__H
@@ -59,7 +60,7 @@ typedef struct iram_t {
 
 typedef void (*vpu_callback) (int status);
 
-int IOSystemInit(void *callback);
+int IOSystemInit(void);
 int IOSystemShutdown(void);
 int IOGetPhyMem(vpu_mem_desc * buff);
 int IOFreePhyMem(vpu_mem_desc * buff);
@@ -73,8 +74,8 @@ int IOClkGateSet(int on);
 int IOGetPhyShareMem(vpu_mem_desc * buff);
 int IOSysSWReset(void);
 
-unsigned long VpuWriteReg(unsigned long addr, unsigned int data);
-unsigned long VpuReadReg(unsigned long addr);
+Value VpuWriteReg(Address, Value);
+Value VpuReadReg(Address);
 
 void ResetVpu(void);
 int isVpuInitialized(void);

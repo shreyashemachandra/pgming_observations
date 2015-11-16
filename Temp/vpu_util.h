@@ -549,7 +549,7 @@ typedef struct {
 
 void BitIssueCommand(CodecInst *pCodecInst, int cmd);
 
-RetCode LoadBitCodeTable(Uint16 * pBitCode, int *size);
+RetCode LoadBitCodeTable(Uint16 ** pBitCode, int *size);
 RetCode DownloadBitCodeTable(unsigned long *virtCodeBuf, Uint16 *bit_code);
 
 RetCode GetCodecInstance(CodecInst ** ppInst);

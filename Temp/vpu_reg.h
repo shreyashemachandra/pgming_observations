@@ -388,27 +388,27 @@
 #define RET_VER_NUM			0x1C0
 #define RET_FW_CODE_REV			0x1C4
 
-#if defined(IMX27ADS)
+/*#if defined(IMX27ADS)
 	#define CODE_BUF_SIZE			(64 * 1024)
 	#define FMO_SLICE_SAVE_BUF_SIZE		(32)
 	#define WORK_BUF_SIZE			(288 * 1024) + (FMO_SLICE_SAVE_BUF_SIZE * 1024 * 8)
 	#define PARA_BUF2_SIZE			(1728)
 	#define PARA_BUF_SIZE			(10 * 1024)
-#elif defined(IMX51) || defined(IMX53)
-        #define CODE_BUF_SIZE			(200 * 1024) /* define max is 200k byte currently */
-        #define FMO_SLICE_SAVE_BUF_SIZE		(32)
-        #define TEMP_BUF_SIZE			(304 * 1024)
-        #define PARA_BUF2_SIZE			(2 * 1024)
-        #define PARA_BUF_SIZE			(10 * 1024)
-#elif defined(IMX6Q)
+#elif defined(IMX51) || defined(IMX53)*/
+        //#define CODE_BUF_SIZE			(200 * 1024) /* define max is 200k byte currently */
+        //#define FMO_SLICE_SAVE_BUF_SIZE		(32)
+        //#define TEMP_BUF_SIZE			(304 * 1024)
+        //#define PARA_BUF2_SIZE			(2 * 1024)
+        //#define PARA_BUF_SIZE			(10 * 1024) 
+//#elif defined(IMX6Q)
 	#define CODE_BUF_SIZE                   (280 * 1024) /* define max is 280k byte currently */
 	#define FMO_SLICE_SAVE_BUF_SIZE         (32)
 	#define TEMP_BUF_SIZE                   (204 * 1024)
 	#define PARA_BUF2_SIZE                  (2 * 1024)
 	#define PARA_BUF_SIZE                   (10 * 1024)
-#else
-#error  you must define PLATFORM properly
-#endif
+//#else
+//#error  you must define PLATFORM properly
+//#endif
 
 /*----------------------------------------------------------------------------
  *---------------------------------------------------------------------------*/
