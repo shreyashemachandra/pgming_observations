@@ -46,6 +46,9 @@ Commands:
 12) vimtutor
 	Basic level tutor for vim
 
+13) du -sh .
+    gives the disk usage of the current directory
+
 
 Shell Scpring:
 ==============
