@@ -68,6 +68,7 @@
         . git
         . dropbox
         . keepassx
+        . tmux
 
 9) Install Tlist - for gvim
 
