@@ -68,9 +68,20 @@
         . git
         . dropbox
         . keepassx
+        . tmux
+        . ack-grep (used to grep a pattern in the all the file)
 
 9) Install Tlist - for gvim
 
 10) Only for Office - 
         Configure Printer
-        
+
+11) Add Plugins to vim:
+    . pathogen.vim -> GitHub tpope --> Hosts many plugins in vim
+    . vim-colorschemes -> GitHub flazz (:colo Blacksea) -> Gets millions of color schemes for gvim
+    . ultisnips -> GitHub SirVir -> to get code snippets
+    . syntastic -> GitHub scrooloose -> to get the systactic errors when saving the file
+    . ack.vim -> GitHub mileszs -> Used to search for patterns very fast inside vim 
+    (Use it by typing :Ack <patern> -> searches in the current directory)
+    . vim-airline (Status Bar)
+    . multiple cursers
