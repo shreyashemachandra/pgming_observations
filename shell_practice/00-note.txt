@@ -10,19 +10,26 @@ Commands:
 	--------
 	ls -a
 	ls -l
+
 2) file:
 	Options:
 	file *
+
 3) cp:
 	cp <src path> <dest path>
+
 4) mv:
 	mv <src path> <dest path>
+
 5) tail:
 	tail +10 <file name>  --> To output the last 10 lines of the file
+
 6) head:
 	head +10 <file Name>   --> To output the first 10 lines of the file
+
 7) ln:
 	ln -s <ActualFile> <Symbolic File Name> ---> To Crete a symbolic link
+
 8) vi / vim / gvim:
     General:
     --------
@@ -101,6 +108,10 @@ Commands:
     Basic:
     ------
     - 
+
+17) gconftool --type string --set /desktop/gnome/applications/terminal/exec <YOUR-TERMINAL>
+    - Used to change the default terminal in ubuntu
+    eg: gconftool --type string --set /desktop/gnome/applications/terminal/exec 'xterm -fa ******' - You know it
 
 
 Shell Scpring:
