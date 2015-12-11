@@ -1,0 +1,203 @@
+framebuf initialised![DEBUG]
+/usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_lib.c:91 enter vpu_Init()
+    [DEBUG] /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_lib.c:67 enter
+dumpSizeInIntegrity()
+
+
+    Short size: 2
+    Int size: 4
+    long size: 4
+    Unsigned long size: 4
+    Unsigned short size: 2
+
+    Char size: 1
+
+    [DEBUG] /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_lib.c:74 exit
+dumpSizeInIntegrity()
+    [INFO]  /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_io.c:152
+    ************ Register Virtual Memory: ****************
+    [INFO]  /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_io.c:153 Mappped
+    Virtual Address of Register Area: 0x000e0000
+
+    VFS: Please make sure all filesystems are unmounted
+    VFS: by doing one of the following just before rebooting or
+    VFS: powering down the system:
+    VFS: a) Run the 'Unmounter' task (if configured), or
+    VFS: b) Unmount all filesystems through application calls to the
+    VFS:    unmount file system call, or
+    VFS: c) Use the unmount or reboot commands in the shell.
+    <ram>autoramroot:a: 256 sectors in 1 cylinders of 1 tracks, 256 sectors
+0.1MB in 1 cyl groups (16 c/g, 2.00MB/g, 64 i/g)
+    newfs has completed successfully
+    [INFO]  /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_io.c:159
+    Mappped Virtual Address of Memory addr: 0x017d2000 size: 0x2000000
+
+    [INFO]  /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_io.c:164 VPU
+    memory physical base: 0x2dffe000
+    ************ Buffer Physical Memory: ****************
+    Code Buffer Physical Start Address: 0x2dffe000
+    Temp Buffer Physical Start Address: 0x2e044000
+    Para Buffer Physical Start Address: 0x2e077800
+
+    ************ Buffer Virtual Memory: ****************
+    VFS: Mounting <ram:128k>autoramroot:a on / with options: update
+    Code Buffer Virtual Start Address: 0x017d2000
+    Para Buffer Virtual Start Address: 0x0184b800
+    Para Buffer2 Virtual Start Address: 0x0184b000
+
+    BIT_CUR_PC in isVpuInitialized: 0
+    VPU Not Initialized, Loading BitCode
+    MAX_FW_BINARY_LEN = 204800
+    [DEBUG] /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_util.c:258
+enter LoadBitCodeTable()
+    [INFO]  /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_bitcode.c:15882
+    Size of Bit Code: 253954
+    VFS: Creating mount point: /sda
+    VFS: Mounting SDCardDev:a on /sda with options: rw
+    Platform Name: MX6Q
+    Bite_Code Size : 0x1f000 | 126976 | MAX BitCode Len: 204800
+    [DEBUG] /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_util.c:275 exit
+LoadBitCodeTable()
+    Bit Code Length: 126976
+    VFS: Mounted SDCardDev:a on /sda
+    VFS: File system mount table processing complete.
+    VFS: File system initialization complete.
+
+    0x00000000:   0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
+    0x00000020:   0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
+    0x00000040:   0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
+    0x00000060:   0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
+    0x00000080:   0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
+    0x000000a0:   0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
+    0x000000c0:   0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
+    0x000000e0:   0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
+    0x00000100:   0x2dffe000, 0x0, 0x2e077800, 0x8, 0x1000, 0x0,
+    0x2e044000, 0x0,
+    0x00000120:   0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
+    0x00000140:   0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
+    0x00000160:   0x1, 0x0, 0x0, 0x0, 0x8, 0x0, 0x0, 0x0,
+    0x00000180:   0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
+    0x000001a0:   0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
+    0x000001c0:   0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
+    0x000001e0:   0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
+    BIT_BUSY_FLAG : 0x0,
+    [DEBUG]
+    /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_lib.c:199
+exit vpu_Init()
+    Bitstream Phy Mem Starting Address: 2effe000
+    Bitstream Virt Mem Starting Address: 27d2000
+    Physical Mem of ps_mem 0x2f1fe000
+    Virtual Mem of ps_mem 0x 29d2000
+    [DEBUG]
+    /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_lib.c:1242
+enter vpu_DecOpen()
+    BIT_CUR_PC in isVpuInitialized: bf
+    Context Buffer Phy Mem Starting Address: 2f27e000
+    Context Buffer Virt Mem Starting Address: 2a52000
+    Updating BIT_RD_PTR and BIT_WR_PTR
+    [INFO]
+    /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_lib.c:1360
+    bitstreamMode 0, chromaInterleave 0, mapType 0,
+    tiled2LinearEnable 0
+    vpu_DecOpen Completed
+    [DEBUG]
+    /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_lib.c:1025
+enter vpu_DecGetBitstreamBuffer()
+    Dec Run Index = 0 | VPU returned Index: 0End of
+    vpu_DecGetBitstreamBuffer:
+Size: 0x1ff7ff
+rdPtr: 0x2effe000
+wrPtr: 0x2effe000
+[DEBUG]
+    /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_lib.c:1065
+exit vpu_DecGetBitstreamBuffer()
+    Target Address: 0x27d2000
+    Size: 0x1ff600
+    bs_va_endaddr: 0x29d2000
+    target_addr + size : 0x29d1600
+    ReadFileWithTiming() called
+    Size of dummy.h264 = 0x24a84
+    Read Size: 0x24a84
+    ActualSize: 0x24a84
+    Update Called!
+    [DEBUG]
+    /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_lib.c:937
+enter vpu_DecUpdateBitstreamBuffer()
+    Dec Run Index: 0
+    End of vpu_DecUpdateBitstreamBuffer:
+    Size: 0x0
+    rdPtr: 0x2effe000
+    wrPtr: 0x2f022a84
+    [DEBUG]
+    /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_lib.c:999
+exit vpu_DecUpdateBitstreamBuffer()
+    [DEBUG]
+    /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_lib.c:275
+enter vpu_DecSetEscSeqInit()
+    [DEBUG]
+    /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_lib.c:317
+enter vpu_DecGetInitialInfo()
+    instIndex = 0
+    rdPtr = 0x2effe000
+    wrPtr = 0x2f022a84
+    [DEBUG]
+    /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_util.c:226
+enter BitIssueCommand()
+    BitIssueCommand: 1
+    [DEBUG]
+    /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_util.c:251
+exit BitIssueCommand()
+    [DEBUG]
+    /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_lib.c:275
+enter vpu_DecSetEscSeqInit()
+    H.264 Profile: 77 Level: 13 Interlace: 0
+    Aspect Ratio is not present.
+    Decoder: width = 320, height = 240, frameRateRes = -1,
+    frameRateDiv = -1, count = 4
+    CROP left/top/right/bottom 0 0 0 0
+    Display fps will be 30
+    Physical SliceBuf Mem: 0x2f292000
+    Virtual SliceBuf Mem: 0x2a66000
+    Total FrameBuffers Used: 6
+    pfbpool[0]->fb's Phy Start Addr: 0x2f2af400
+    pfbpool[0]->fb's Virt Start Addr: 0x2a83400
+    pfbpool[1]->fb's Phy Start Addr: 0x2f2d0100
+    pfbpool[1]->fb's Virt Start Addr: 0x2aa4100
+    pfbpool[2]->fb's Phy Start Addr: 0x2f2f0e00
+    pfbpool[2]->fb's Virt Start Addr: 0x2ac4e00
+    pfbpool[3]->fb's Phy Start Addr: 0x2f311b00
+    pfbpool[3]->fb's Virt Start Addr: 0x2ae5b00
+    pfbpool[4]->fb's Phy Start Addr: 0x2f332800
+    pfbpool[4]->fb's Virt Start Addr: 0x2b06800
+    pfbpool[5]->fb's Phy Start Addr: 0x2f353500
+    pfbpool[5]->fb's Virt Start Addr: 0x2b27500
+    decoder_allocate_framebuffer - Line: 352 -> Done
+    allocation
+    [DEBUG]
+    /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_lib.c:1096
+enter vpu_DecRegisterFrameBuffer()
+    [DEBUG]
+    /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_util.c:226
+enter BitIssueCommand()
+    BitIssueCommand: 4
+    [DEBUG]
+    /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_util.c:251
+exit BitIssueCommand()
+    [DEBUG]
+    /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_lib.c:1219
+exit vpu_DecRegisterFrameBuffer()
+    [DEBUG]
+    /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_lib.c:529
+enter vpu_DecStartOneFrame()
+    [DEBUG]
+    /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_util.c:226
+enter BitIssueCommand()
+    BitIssueCommand: 3
+    [DEBUG]
+    /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_util.c:251
+exit BitIssueCommand()
+    [DEBUG]
+    /usr/ghs/int1104/examples/imx6-sabre/vpu/vpu_lib/vpu_lib.c:617
+exit vpu_DecStartOneFrame()
+    decoder_start function ended
+    END!!!

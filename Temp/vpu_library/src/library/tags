@@ -1,0 +1,1531 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AC_TABLE_INDEX0	vpu_lib/vpu_lib.h	53;"	d
+AC_TABLE_INDEX0	vpu_lib/vpu_util.h	66;"	d
+AC_TABLE_INDEX1	vpu_lib/vpu_lib.h	55;"	d
+AC_TABLE_INDEX1	vpu_lib/vpu_util.h	68;"	d
+ADDR_FRAME_BUF_STAT_BASE_OFFSET	vpu_lib/vpu_util.h	60;"	d
+ADDR_MB_BASE_OFFSET	vpu_lib/vpu_util.h	59;"	d
+ADDR_MV_BASE_OFFSET	vpu_lib/vpu_util.h	58;"	d
+ADDR_PIC_PARA_BASE_OFFSET	vpu_lib/vpu_util.h	57;"	d
+ADDR_SLICE_BASE_OFFSET	vpu_lib/vpu_util.h	61;"	d
+API_MUTEX	vpu_lib/vpu_util.h	/^    API_MUTEX = 0,$/;"	e	enum:__anon40
+ARRAY_SIZE	vpu_lib/vpu_util.h	492;"	d
+AVC_AUX_AVC	vpu_lib/vpu_util.h	/^    AVC_AUX_AVC = 0,$/;"	e	enum:__anon38
+AVC_AUX_MVC	vpu_lib/vpu_util.h	/^    AVC_AUX_MVC = 1$/;"	e	enum:__anon38
+AVC_DEC	vpu_lib/vpu_util.h	/^    AVC_DEC = 0,$/;"	e	enum:__anon35
+AVC_ENC	vpu_lib/vpu_util.h	/^    AVC_ENC = 8,$/;"	e	enum:__anon35
+AVS_DEC	vpu_lib/vpu_util.h	/^    AVS_DEC = 5,$/;"	e	enum:__anon35
+AvcFpaSei	vpu_lib/vpu_lib.h	/^} AvcFpaSei;$/;"	t	typeref:struct:__anon22
+AvcHeaderType	vpu_lib/vpu_lib.h	/^} AvcHeaderType;$/;"	t	typeref:enum:__anon26
+BA_SEL	vpu_lib/vpu_gdi.h	/^	BA_SEL = 1,$/;"	e	enum:__anon31
+BITS_PER_SAMPLE	vpu_lib/vpu_util.h	/^    BITS_PER_SAMPLE		= 0x0102,$/;"	e	enum:__anon43
+BITS_STREAMCTRL_MASK	vpu_lib/vpu_reg.h	413;"	d
+BITS_STREAMCTRL_MASK	vpu_lib/vpu_reg.h	422;"	d
+BIT_AXI_SRAM_USE	vpu_lib/vpu_reg.h	56;"	d
+BIT_AXI_SRAM_USE	vpu_lib/vpu_reg.h	72;"	d
+BIT_BIT_STREAM_CTRL	vpu_lib/vpu_reg.h	41;"	d
+BIT_BIT_STREAM_PARAM	vpu_lib/vpu_reg.h	44;"	d
+BIT_BUF_CHECK_DIS	vpu_lib/vpu_reg.h	409;"	d
+BIT_BUF_CHECK_DIS	vpu_lib/vpu_reg.h	418;"	d
+BIT_BUF_PIC_FLUSH	vpu_lib/vpu_reg.h	410;"	d
+BIT_BUF_PIC_FLUSH	vpu_lib/vpu_reg.h	419;"	d
+BIT_BUF_PIC_RESET	vpu_lib/vpu_reg.h	411;"	d
+BIT_BUF_PIC_RESET	vpu_lib/vpu_reg.h	420;"	d
+BIT_BUSY_FLAG	vpu_lib/vpu_reg.h	88;"	d
+BIT_BYTE_POS_FRAME_END	vpu_lib/vpu_reg.h	86;"	d
+BIT_BYTE_POS_FRAME_START	vpu_lib/vpu_reg.h	85;"	d
+BIT_CODE_BUF_ADDR	vpu_lib/vpu_reg.h	38;"	d
+BIT_CODE_DOWN	vpu_lib/vpu_reg.h	26;"	d
+BIT_CODE_RESET	vpu_lib/vpu_reg.h	30;"	d
+BIT_CODE_RUN	vpu_lib/vpu_reg.h	25;"	d
+BIT_CUR_PC	vpu_lib/vpu_reg.h	31;"	d
+BIT_ENC_DYN_BUFALLOC_EN	vpu_lib/vpu_reg.h	412;"	d
+BIT_ENC_DYN_BUFALLOC_EN	vpu_lib/vpu_reg.h	421;"	d
+BIT_FRAME_MEM_CTRL	vpu_lib/vpu_reg.h	42;"	d
+BIT_FRM_DIS_FLG	vpu_lib/vpu_reg.h	76;"	d
+BIT_FRM_DIS_FLG_0	vpu_lib/vpu_reg.h	60;"	d
+BIT_FRM_DIS_FLG_1	vpu_lib/vpu_reg.h	61;"	d
+BIT_FRM_DIS_FLG_2	vpu_lib/vpu_reg.h	62;"	d
+BIT_FRM_DIS_FLG_3	vpu_lib/vpu_reg.h	63;"	d
+BIT_INT_CLEAR	vpu_lib/vpu_reg.h	28;"	d
+BIT_INT_ENABLE	vpu_lib/vpu_reg.h	92;"	d
+BIT_INT_REASON	vpu_lib/vpu_reg.h	93;"	d
+BIT_INT_REQ	vpu_lib/vpu_reg.h	27;"	d
+BIT_INT_STS	vpu_lib/vpu_reg.h	29;"	d
+BIT_MSG_0	vpu_lib/vpu_reg.h	102;"	d
+BIT_MSG_0	vpu_lib/vpu_reg.h	97;"	d
+BIT_MSG_1	vpu_lib/vpu_reg.h	103;"	d
+BIT_MSG_1	vpu_lib/vpu_reg.h	98;"	d
+BIT_MSG_2	vpu_lib/vpu_reg.h	99;"	d
+BIT_MSG_3	vpu_lib/vpu_reg.h	100;"	d
+BIT_PARA_BUF_ADDR	vpu_lib/vpu_reg.h	40;"	d
+BIT_PIC_WIDTH_OFFSET	vpu_lib/vpu_reg.h	414;"	d
+BIT_PIC_WIDTH_OFFSET	vpu_lib/vpu_reg.h	423;"	d
+BIT_RD_PTR	vpu_lib/vpu_reg.h	52;"	d
+BIT_REG_MARGIN	vpu_lib/vpu_lib.h	34;"	d
+BIT_RESET_CTRL	vpu_lib/vpu_reg.h	47;"	d
+BIT_RESET_CTRL	vpu_lib/vpu_reg.h	49;"	d
+BIT_RTC_HOST_CTRL	vpu_lib/vpu_reg.h	106;"	d
+BIT_RUN_AUX_STD	vpu_lib/vpu_reg.h	94;"	d
+BIT_RUN_COD_STD	vpu_lib/vpu_reg.h	91;"	d
+BIT_RUN_COMMAND	vpu_lib/vpu_reg.h	89;"	d
+BIT_RUN_INDEX	vpu_lib/vpu_reg.h	90;"	d
+BIT_SEARCH_RAM_BASE_ADDR	vpu_lib/vpu_reg.h	57;"	d
+BIT_SEARCH_RAM_BASE_ADDR	vpu_lib/vpu_reg.h	73;"	d
+BIT_SEARCH_RAM_SIZE	vpu_lib/vpu_reg.h	58;"	d
+BIT_SEARCH_RAM_SIZE	vpu_lib/vpu_reg.h	74;"	d
+BIT_SEL_64BITS_ENDIAN	vpu_lib/vpu_reg.h	417;"	d
+BIT_SEL_BE	vpu_lib/vpu_reg.h	408;"	d
+BIT_SEL_BE	vpu_lib/vpu_reg.h	416;"	d
+BIT_SW_RESET	vpu_lib/vpu_reg.h	32;"	d
+BIT_SW_RESET_STATUS	vpu_lib/vpu_reg.h	33;"	d
+BIT_TEMP_BUF_ADDR	vpu_lib/vpu_reg.h	45;"	d
+BIT_WORK_BUF_ADDR	vpu_lib/vpu_reg.h	39;"	d
+BIT_WORK_SIZE	vpu_lib/vpu_util.h	44;"	d
+BIT_WR_PTR	vpu_lib/vpu_reg.h	53;"	d
+BUF_PIC_FLUSH	vpu_lib/vpu_lib.h	31;"	d
+BUF_PIC_RESET	vpu_lib/vpu_lib.h	32;"	d
+BitIssueCommand	vpu_lib/vpu_util.c	/^void BitIssueCommand(CodecInst *pCodecInst, int cmd)$/;"	f
+BitPerSample	vpu_lib/vpu_util.h	/^    int			BitPerSample[3];$/;"	m	struct:__anon47
+Bypass	vpu_lib/vpu_util.h	/^    unsigned Bypass : 1;$/;"	m	struct:__anon50
+CA_SEL	vpu_lib/vpu_gdi.h	/^	CA_SEL = 0,$/;"	e	enum:__anon31
+CHIP_REV_1_0	vpu_lib/vpu_lib.h	449;"	d
+CHIP_REV_2_0	vpu_lib/vpu_lib.h	450;"	d
+CHIP_REV_2_1	vpu_lib/vpu_lib.h	451;"	d
+CMD_DEC_DISPLAY_REORDER	vpu_lib/vpu_reg.h	43;"	d
+CMD_DEC_PARA_SET_SIZE	vpu_lib/vpu_reg.h	375;"	d
+CMD_DEC_PARA_SET_TYPE	vpu_lib/vpu_reg.h	374;"	d
+CMD_DEC_PIC_BB_START	vpu_lib/vpu_reg.h	238;"	d
+CMD_DEC_PIC_CHUNK_SIZE	vpu_lib/vpu_reg.h	237;"	d
+CMD_DEC_PIC_NUM_ROWS	vpu_lib/vpu_reg.h	244;"	d
+CMD_DEC_PIC_OPTION	vpu_lib/vpu_reg.h	235;"	d
+CMD_DEC_PIC_PARA_BASE_ADDR	vpu_lib/vpu_reg.h	240;"	d
+CMD_DEC_PIC_ROT_ADDR_CB	vpu_lib/vpu_reg.h	224;"	d
+CMD_DEC_PIC_ROT_ADDR_CB	vpu_lib/vpu_reg.h	230;"	d
+CMD_DEC_PIC_ROT_ADDR_CR	vpu_lib/vpu_reg.h	225;"	d
+CMD_DEC_PIC_ROT_ADDR_CR	vpu_lib/vpu_reg.h	231;"	d
+CMD_DEC_PIC_ROT_ADDR_Y	vpu_lib/vpu_reg.h	223;"	d
+CMD_DEC_PIC_ROT_ADDR_Y	vpu_lib/vpu_reg.h	229;"	d
+CMD_DEC_PIC_ROT_INDEX	vpu_lib/vpu_reg.h	220;"	d
+CMD_DEC_PIC_ROT_MODE	vpu_lib/vpu_reg.h	222;"	d
+CMD_DEC_PIC_ROT_MODE	vpu_lib/vpu_reg.h	228;"	d
+CMD_DEC_PIC_ROT_STRIDE	vpu_lib/vpu_reg.h	226;"	d
+CMD_DEC_PIC_ROT_STRIDE	vpu_lib/vpu_reg.h	232;"	d
+CMD_DEC_PIC_SKIP_NUM	vpu_lib/vpu_reg.h	236;"	d
+CMD_DEC_PIC_START_BYTE	vpu_lib/vpu_reg.h	239;"	d
+CMD_DEC_PIC_THO_MB_PARA_ADDR	vpu_lib/vpu_reg.h	248;"	d
+CMD_DEC_PIC_THO_PIC_PARA	vpu_lib/vpu_reg.h	246;"	d
+CMD_DEC_PIC_THO_QMAT_ADDR	vpu_lib/vpu_reg.h	247;"	d
+CMD_DEC_PIC_USER_DATA_BASE_ADDR	vpu_lib/vpu_reg.h	242;"	d
+CMD_DEC_PIC_USER_DATA_BUF_SIZE	vpu_lib/vpu_reg.h	243;"	d
+CMD_DEC_SEQ_BB_SIZE	vpu_lib/vpu_reg.h	112;"	d
+CMD_DEC_SEQ_BB_START	vpu_lib/vpu_reg.h	111;"	d
+CMD_DEC_SEQ_INIT_ESCAPE	vpu_lib/vpu_reg.h	124;"	d
+CMD_DEC_SEQ_JPG_THUMB_EN	vpu_lib/vpu_reg.h	118;"	d
+CMD_DEC_SEQ_MP4_ASP_CLASS	vpu_lib/vpu_reg.h	119;"	d
+CMD_DEC_SEQ_OPTION	vpu_lib/vpu_reg.h	113;"	d
+CMD_DEC_SEQ_PS_BB_SIZE	vpu_lib/vpu_reg.h	117;"	d
+CMD_DEC_SEQ_PS_BB_START	vpu_lib/vpu_reg.h	116;"	d
+CMD_DEC_SEQ_SPP_CHUNK_SIZE	vpu_lib/vpu_reg.h	122;"	d
+CMD_DEC_SEQ_SRC_SIZE	vpu_lib/vpu_reg.h	114;"	d
+CMD_DEC_SEQ_START_BYTE	vpu_lib/vpu_reg.h	115;"	d
+CMD_DEC_SEQ_USER_DATA_OPTION	vpu_lib/vpu_reg.h	241;"	d
+CMD_DEC_SEQ_VC1_STREAM_FMT	vpu_lib/vpu_reg.h	120;"	d
+CMD_DEC_SEQ_X264_MV_EN	vpu_lib/vpu_reg.h	121;"	d
+CMD_ENC_HEADER_BB_SIZE	vpu_lib/vpu_reg.h	365;"	d
+CMD_ENC_HEADER_BB_START	vpu_lib/vpu_reg.h	364;"	d
+CMD_ENC_HEADER_CODE	vpu_lib/vpu_reg.h	363;"	d
+CMD_ENC_HEADER_FRAME_CROP_H	vpu_lib/vpu_reg.h	366;"	d
+CMD_ENC_HEADER_FRAME_CROP_V	vpu_lib/vpu_reg.h	367;"	d
+CMD_ENC_PARA_SET_TYPE	vpu_lib/vpu_reg.h	386;"	d
+CMD_ENC_PIC_BB_SIZE	vpu_lib/vpu_reg.h	310;"	d
+CMD_ENC_PIC_BB_START	vpu_lib/vpu_reg.h	309;"	d
+CMD_ENC_PIC_OPTION	vpu_lib/vpu_reg.h	308;"	d
+CMD_ENC_PIC_PARA_BASE_ADDR	vpu_lib/vpu_reg.h	311;"	d
+CMD_ENC_PIC_QS	vpu_lib/vpu_reg.h	306;"	d
+CMD_ENC_PIC_ROT_MODE	vpu_lib/vpu_reg.h	307;"	d
+CMD_ENC_PIC_SRC_ADDR_CB	vpu_lib/vpu_reg.h	298;"	d
+CMD_ENC_PIC_SRC_ADDR_CB	vpu_lib/vpu_reg.h	302;"	d
+CMD_ENC_PIC_SRC_ADDR_CR	vpu_lib/vpu_reg.h	299;"	d
+CMD_ENC_PIC_SRC_ADDR_CR	vpu_lib/vpu_reg.h	303;"	d
+CMD_ENC_PIC_SRC_ADDR_Y	vpu_lib/vpu_reg.h	297;"	d
+CMD_ENC_PIC_SRC_ADDR_Y	vpu_lib/vpu_reg.h	301;"	d
+CMD_ENC_PIC_SRC_INDEX	vpu_lib/vpu_reg.h	293;"	d
+CMD_ENC_PIC_SRC_STRIDE	vpu_lib/vpu_reg.h	294;"	d
+CMD_ENC_PIC_SUB_FRAME_SYNC	vpu_lib/vpu_reg.h	295;"	d
+CMD_ENC_SEARCH_BASE	vpu_lib/vpu_reg.h	174;"	d
+CMD_ENC_SEARCH_SIZE	vpu_lib/vpu_reg.h	175;"	d
+CMD_ENC_SEQ_263_PARA	vpu_lib/vpu_reg.h	167;"	d
+CMD_ENC_SEQ_264_PARA	vpu_lib/vpu_reg.h	168;"	d
+CMD_ENC_SEQ_BB_SIZE	vpu_lib/vpu_reg.h	160;"	d
+CMD_ENC_SEQ_BB_START	vpu_lib/vpu_reg.h	159;"	d
+CMD_ENC_SEQ_COD_STD	vpu_lib/vpu_reg.h	163;"	d
+CMD_ENC_SEQ_FMO	vpu_lib/vpu_reg.h	177;"	d
+CMD_ENC_SEQ_GOP_NUM	vpu_lib/vpu_reg.h	170;"	d
+CMD_ENC_SEQ_INTRA_QP	vpu_lib/vpu_reg.h	179;"	d
+CMD_ENC_SEQ_INTRA_QP	vpu_lib/vpu_reg.h	181;"	d
+CMD_ENC_SEQ_INTRA_REFRESH	vpu_lib/vpu_reg.h	173;"	d
+CMD_ENC_SEQ_INTRA_WEIGHT	vpu_lib/vpu_reg.h	187;"	d
+CMD_ENC_SEQ_JPG_PARA	vpu_lib/vpu_reg.h	190;"	d
+CMD_ENC_SEQ_JPG_RST_INTERVAL	vpu_lib/vpu_reg.h	191;"	d
+CMD_ENC_SEQ_JPG_THUMB_EN	vpu_lib/vpu_reg.h	192;"	d
+CMD_ENC_SEQ_JPG_THUMB_OFFSET	vpu_lib/vpu_reg.h	194;"	d
+CMD_ENC_SEQ_JPG_THUMB_SIZE	vpu_lib/vpu_reg.h	193;"	d
+CMD_ENC_SEQ_ME_OPTION	vpu_lib/vpu_reg.h	188;"	d
+CMD_ENC_SEQ_MP4_PARA	vpu_lib/vpu_reg.h	166;"	d
+CMD_ENC_SEQ_OPTION	vpu_lib/vpu_reg.h	161;"	d
+CMD_ENC_SEQ_PARA_CHANGE_ENABLE	vpu_lib/vpu_reg.h	201;"	d
+CMD_ENC_SEQ_PARA_HEC_MODE	vpu_lib/vpu_reg.h	208;"	d
+CMD_ENC_SEQ_PARA_INTRA_MB_NUM	vpu_lib/vpu_reg.h	206;"	d
+CMD_ENC_SEQ_PARA_RC_BITRATE	vpu_lib/vpu_reg.h	204;"	d
+CMD_ENC_SEQ_PARA_RC_FRAME_RATE	vpu_lib/vpu_reg.h	205;"	d
+CMD_ENC_SEQ_PARA_RC_GOP	vpu_lib/vpu_reg.h	202;"	d
+CMD_ENC_SEQ_PARA_RC_INTRA_QP	vpu_lib/vpu_reg.h	203;"	d
+CMD_ENC_SEQ_PARA_SLICE_MODE	vpu_lib/vpu_reg.h	207;"	d
+CMD_ENC_SEQ_RC_BUF_SIZE	vpu_lib/vpu_reg.h	172;"	d
+CMD_ENC_SEQ_RC_GAMMA	vpu_lib/vpu_reg.h	185;"	d
+CMD_ENC_SEQ_RC_INTERVAL_MODE	vpu_lib/vpu_reg.h	186;"	d
+CMD_ENC_SEQ_RC_PARA	vpu_lib/vpu_reg.h	171;"	d
+CMD_ENC_SEQ_RC_QP_MIN_MAX	vpu_lib/vpu_reg.h	184;"	d
+CMD_ENC_SEQ_SLICE_MODE	vpu_lib/vpu_reg.h	169;"	d
+CMD_ENC_SEQ_SRC_F_RATE	vpu_lib/vpu_reg.h	165;"	d
+CMD_ENC_SEQ_SRC_SIZE	vpu_lib/vpu_reg.h	164;"	d
+CMD_SET_FRAME_AXI_BIT_ADDR	vpu_lib/vpu_reg.h	326;"	d
+CMD_SET_FRAME_AXI_BIT_ADDR	vpu_lib/vpu_reg.h	65;"	d
+CMD_SET_FRAME_AXI_BIT_ADDR	vpu_lib/vpu_reg.h	78;"	d
+CMD_SET_FRAME_AXI_BIT_DIVX3_ADDR	vpu_lib/vpu_reg.h	66;"	d
+CMD_SET_FRAME_AXI_BTP_ADDR	vpu_lib/vpu_reg.h	333;"	d
+CMD_SET_FRAME_AXI_DBKC_ADDR	vpu_lib/vpu_reg.h	329;"	d
+CMD_SET_FRAME_AXI_DBKC_ADDR	vpu_lib/vpu_reg.h	81;"	d
+CMD_SET_FRAME_AXI_DBKY_ADDR	vpu_lib/vpu_reg.h	328;"	d
+CMD_SET_FRAME_AXI_DBKY_ADDR	vpu_lib/vpu_reg.h	80;"	d
+CMD_SET_FRAME_AXI_DBK_ADDR	vpu_lib/vpu_reg.h	68;"	d
+CMD_SET_FRAME_AXI_IPACDC_ADDR	vpu_lib/vpu_reg.h	327;"	d
+CMD_SET_FRAME_AXI_IPACDC_ADDR	vpu_lib/vpu_reg.h	79;"	d
+CMD_SET_FRAME_AXI_IP_ADDR	vpu_lib/vpu_reg.h	67;"	d
+CMD_SET_FRAME_AXI_OVL_ADDR	vpu_lib/vpu_reg.h	330;"	d
+CMD_SET_FRAME_AXI_OVL_ADDR	vpu_lib/vpu_reg.h	69;"	d
+CMD_SET_FRAME_AXI_OVL_ADDR	vpu_lib/vpu_reg.h	82;"	d
+CMD_SET_FRAME_BUF_NUM	vpu_lib/vpu_reg.h	321;"	d
+CMD_SET_FRAME_BUF_STRIDE	vpu_lib/vpu_reg.h	322;"	d
+CMD_SET_FRAME_CACHE_CONFIG	vpu_lib/vpu_reg.h	335;"	d
+CMD_SET_FRAME_CACHE_SIZE	vpu_lib/vpu_reg.h	334;"	d
+CMD_SET_FRAME_DELAY	vpu_lib/vpu_reg.h	342;"	d
+CMD_SET_FRAME_DELAY	vpu_lib/vpu_reg.h	345;"	d
+CMD_SET_FRAME_DP_BUF_BASE	vpu_lib/vpu_reg.h	355;"	d
+CMD_SET_FRAME_DP_BUF_SIZE	vpu_lib/vpu_reg.h	356;"	d
+CMD_SET_FRAME_MAX_DEC_SIZE	vpu_lib/vpu_reg.h	341;"	d
+CMD_SET_FRAME_MAX_DEC_SIZE	vpu_lib/vpu_reg.h	344;"	d
+CMD_SET_FRAME_MB_BUF_BASE	vpu_lib/vpu_reg.h	336;"	d
+CMD_SET_FRAME_SLICE_BB_SIZE	vpu_lib/vpu_reg.h	324;"	d
+CMD_SET_FRAME_SLICE_BB_START	vpu_lib/vpu_reg.h	323;"	d
+CMD_SET_FRAME_SOURCE_BUF_STRIDE	vpu_lib/vpu_reg.h	347;"	d
+CMD_SET_FRAME_SUBSAMP_A	vpu_lib/vpu_reg.h	353;"	d
+CMD_SET_FRAME_SUBSAMP_A_MVC	vpu_lib/vpu_reg.h	357;"	d
+CMD_SET_FRAME_SUBSAMP_B	vpu_lib/vpu_reg.h	354;"	d
+CMD_SET_FRAME_SUBSAMP_B_MVC	vpu_lib/vpu_reg.h	358;"	d
+CODE_BUF_SIZE	vpu_lib/vpu_reg.h	398;"	d
+COMMON_INIT	application/vpu_test.h	26;"	d
+COMMON_INIT	application/vpu_test.h.BACKUP.805.h	31;"	d
+COMMON_INIT	application/vpu_test.h.LOCAL.805.h	26;"	d
+COMMON_INIT	application/vpu_test.h.REMOTE.805.h	26;"	d
+COMPRESSION_SCHEME	vpu_lib/vpu_util.h	/^    COMPRESSION_SCHEME	= 0x0103,$/;"	e	enum:__anon43
+CTX_BIT_FRAME_MEM_CTRL	vpu_lib/vpu_util.h	/^    CTX_BIT_FRAME_MEM_CTRL,$/;"	e	enum:__anon41
+CTX_BIT_FRM_DIS_FLG	vpu_lib/vpu_util.h	/^    CTX_BIT_FRM_DIS_FLG,$/;"	e	enum:__anon41
+CTX_BIT_RD_PTR	vpu_lib/vpu_util.h	/^    CTX_BIT_RD_PTR,$/;"	e	enum:__anon41
+CTX_BIT_STREAM_PARAM	vpu_lib/vpu_util.h	/^    CTX_BIT_STREAM_PARAM = 0,$/;"	e	enum:__anon41
+CTX_BIT_WR_PTR	vpu_lib/vpu_util.h	/^    CTX_BIT_WR_PTR,$/;"	e	enum:__anon41
+CTX_MAX_REGS	vpu_lib/vpu_util.h	/^    CTX_MAX_REGS$/;"	e	enum:__anon41
+CacheSizeCfg	vpu_lib/vpu_util.h	/^typedef struct CacheSizeCfg {$/;"	s
+CacheSizeCfg	vpu_lib/vpu_util.h	/^} CacheSizeCfg;$/;"	t	typeref:struct:CacheSizeCfg
+CacheSizeX	vpu_lib/vpu_util.h	/^    unsigned CacheSizeX : 4;$/;"	m	struct:CacheSizeCfg
+CacheSizeY	vpu_lib/vpu_util.h	/^    unsigned CacheSizeY : 4;$/;"	m	struct:CacheSizeCfg
+CbBufferSize	vpu_lib/vpu_util.h	/^    unsigned CbBufferSize: 8;$/;"	m	struct:__anon50
+CheckDecInstanceValidity	vpu_lib/vpu_util.c	/^RetCode CheckDecInstanceValidity(DecHandle handle)$/;"	f
+CheckDecOpenParam	vpu_lib/vpu_util.c	/^RetCode CheckDecOpenParam(DecOpenParam * pop)$/;"	f
+ChromaFormat	vpu_lib/vpu_lib.h	/^} ChromaFormat;$/;"	t	typeref:enum:__anon11
+CodStd	vpu_lib/vpu_lib.h	/^} CodStd;$/;"	t	typeref:enum:__anon5
+CodecCommand	vpu_lib/vpu_lib.h	/^} CodecCommand;$/;"	t	typeref:enum:__anon8
+CodecInfo	vpu_lib/vpu_util.h	/^    } CodecInfo;$/;"	m	struct:CodecInst	typeref:union:CodecInst::__anon59
+CodecInst	vpu_lib/vpu_util.h	/^typedef struct CodecInst {$/;"	s
+CodecInst	vpu_lib/vpu_util.h	/^} CodecInst;$/;"	t	typeref:struct:CodecInst
+CodecParam	vpu_lib/vpu_util.h	/^    } CodecParam;$/;"	m	struct:CodecInst	typeref:union:CodecInst::__anon60
+Compression	vpu_lib/vpu_util.h	/^    int			Compression; \/\/ 1 for uncompressed \/ 6 for compressed(jpeg)$/;"	m	struct:__anon47
+CrBufferSize	vpu_lib/vpu_util.h	/^    unsigned CrBufferSize: 8;$/;"	m	struct:__anon50
+DC_TABLE_INDEX0	vpu_lib/vpu_lib.h	52;"	d
+DC_TABLE_INDEX0	vpu_lib/vpu_util.h	65;"	d
+DC_TABLE_INDEX1	vpu_lib/vpu_lib.h	54;"	d
+DC_TABLE_INDEX1	vpu_lib/vpu_util.h	67;"	d
+DECODE	application/vpu_test.h	68;"	d
+DECODE	application/vpu_test.h.BACKUP.805.h	96;"	d
+DECODE	application/vpu_test.h.LOCAL.805.h	66;"	d
+DECODE	application/vpu_test.h.REMOTE.805.h	68;"	d
+DEC_ADDR_END_OF_RPT_BUF	vpu_lib/vpu_util.h	63;"	d
+DEC_BUF_FLUSH	vpu_lib/vpu_util.h	/^    DEC_BUF_FLUSH = 8,$/;"	e	enum:__anon39
+DEC_PARA_SET	vpu_lib/vpu_util.h	/^    DEC_PARA_SET = 7,$/;"	e	enum:__anon39
+DEC_SET_DEBLOCK_OUTPUT	vpu_lib/vpu_lib.h	/^    DEC_SET_DEBLOCK_OUTPUT,$/;"	e	enum:__anon8
+DEC_SET_FRAME_DELAY	vpu_lib/vpu_lib.h	/^    DEC_SET_FRAME_DELAY,$/;"	e	enum:__anon8
+DEC_SET_PPS_RBSP	vpu_lib/vpu_lib.h	/^    DEC_SET_PPS_RBSP,$/;"	e	enum:__anon8
+DEC_SET_REPORT_BUFSTAT	vpu_lib/vpu_lib.h	/^    DEC_SET_REPORT_BUFSTAT,$/;"	e	enum:__anon8
+DEC_SET_REPORT_MBINFO	vpu_lib/vpu_lib.h	/^    DEC_SET_REPORT_MBINFO,$/;"	e	enum:__anon8
+DEC_SET_REPORT_MVINFO	vpu_lib/vpu_lib.h	/^    DEC_SET_REPORT_MVINFO,$/;"	e	enum:__anon8
+DEC_SET_REPORT_USERDATA	vpu_lib/vpu_lib.h	/^    DEC_SET_REPORT_USERDATA,$/;"	e	enum:__anon8
+DEC_SET_SPS_RBSP	vpu_lib/vpu_lib.h	/^    DEC_SET_SPS_RBSP,$/;"	e	enum:__anon8
+DEFAULT_PKT_SIZE	application/vpu_test.h	73;"	d
+DEFAULT_PKT_SIZE	application/vpu_test.h.BACKUP.805.h	101;"	d
+DEFAULT_PKT_SIZE	application/vpu_test.h.LOCAL.805.h	71;"	d
+DEFAULT_PKT_SIZE	application/vpu_test.h.REMOTE.805.h	73;"	d
+DEFAULT_PORT	application/vpu_test.h	72;"	d
+DEFAULT_PORT	application/vpu_test.h.BACKUP.805.h	100;"	d
+DEFAULT_PORT	application/vpu_test.h.LOCAL.805.h	70;"	d
+DEFAULT_PORT	application/vpu_test.h.REMOTE.805.h	72;"	d
+DHT_Marker	vpu_lib/vpu_util.h	/^    DHT_Marker      = 0xFFC4,           \/* Define Huffman table(s) *\/$/;"	e	enum:__anon42
+DISABLE_DERING	vpu_lib/vpu_lib.h	/^    DISABLE_DERING,$/;"	e	enum:__anon8
+DISABLE_MIRRORING	vpu_lib/vpu_lib.h	/^    DISABLE_MIRRORING,$/;"	e	enum:__anon8
+DISABLE_ROTATION	vpu_lib/vpu_lib.h	/^    DISABLE_ROTATION,$/;"	e	enum:__anon8
+DQT_Marker	vpu_lib/vpu_util.h	/^    DQT_Marker      = 0xFFDB,           \/* Define quantization table(s) *\/$/;"	e	enum:__anon42
+DRI_Marker	vpu_lib/vpu_util.h	/^    DRI_Marker      = 0xFFDD,           \/* Define restart interval *\/$/;"	e	enum:__anon42
+DV3_DEC	vpu_lib/vpu_util.h	/^    DV3_DEC = 3,$/;"	e	enum:__anon35
+DbkOffset	vpu_lib/vpu_lib.h	/^} DbkOffset;$/;"	t	typeref:struct:__anon12
+DbkOffsetA	vpu_lib/vpu_lib.h	/^    int DbkOffsetA;$/;"	m	struct:__anon12
+DbkOffsetB	vpu_lib/vpu_lib.h	/^    int DbkOffsetB;$/;"	m	struct:__anon12
+DbkOffsetEnable	vpu_lib/vpu_lib.h	/^    int DbkOffsetEnable;$/;"	m	struct:__anon12
+DecAvcSliceBufInfo	vpu_lib/vpu_lib.h	/^} DecAvcSliceBufInfo;$/;"	t	typeref:struct:__anon16
+DecBitstreamBufEmpty	vpu_lib/vpu_util.c	/^int DecBitstreamBufEmpty(DecHandle handle)$/;"	f
+DecBufInfo	vpu_lib/vpu_lib.h	/^} DecBufInfo;$/;"	t	typeref:struct:__anon18
+DecHandle	vpu_lib/vpu_lib.h	/^typedef DecInst *DecHandle;$/;"	t
+DecInfo	vpu_lib/vpu_util.h	/^} DecInfo;$/;"	t	typeref:struct:__anon58
+DecInitialInfo	vpu_lib/vpu_lib.h	/^} DecInitialInfo;$/;"	t	typeref:struct:__anon14
+DecInst	vpu_lib/vpu_lib.h	/^typedef struct CodecInst DecInst;$/;"	t	typeref:struct:CodecInst
+DecMaxFrmInfo	vpu_lib/vpu_lib.h	/^} DecMaxFrmInfo;$/;"	t	typeref:struct:__anon17
+DecOpenParam	vpu_lib/vpu_lib.h	/^} DecOpenParam;$/;"	t	typeref:struct:__anon13
+DecOutputInfo	vpu_lib/vpu_lib.h	/^} DecOutputInfo;$/;"	t	typeref:struct:__anon23
+DecParam	vpu_lib/vpu_lib.h	/^} DecParam;$/;"	t	typeref:struct:__anon20
+DecParamSet	vpu_lib/vpu_util.h	/^} DecParamSet;$/;"	t	typeref:struct:__anon53
+DualConf	vpu_lib/vpu_util.h	/^    unsigned DualConf : 1;$/;"	m	struct:__anon50
+ENABLE_DERING	vpu_lib/vpu_lib.h	/^    ENABLE_DERING,$/;"	e	enum:__anon8
+ENABLE_MIRRORING	vpu_lib/vpu_lib.h	/^    ENABLE_MIRRORING,$/;"	e	enum:__anon8
+ENABLE_ROTATION	vpu_lib/vpu_lib.h	/^    ENABLE_ROTATION,$/;"	e	enum:__anon8
+ENCODE	application/vpu_test.h	67;"	d
+ENCODE	application/vpu_test.h.BACKUP.805.h	95;"	d
+ENCODE	application/vpu_test.h.LOCAL.805.h	65;"	d
+ENCODE	application/vpu_test.h.REMOTE.805.h	67;"	d
+ENCODE_HEADER	vpu_lib/vpu_util.h	/^    ENCODE_HEADER = 5,$/;"	e	enum:__anon39
+ENC_ADDR_END_OF_RPT_BUF	vpu_lib/vpu_util.h	62;"	d
+ENC_DISABLE_HEC	vpu_lib/vpu_lib.h	/^    ENC_DISABLE_HEC,$/;"	e	enum:__anon8
+ENC_DISABLE_SUB_FRAME_SYNC	vpu_lib/vpu_lib.h	/^    ENC_DISABLE_SUB_FRAME_SYNC,$/;"	e	enum:__anon8
+ENC_ENABLE_HEC	vpu_lib/vpu_lib.h	/^    ENC_ENABLE_HEC,$/;"	e	enum:__anon8
+ENC_ENABLE_SOF_STUFF	vpu_lib/vpu_lib.h	/^    ENC_ENABLE_SOF_STUFF$/;"	e	enum:__anon8
+ENC_ENABLE_SUB_FRAME_SYNC	vpu_lib/vpu_lib.h	/^    ENC_ENABLE_SUB_FRAME_SYNC,$/;"	e	enum:__anon8
+ENC_GET_JPEG_HEADER	vpu_lib/vpu_lib.h	/^    ENC_GET_JPEG_HEADER,$/;"	e	enum:__anon8
+ENC_GET_PPS_RBSP	vpu_lib/vpu_lib.h	/^    ENC_GET_PPS_RBSP,$/;"	e	enum:__anon8
+ENC_GET_SPS_RBSP	vpu_lib/vpu_lib.h	/^    ENC_GET_SPS_RBSP,$/;"	e	enum:__anon8
+ENC_GET_VIDEO_HEADER	vpu_lib/vpu_lib.h	/^    ENC_GET_VIDEO_HEADER,$/;"	e	enum:__anon8
+ENC_GET_VOL_HEADER	vpu_lib/vpu_lib.h	/^    ENC_GET_VOL_HEADER,$/;"	e	enum:__anon8
+ENC_GET_VOS_HEADER	vpu_lib/vpu_lib.h	/^    ENC_GET_VOS_HEADER,$/;"	e	enum:__anon8
+ENC_GET_VO_HEADER	vpu_lib/vpu_lib.h	/^    ENC_GET_VO_HEADER,$/;"	e	enum:__anon8
+ENC_PARA_SET	vpu_lib/vpu_util.h	/^    ENC_PARA_SET = 6,$/;"	e	enum:__anon39
+ENC_PUT_AVC_HEADER	vpu_lib/vpu_lib.h	/^    ENC_PUT_AVC_HEADER,$/;"	e	enum:__anon8
+ENC_PUT_MP4_HEADER	vpu_lib/vpu_lib.h	/^    ENC_PUT_MP4_HEADER,$/;"	e	enum:__anon8
+ENC_SET_BITRATE	vpu_lib/vpu_lib.h	/^    ENC_SET_BITRATE,$/;"	e	enum:__anon8
+ENC_SET_FRAME_RATE	vpu_lib/vpu_lib.h	/^    ENC_SET_FRAME_RATE,$/;"	e	enum:__anon8
+ENC_SET_GOP_NUMBER	vpu_lib/vpu_lib.h	/^    ENC_SET_GOP_NUMBER,$/;"	e	enum:__anon8
+ENC_SET_INTRA_MB_REFRESH_NUMBER	vpu_lib/vpu_lib.h	/^    ENC_SET_INTRA_MB_REFRESH_NUMBER,$/;"	e	enum:__anon8
+ENC_SET_INTRA_QP	vpu_lib/vpu_lib.h	/^    ENC_SET_INTRA_QP,$/;"	e	enum:__anon8
+ENC_SET_INTRA_REFRESH_MODE	vpu_lib/vpu_lib.h	/^    ENC_SET_INTRA_REFRESH_MODE,$/;"	e	enum:__anon8
+ENC_SET_REPORT_MBINFO	vpu_lib/vpu_lib.h	/^    ENC_SET_REPORT_MBINFO,$/;"	e	enum:__anon8
+ENC_SET_REPORT_MVINFO	vpu_lib/vpu_lib.h	/^    ENC_SET_REPORT_MVINFO,$/;"	e	enum:__anon8
+ENC_SET_REPORT_SLICEINFO	vpu_lib/vpu_lib.h	/^    ENC_SET_REPORT_SLICEINFO,$/;"	e	enum:__anon8
+ENC_SET_SEARCHRAM_PARAM	vpu_lib/vpu_lib.h	/^    ENC_SET_SEARCHRAM_PARAM,$/;"	e	enum:__anon8
+ENC_SET_SLICE_INFO	vpu_lib/vpu_lib.h	/^    ENC_SET_SLICE_INFO,$/;"	e	enum:__anon8
+ENC_SET_SUB_FRAME_SYNC	vpu_lib/vpu_lib.h	/^    ENC_SET_SUB_FRAME_SYNC,$/;"	e	enum:__anon8
+ENTER_FUNC	vpu_lib/vpu_debug.h	39;"	d
+EOI_Marker	vpu_lib/vpu_util.h	/^    EOI_Marker      = 0xFFD9,           \/* End of image *\/$/;"	e	enum:__anon42
+ETE	vpu_lib/vpu_debug.h	47;"	d
+EXIF_CODE	vpu_lib/vpu_util.h	/^    EXIF_CODE       = 0xFFE1,$/;"	e	enum:__anon42
+EXIF_INFO	vpu_lib/vpu_util.h	/^} EXIF_INFO;$/;"	t	typeref:struct:__anon47
+EXIF_JPG	vpu_lib/vpu_util.h	/^    EXIF_JPG	= 4$/;"	e	enum:__anon45
+EXIT_FUNC	vpu_lib/vpu_debug.h	40;"	d
+EncSubFrameSyncConfig	vpu_lib/vpu_util.h	/^} EncSubFrameSyncConfig;$/;"	t	typeref:struct:__anon57
+Event	vpu_lib/vpu_util.h	/^} Event;$/;"	t	typeref:enum:__anon34
+ExifInfo	vpu_lib/vpu_util.h	/^    EXIF_INFO	ExifInfo;$/;"	m	struct:__anon48
+ExtBufCfg	vpu_lib/vpu_lib.h	/^} ExtBufCfg;$/;"	t	typeref:struct:__anon15
+ExtParaType	vpu_lib/vpu_lib.h	/^} ExtParaType;$/;"	t	typeref:enum:__anon19
+FB_INDEX_MASK	application/fb.c	9;"	d	file:
+FF_Marker	vpu_lib/vpu_util.h	/^    FF_Marker       = 0x00,$/;"	e	enum:__anon42
+FIRMWARE_GET	vpu_lib/vpu_util.h	/^    FIRMWARE_GET = 0xf$/;"	e	enum:__anon39
+FMO_SLICE_SAVE_BUF_SIZE	vpu_lib/vpu_reg.h	399;"	d
+FORMAT_224	vpu_lib/vpu_lib.h	/^    FORMAT_224,$/;"	e	enum:__anon11
+FORMAT_400	vpu_lib/vpu_lib.h	/^    FORMAT_400$/;"	e	enum:__anon11
+FORMAT_420	vpu_lib/vpu_lib.h	/^    FORMAT_420,$/;"	e	enum:__anon11
+FORMAT_422	vpu_lib/vpu_lib.h	/^    FORMAT_422,$/;"	e	enum:__anon11
+FORMAT_444	vpu_lib/vpu_lib.h	/^    FORMAT_444,$/;"	e	enum:__anon11
+FrameBuffer	vpu_lib/vpu_lib.h	/^} FrameBuffer;$/;"	t	typeref:struct:__anon9
+GDI_ADR_RQ_SIZE_ERR_PRI0	vpu_lib/vpu_reg.h	482;"	d
+GDI_ADR_RQ_SIZE_ERR_PRI1	vpu_lib/vpu_reg.h	483;"	d
+GDI_ADR_RQ_SIZE_ERR_PRI1	vpu_lib/vpu_reg.h	484;"	d
+GDI_ADR_RQ_SIZE_ERR_PRI2	vpu_lib/vpu_reg.h	485;"	d
+GDI_ADR_RQ_SIZE_ERR_SEC0	vpu_lib/vpu_reg.h	489;"	d
+GDI_ADR_RQ_SIZE_ERR_SEC1	vpu_lib/vpu_reg.h	490;"	d
+GDI_ADR_RQ_SIZE_ERR_SEC2	vpu_lib/vpu_reg.h	491;"	d
+GDI_ADR_WQ_SIZE_ERR_PRI0	vpu_lib/vpu_reg.h	486;"	d
+GDI_ADR_WQ_SIZE_ERR_PRI1	vpu_lib/vpu_reg.h	487;"	d
+GDI_ADR_WQ_SIZE_ERR_PRI2	vpu_lib/vpu_reg.h	488;"	d
+GDI_ADR_WQ_SIZE_ERR_SEC0	vpu_lib/vpu_reg.h	492;"	d
+GDI_ADR_WQ_SIZE_ERR_SEC1	vpu_lib/vpu_reg.h	493;"	d
+GDI_ADR_WQ_SIZE_ERR_SEC2	vpu_lib/vpu_reg.h	494;"	d
+GDI_BUS_CTRL	vpu_lib/vpu_reg.h	478;"	d
+GDI_BUS_STATUS	vpu_lib/vpu_reg.h	479;"	d
+GDI_BWB_ENABLE	vpu_lib/vpu_reg.h	446;"	d
+GDI_BWB_SIZE	vpu_lib/vpu_reg.h	447;"	d
+GDI_BWB_STATUS	vpu_lib/vpu_reg.h	449;"	d
+GDI_BWB_STD_STRUCT	vpu_lib/vpu_reg.h	448;"	d
+GDI_CONTROL	vpu_lib/vpu_reg.h	439;"	d
+GDI_DEBUG_0	vpu_lib/vpu_reg.h	453;"	d
+GDI_DEBUG_1	vpu_lib/vpu_reg.h	454;"	d
+GDI_DEBUG_2	vpu_lib/vpu_reg.h	455;"	d
+GDI_DEBUG_3	vpu_lib/vpu_reg.h	456;"	d
+GDI_DEBUG_PROBE_ADDR	vpu_lib/vpu_reg.h	457;"	d
+GDI_DEBUG_PROBE_DATA	vpu_lib/vpu_reg.h	458;"	d
+GDI_H_INCLUDED	vpu_lib/vpu_gdi.h	13;"	d
+GDI_INFO_BASE_CB	vpu_lib/vpu_reg.h	499;"	d
+GDI_INFO_BASE_CR	vpu_lib/vpu_reg.h	500;"	d
+GDI_INFO_BASE_Y	vpu_lib/vpu_reg.h	498;"	d
+GDI_INFO_CONTROL	vpu_lib/vpu_reg.h	496;"	d
+GDI_INFO_PIC_SIZE	vpu_lib/vpu_reg.h	497;"	d
+GDI_PIC_INIT_HOST	vpu_lib/vpu_reg.h	440;"	d
+GDI_PINFO_ACK	vpu_lib/vpu_reg.h	443;"	d
+GDI_PINFO_ADDR	vpu_lib/vpu_reg.h	444;"	d
+GDI_PINFO_DATA	vpu_lib/vpu_reg.h	445;"	d
+GDI_PINFO_REQ	vpu_lib/vpu_reg.h	442;"	d
+GDI_PRI_RD_LOCK_CNT	vpu_lib/vpu_reg.h	430;"	d
+GDI_PRI_RD_PRIO_H	vpu_lib/vpu_reg.h	427;"	d
+GDI_PRI_RD_PRIO_L	vpu_lib/vpu_reg.h	426;"	d
+GDI_PRI_WR_LOCK_CNT	vpu_lib/vpu_reg.h	431;"	d
+GDI_PRI_WR_PRIO_H	vpu_lib/vpu_reg.h	429;"	d
+GDI_PRI_WR_PRIO_L	vpu_lib/vpu_reg.h	428;"	d
+GDI_RBC2_AXI_0	vpu_lib/vpu_reg.h	514;"	d
+GDI_RBC2_AXI_1F	vpu_lib/vpu_reg.h	515;"	d
+GDI_SEC_CLIENT_EN	vpu_lib/vpu_reg.h	438;"	d
+GDI_SEC_RD_LOCK_CNT	vpu_lib/vpu_reg.h	436;"	d
+GDI_SEC_RD_PRIO_H	vpu_lib/vpu_reg.h	433;"	d
+GDI_SEC_RD_PRIO_L	vpu_lib/vpu_reg.h	432;"	d
+GDI_SEC_WR_LOCK_CNT	vpu_lib/vpu_reg.h	437;"	d
+GDI_SEC_WR_PRIO_H	vpu_lib/vpu_reg.h	435;"	d
+GDI_SEC_WR_PRIO_L	vpu_lib/vpu_reg.h	434;"	d
+GDI_SIZE_ERR_FLAG	vpu_lib/vpu_reg.h	481;"	d
+GDI_STATUS	vpu_lib/vpu_reg.h	451;"	d
+GDI_TILEDBUF_BASE	vpu_lib/vpu_reg.h	516;"	d
+GDI_TILED_MAP_TYPE	vpu_lib/vpu_lib.h	/^} GDI_TILED_MAP_TYPE;$/;"	t	typeref:enum:__anon7
+GDI_WPROT_ERR_ADR	vpu_lib/vpu_reg.h	463;"	d
+GDI_WPROT_ERR_CLR	vpu_lib/vpu_reg.h	461;"	d
+GDI_WPROT_ERR_RSN	vpu_lib/vpu_reg.h	462;"	d
+GDI_WPROT_RGN0_END	vpu_lib/vpu_reg.h	466;"	d
+GDI_WPROT_RGN0_STA	vpu_lib/vpu_reg.h	465;"	d
+GDI_WPROT_RGN1_END	vpu_lib/vpu_reg.h	468;"	d
+GDI_WPROT_RGN1_STA	vpu_lib/vpu_reg.h	467;"	d
+GDI_WPROT_RGN2_END	vpu_lib/vpu_reg.h	470;"	d
+GDI_WPROT_RGN2_STA	vpu_lib/vpu_reg.h	469;"	d
+GDI_WPROT_RGN3_END	vpu_lib/vpu_reg.h	472;"	d
+GDI_WPROT_RGN3_STA	vpu_lib/vpu_reg.h	471;"	d
+GDI_WPROT_RGN4_END	vpu_lib/vpu_reg.h	474;"	d
+GDI_WPROT_RGN4_STA	vpu_lib/vpu_reg.h	473;"	d
+GDI_WPROT_RGN5_END	vpu_lib/vpu_reg.h	476;"	d
+GDI_WPROT_RGN5_STA	vpu_lib/vpu_reg.h	475;"	d
+GDI_WPROT_RGN_EN	vpu_lib/vpu_reg.h	464;"	d
+GDI_XY2_BA_0	vpu_lib/vpu_reg.h	505;"	d
+GDI_XY2_BA_1	vpu_lib/vpu_reg.h	506;"	d
+GDI_XY2_BA_2	vpu_lib/vpu_reg.h	507;"	d
+GDI_XY2_BA_3	vpu_lib/vpu_reg.h	508;"	d
+GDI_XY2_CAS_0	vpu_lib/vpu_reg.h	502;"	d
+GDI_XY2_CAS_F	vpu_lib/vpu_reg.h	503;"	d
+GDI_XY2_RAS_0	vpu_lib/vpu_reg.h	510;"	d
+GDI_XY2_RAS_F	vpu_lib/vpu_reg.h	511;"	d
+GDI_XY2_RBC_CONFIG	vpu_lib/vpu_reg.h	513;"	d
+GDMA_BASE	vpu_lib/vpu_reg.h	22;"	d
+GdiTiledMap	vpu_lib/vpu_gdi.h	/^} GdiTiledMap;$/;"	t	typeref:struct:__anon32
+GetCodecInstance	vpu_lib/vpu_util.c	/^RetCode GetCodecInstance(CodecInst ** ppInst)$/;"	f
+HUFF_VAL_SIZE	vpu_lib/vpu_util.h	72;"	d
+IMAGE_ENDIAN	vpu_lib/vpu_lib.c	41;"	d	file:
+IMAGE_HEIGHT	vpu_lib/vpu_util.h	/^    IMAGE_HEIGHT		= 0x0101,$/;"	e	enum:__anon43
+IMAGE_WIDTH	vpu_lib/vpu_util.h	/^    IMAGE_WIDTH		= 0x0100,$/;"	e	enum:__anon43
+INT_BIT_BIT_BUF_EMPTY	vpu_lib/vpu_util.h	/^    INT_BIT_BIT_BUF_EMPTY = 14,$/;"	e	enum:__anon33
+INT_BIT_BIT_BUF_FULL	vpu_lib/vpu_util.h	/^    INT_BIT_BIT_BUF_FULL = 15$/;"	e	enum:__anon33
+INT_BIT_PIC_RUN	vpu_lib/vpu_util.h	/^    INT_BIT_PIC_RUN = 3,$/;"	e	enum:__anon33
+IOSystemInit	vpu_lib/vpu_io.c	/^int IOSystemInit(void){$/;"	f
+IOWaitForInt	vpu_lib/vpu_io.c	/^int IOWaitForInt(int timeout_in_ms){$/;"	f
+Int64	vpu_lib/vpu_lib.h	/^typedef long long Int64;$/;"	t
+InterruptBit	vpu_lib/vpu_util.h	/^}InterruptBit;$/;"	t	typeref:enum:__anon33
+JFIF	vpu_lib/vpu_util.h	/^    JFIF    	= 0,$/;"	e	enum:__anon45
+JFIF_CODE	vpu_lib/vpu_util.h	/^    JFIF_CODE       = 0xFFE0,           \/* Application *\/$/;"	e	enum:__anon42
+JFXX_JPG	vpu_lib/vpu_util.h	/^    JFXX_JPG	= 1,$/;"	e	enum:__anon45
+JFXX_PAL	vpu_lib/vpu_util.h	/^    JFXX_PAL  	= 2,$/;"	e	enum:__anon45
+JFXX_RAW	vpu_lib/vpu_util.h	/^    JFXX_RAW 	= 3,$/;"	e	enum:__anon45
+JPEG_IC_FORMAT	vpu_lib/vpu_util.h	/^    JPEG_IC_FORMAT		= 0x0201,$/;"	e	enum:__anon43
+JpegOffset	vpu_lib/vpu_util.h	/^    Uint32		JpegOffset;$/;"	m	struct:__anon47
+JpegThumbSize	vpu_lib/vpu_util.h	/^    Uint32		JpegThumbSize;$/;"	m	struct:__anon47
+LINEAR_FRAME_MAP	vpu_lib/vpu_lib.h	/^    LINEAR_FRAME_MAP = 0,$/;"	e	enum:__anon7
+LOOPBACK	application/vpu_test.h	69;"	d
+LOOPBACK	application/vpu_test.h.BACKUP.805.h	97;"	d
+LOOPBACK	application/vpu_test.h.LOCAL.805.h	67;"	d
+LOOPBACK	application/vpu_test.h.REMOTE.805.h	69;"	d
+LoadBitCodeTable	vpu_lib/vpu_util.c	/^RetCode LoadBitCodeTable(Uint16 **pBitCode, int *size){$/;"	f
+LockVpu	vpu_lib/vpu_util.h	/^static inline unsigned char LockVpu(semaphore_t *semap)$/;"	f
+LockVpuReg	vpu_lib/vpu_util.h	/^static inline unsigned char LockVpuReg(semaphore_t *semap)$/;"	f
+LumaBufferSize	vpu_lib/vpu_util.h	/^    unsigned LumaBufferSize: 8;$/;"	m	struct:__anon50
+MAX_BUF_NUM	application/vpu_test.h	102;"	d
+MAX_BUF_NUM	application/vpu_test.h.BACKUP.805.h	146;"	d
+MAX_BUF_NUM	application/vpu_test.h.LOCAL.805.h	100;"	d
+MAX_BUF_NUM	application/vpu_test.h.REMOTE.805.h	102;"	d
+MAX_FW_BINARY_LEN	vpu_lib/vpu_util.h	27;"	d
+MAX_ITEM_NUM	vpu_lib/vpu_util.h	382;"	d
+MAX_NUM_INSTANCE	vpu_lib/vpu_lib.h	50;"	d
+MAX_PATH	application/vpu_test.h	162;"	d
+MAX_PATH	application/vpu_test.h.BACKUP.805.h	263;"	d
+MAX_PATH	application/vpu_test.h.LOCAL.805.h	160;"	d
+MAX_PATH	application/vpu_test.h.REMOTE.805.h	162;"	d
+MAX_PIC_HEIGHT	vpu_lib/vpu_lib.c	45;"	d	file:
+MAX_PIC_WIDTH	vpu_lib/vpu_lib.c	44;"	d	file:
+MAX_RBSP_SIZE	vpu_lib/vpu_util.h	364;"	d
+MAX_REORDER	vpu_lib/vpu_util.h	381;"	d
+MAX_TS	vpu_lib/vpu_util.h	380;"	d
+MJPEG_BBC_BAS_ADDR_REG	vpu_lib/vpu_reg.h	599;"	d
+MJPEG_BBC_BUSY_REG	vpu_lib/vpu_reg.h	594;"	d
+MJPEG_BBC_COMMAND_REG	vpu_lib/vpu_reg.h	593;"	d
+MJPEG_BBC_CTRL_REG	vpu_lib/vpu_reg.h	596;"	d
+MJPEG_BBC_CUR_POS_REG	vpu_lib/vpu_reg.h	597;"	d
+MJPEG_BBC_DATA_CNT_REG	vpu_lib/vpu_reg.h	592;"	d
+MJPEG_BBC_END_ADDR_REG	vpu_lib/vpu_reg.h	586;"	d
+MJPEG_BBC_EXT_ADDR_REG	vpu_lib/vpu_reg.h	590;"	d
+MJPEG_BBC_FLUSH_CMD_REG	vpu_lib/vpu_reg.h	602;"	d
+MJPEG_BBC_INT_ADDR_REG	vpu_lib/vpu_reg.h	591;"	d
+MJPEG_BBC_RD_PTR_REG	vpu_lib/vpu_reg.h	588;"	d
+MJPEG_BBC_STRM_CTRL_REG	vpu_lib/vpu_reg.h	600;"	d
+MJPEG_BBC_WR_PTR_REG	vpu_lib/vpu_reg.h	587;"	d
+MJPEG_COEF_ADDR_REG	vpu_lib/vpu_reg.h	553;"	d
+MJPEG_COEF_CTRL_REG	vpu_lib/vpu_reg.h	552;"	d
+MJPEG_COEF_DATA_REG	vpu_lib/vpu_reg.h	554;"	d
+MJPEG_CYCLE_INFO_REG	vpu_lib/vpu_reg.h	561;"	d
+MJPEG_DPB_BASE00_REG	vpu_lib/vpu_reg.h	539;"	d
+MJPEG_DPB_BASE10_REG	vpu_lib/vpu_reg.h	540;"	d
+MJPEG_DPB_BASE20_REG	vpu_lib/vpu_reg.h	541;"	d
+MJPEG_DPB_BASE30_REG	vpu_lib/vpu_reg.h	542;"	d
+MJPEG_DPB_CONFIG_REG	vpu_lib/vpu_reg.h	536;"	d
+MJPEG_DPCM_DIFF_CB_REG	vpu_lib/vpu_reg.h	564;"	d
+MJPEG_DPCM_DIFF_CR_REG	vpu_lib/vpu_reg.h	565;"	d
+MJPEG_DPCM_DIFF_Y_REG	vpu_lib/vpu_reg.h	563;"	d
+MJPEG_GBU_BBER_REG	vpu_lib/vpu_reg.h	576;"	d
+MJPEG_GBU_BBHR_REG	vpu_lib/vpu_reg.h	578;"	d
+MJPEG_GBU_BBIR_REG	vpu_lib/vpu_reg.h	577;"	d
+MJPEG_GBU_BBSR_REG	vpu_lib/vpu_reg.h	575;"	d
+MJPEG_GBU_BCNT_REG	vpu_lib/vpu_reg.h	580;"	d
+MJPEG_GBU_BT_PTR_REG	vpu_lib/vpu_reg.h	570;"	d
+MJPEG_GBU_CTRL_REG	vpu_lib/vpu_reg.h	568;"	d
+MJPEG_GBU_FF_RPTR_REG	vpu_lib/vpu_reg.h	582;"	d
+MJPEG_GBU_FF_WPTR_REG	vpu_lib/vpu_reg.h	583;"	d
+MJPEG_GBU_TT_CNT_REG	vpu_lib/vpu_reg.h	572;"	d
+MJPEG_GBU_WD_PTR_REG	vpu_lib/vpu_reg.h	571;"	d
+MJPEG_HUFF_ADDR_REG	vpu_lib/vpu_reg.h	545;"	d
+MJPEG_HUFF_CTRL_REG	vpu_lib/vpu_reg.h	544;"	d
+MJPEG_HUFF_DATA_REG	vpu_lib/vpu_reg.h	546;"	d
+MJPEG_IF_INFO_REG	vpu_lib/vpu_reg.h	533;"	d
+MJPEG_INTR_MASK_REG	vpu_lib/vpu_reg.h	560;"	d
+MJPEG_MCU_INFO_REG	vpu_lib/vpu_reg.h	529;"	d
+MJPEG_OP_INFO_REG	vpu_lib/vpu_reg.h	534;"	d
+MJPEG_PIC_CTRL_REG	vpu_lib/vpu_reg.h	527;"	d
+MJPEG_PIC_ERRMB_REG	vpu_lib/vpu_reg.h	524;"	d
+MJPEG_PIC_SETMB_REG	vpu_lib/vpu_reg.h	525;"	d
+MJPEG_PIC_SIZE_REG	vpu_lib/vpu_reg.h	528;"	d
+MJPEG_PIC_START_REG	vpu_lib/vpu_reg.h	522;"	d
+MJPEG_PIC_STATUS_REG	vpu_lib/vpu_reg.h	523;"	d
+MJPEG_QMAT_ADDR_REG	vpu_lib/vpu_reg.h	549;"	d
+MJPEG_QMAT_CTRL_REG	vpu_lib/vpu_reg.h	548;"	d
+MJPEG_QMAT_DATA_REG	vpu_lib/vpu_reg.h	550;"	d
+MJPEG_ROT_INFO_REG	vpu_lib/vpu_reg.h	530;"	d
+MJPEG_RST_COUNT_REG	vpu_lib/vpu_reg.h	558;"	d
+MJPEG_RST_INDEX_REG	vpu_lib/vpu_reg.h	557;"	d
+MJPEG_RST_INTVAL_REG	vpu_lib/vpu_reg.h	556;"	d
+MJPEG_SCL_INFO_REG	vpu_lib/vpu_reg.h	532;"	d
+MJPEG_WRESP_CHECK_REG	vpu_lib/vpu_reg.h	537;"	d
+MJPG_DEC	vpu_lib/vpu_util.h	/^    MJPG_DEC = 6,$/;"	e	enum:__anon35
+MJPG_ENC	vpu_lib/vpu_util.h	/^    MJPG_ENC = 13$/;"	e	enum:__anon35
+MODE224	application/vpu_test.h	/^    MODE224 = 2,$/;"	e	enum:__anon3
+MODE224	application/vpu_test.h.BACKUP.805.h	/^    MODE224 = 2,$/;"	e	enum:__anon2
+MODE224	application/vpu_test.h.LOCAL.805.h	/^    MODE224 = 2,$/;"	e	enum:__anon4
+MODE224	application/vpu_test.h.REMOTE.805.h	/^    MODE224 = 2,$/;"	e	enum:__anon1
+MODE400	application/vpu_test.h	/^    MODE400 = 4$/;"	e	enum:__anon3
+MODE400	application/vpu_test.h.BACKUP.805.h	/^    MODE400 = 4$/;"	e	enum:__anon2
+MODE400	application/vpu_test.h.LOCAL.805.h	/^    MODE400 = 4$/;"	e	enum:__anon4
+MODE400	application/vpu_test.h.REMOTE.805.h	/^    MODE400 = 4$/;"	e	enum:__anon1
+MODE420	application/vpu_test.h	/^    MODE420 = 0,$/;"	e	enum:__anon3
+MODE420	application/vpu_test.h.BACKUP.805.h	/^    MODE420 = 0,$/;"	e	enum:__anon2
+MODE420	application/vpu_test.h.LOCAL.805.h	/^    MODE420 = 0,$/;"	e	enum:__anon4
+MODE420	application/vpu_test.h.REMOTE.805.h	/^    MODE420 = 0,$/;"	e	enum:__anon1
+MODE422	application/vpu_test.h	/^    MODE422 = 1,$/;"	e	enum:__anon3
+MODE422	application/vpu_test.h.BACKUP.805.h	/^    MODE422 = 1,$/;"	e	enum:__anon2
+MODE422	application/vpu_test.h.LOCAL.805.h	/^    MODE422 = 1,$/;"	e	enum:__anon4
+MODE422	application/vpu_test.h.REMOTE.805.h	/^    MODE422 = 1,$/;"	e	enum:__anon1
+MODE444	application/vpu_test.h	/^    MODE444 = 3,$/;"	e	enum:__anon3
+MODE444	application/vpu_test.h.BACKUP.805.h	/^    MODE444 = 3,$/;"	e	enum:__anon2
+MODE444	application/vpu_test.h.LOCAL.805.h	/^    MODE444 = 3,$/;"	e	enum:__anon4
+MODE444	application/vpu_test.h.REMOTE.805.h	/^    MODE444 = 3,$/;"	e	enum:__anon1
+MP2_DEC	vpu_lib/vpu_util.h	/^    MP2_DEC = 2,$/;"	e	enum:__anon35
+MP4_AUX_DIVX3	vpu_lib/vpu_util.h	/^    MP4_AUX_DIVX3 = 1$/;"	e	enum:__anon36
+MP4_AUX_MPEG4	vpu_lib/vpu_util.h	/^    MP4_AUX_MPEG4 = 0,$/;"	e	enum:__anon36
+MP4_DEC	vpu_lib/vpu_util.h	/^    MP4_DEC = 3,$/;"	e	enum:__anon35
+MP4_ENC	vpu_lib/vpu_util.h	/^    MP4_ENC = 11,$/;"	e	enum:__anon35
+MPEG4_SCRATCH_SIZE	application/vpu_test.h	55;"	d
+MPEG4_SCRATCH_SIZE	application/vpu_test.h.BACKUP.805.h	77;"	d
+MPEG4_SCRATCH_SIZE	application/vpu_test.h.LOCAL.805.h	55;"	d
+MPEG4_SCRATCH_SIZE	application/vpu_test.h.REMOTE.805.h	55;"	d
+MX27	vpu_lib/vpu_lib.h	/^    MX27 = 0,$/;"	e	enum:__anon28
+MX51	vpu_lib/vpu_lib.h	/^    MX51,$/;"	e	enum:__anon28
+MX53	vpu_lib/vpu_lib.h	/^    MX53,$/;"	e	enum:__anon28
+MX61	vpu_lib/vpu_lib.h	/^    MX61,$/;"	e	enum:__anon28
+MX63	vpu_lib/vpu_lib.h	/^    MX63$/;"	e	enum:__anon28
+MapType	vpu_lib/vpu_gdi.h	/^	int MapType;$/;"	m	struct:__anon32
+Marker	vpu_lib/vpu_util.h	/^    Marker          = 0xFF,$/;"	e	enum:__anon42
+MaverickCacheConfig	vpu_lib/vpu_util.h	/^} MaverickCacheConfig;$/;"	t	typeref:struct:__anon50
+MvcPicInfo	vpu_lib/vpu_lib.h	/^} MvcPicInfo;$/;"	t	typeref:struct:__anon21
+NPT_BASE	vpu_lib/vpu_reg.h	23;"	d
+NUM_FRAME_BUFS	application/fb.c	8;"	d	file:
+NumDecFrameBuf	vpu_lib/vpu_lib.h	/^    int NumDecFrameBuf;$/;"	m	struct:__anon23
+OUT_UNLOCK	vpu_lib/vpu_util.h	/^    OUT_UNLOCK$/;"	e	enum:__anon34
+PARA_BUF2_SIZE	vpu_lib/vpu_reg.h	401;"	d
+PARA_BUF_SIZE	vpu_lib/vpu_reg.h	402;"	d
+PARA_TYPE_FRM_BUF_STATUS	vpu_lib/vpu_lib.h	/^    PARA_TYPE_FRM_BUF_STATUS = 1,$/;"	e	enum:__anon19
+PARA_TYPE_MB_PARA	vpu_lib/vpu_lib.h	/^    PARA_TYPE_MB_PARA = 2,$/;"	e	enum:__anon19
+PARA_TYPE_MV	vpu_lib/vpu_lib.h	/^    PARA_TYPE_MV = 4,$/;"	e	enum:__anon19
+PATH_FILE	application/vpu_test.h.LOCAL.805.h	60;"	d
+PATH_IPU	application/vpu_test.h.LOCAL.805.h	62;"	d
+PATH_NET	application/vpu_test.h.LOCAL.805.h	61;"	d
+PATH_V4L2	application/vpu_test.h.LOCAL.805.h	59;"	d
+PIC_DONE	vpu_lib/vpu_util.h	/^    PIC_DONE,$/;"	e	enum:__anon34
+PIC_RUN	vpu_lib/vpu_util.h	/^    PIC_RUN = 3,$/;"	e	enum:__anon39
+PIXEL_COMPOSITION	vpu_lib/vpu_util.h	/^    PIXEL_COMPOSITION	= 0x0106,$/;"	e	enum:__anon43
+PLANAR_CONFIG	vpu_lib/vpu_util.h	/^    PLANAR_CONFIG		= 0x011c$/;"	e	enum:__anon43
+PPS_RBSP	vpu_lib/vpu_lib.h	/^    PPS_RBSP,$/;"	e	enum:__anon26
+PPS_RBSP_MVC	vpu_lib/vpu_lib.h	/^    PPS_RBSP_MVC$/;"	e	enum:__anon26
+PRJ_BODADX7X	vpu_lib/vpu_lib.h	45;"	d
+PRJ_BODA_CX_4	vpu_lib/vpu_lib.h	41;"	d
+PRJ_BODA_DX_4V	vpu_lib/vpu_lib.h	44;"	d
+PRJ_CODA7541	vpu_lib/vpu_lib.h	47;"	d
+PRJ_CODAHX_14	vpu_lib/vpu_lib.h	46;"	d
+PRJ_CODA_960	vpu_lib/vpu_lib.h	48;"	d
+PRJ_CODA_DX_6M	vpu_lib/vpu_lib.h	42;"	d
+PRJ_CODA_DX_8	vpu_lib/vpu_lib.h	43;"	d
+PRJ_PRISM_CX	vpu_lib/vpu_lib.h	38;"	d
+PRJ_PRISM_EX	vpu_lib/vpu_lib.h	40;"	d
+PRJ_SHIVA	vpu_lib/vpu_lib.h	39;"	d
+PRJ_TRISTAN	vpu_lib/vpu_lib.h	36;"	d
+PRJ_TRISTAN_REV	vpu_lib/vpu_lib.h	37;"	d
+PS_SAVE_SIZE	application/vpu_test.h	53;"	d
+PS_SAVE_SIZE	application/vpu_test.h.BACKUP.805.h	75;"	d
+PS_SAVE_SIZE	application/vpu_test.h.LOCAL.805.h	53;"	d
+PS_SAVE_SIZE	application/vpu_test.h.REMOTE.805.h	53;"	d
+PS_SAVE_SIZE	vpu_lib/vpu_util.h	47;"	d
+PageMerge	vpu_lib/vpu_util.h	/^    unsigned PageMerge : 2;$/;"	m	struct:__anon50
+PageSizeX	vpu_lib/vpu_util.h	/^    unsigned PageSizeX  : 4;$/;"	m	struct:CacheSizeCfg
+PageSizeY	vpu_lib/vpu_util.h	/^    unsigned PageSizeY  : 4;$/;"	m	struct:CacheSizeCfg
+Pallette	vpu_lib/vpu_util.h	/^    Uint8 		Pallette[256][3];$/;"	m	struct:__anon48
+PhysicalAddress	vpu_lib/vpu_lib.h	/^typedef Uint32 PhysicalAddress;$/;"	t
+PicX	vpu_lib/vpu_util.h	/^    int			PicX;$/;"	m	struct:__anon47
+PicY	vpu_lib/vpu_util.h	/^    int			PicY;$/;"	m	struct:__anon47
+PixelComposition	vpu_lib/vpu_util.h	/^    int			PixelComposition; \/\/ 2 for RGB \/ 6 for YCbCr$/;"	m	struct:__anon47
+PlanrConfig	vpu_lib/vpu_util.h	/^    int  		PlanrConfig; \/\/ 1 for chunky \/ 2 for planar$/;"	m	struct:__anon47
+QUEUE_SIZE	application/vpu_test.h	103;"	d
+QUEUE_SIZE	application/vpu_test.h.BACKUP.805.h	147;"	d
+QUEUE_SIZE	application/vpu_test.h.LOCAL.805.h	101;"	d
+QUEUE_SIZE	application/vpu_test.h.REMOTE.805.h	103;"	d
+Q_COMPONENT0	vpu_lib/vpu_util.h	69;"	d
+Q_COMPONENT1	vpu_lib/vpu_util.h	70;"	d
+Q_COMPONENT2	vpu_lib/vpu_util.h	71;"	d
+RA_SEL	vpu_lib/vpu_gdi.h	/^	RA_SEL = 2,$/;"	e	enum:__anon31
+RBC	vpu_lib/vpu_gdi.h	32;"	d
+RBC_SAME	vpu_lib/vpu_gdi.h	33;"	d
+RC_CHANGE_PARAMETER	vpu_lib/vpu_util.h	/^    RC_CHANGE_PARAMETER = 9,$/;"	e	enum:__anon39
+REG_MUTEX	vpu_lib/vpu_util.h	/^    REG_MUTEX = 1$/;"	e	enum:__anon40
+RETCODE_CALLED_BEFORE	vpu_lib/vpu_lib.h	/^    RETCODE_CALLED_BEFORE = -12,$/;"	e	enum:__anon6
+RETCODE_DEBLOCKING_OUTPUT_NOT_SET	vpu_lib/vpu_lib.h	/^    RETCODE_DEBLOCKING_OUTPUT_NOT_SET = -14,$/;"	e	enum:__anon6
+RETCODE_FAILURE	vpu_lib/vpu_lib.h	/^    RETCODE_FAILURE = -1,$/;"	e	enum:__anon6
+RETCODE_FAILURE_TIMEOUT	vpu_lib/vpu_lib.h	/^    RETCODE_FAILURE_TIMEOUT = -17,$/;"	e	enum:__anon6
+RETCODE_FRAME_NOT_COMPLETE	vpu_lib/vpu_lib.h	/^    RETCODE_FRAME_NOT_COMPLETE = -6,$/;"	e	enum:__anon6
+RETCODE_INSUFFICIENT_FRAME_BUFFERS	vpu_lib/vpu_lib.h	/^    RETCODE_INSUFFICIENT_FRAME_BUFFERS = -8,$/;"	e	enum:__anon6
+RETCODE_INVALID_COMMAND	vpu_lib/vpu_lib.h	/^    RETCODE_INVALID_COMMAND = -4,$/;"	e	enum:__anon6
+RETCODE_INVALID_FRAME_BUFFER	vpu_lib/vpu_lib.h	/^    RETCODE_INVALID_FRAME_BUFFER = -7,$/;"	e	enum:__anon6
+RETCODE_INVALID_HANDLE	vpu_lib/vpu_lib.h	/^    RETCODE_INVALID_HANDLE = -2,$/;"	e	enum:__anon6
+RETCODE_INVALID_PARAM	vpu_lib/vpu_lib.h	/^    RETCODE_INVALID_PARAM = -3,$/;"	e	enum:__anon6
+RETCODE_INVALID_STRIDE	vpu_lib/vpu_lib.h	/^    RETCODE_INVALID_STRIDE = -9,$/;"	e	enum:__anon6
+RETCODE_JPEG_BIT_EMPTY	vpu_lib/vpu_lib.h	/^    RETCODE_JPEG_BIT_EMPTY = -20$/;"	e	enum:__anon6
+RETCODE_JPEG_EOS	vpu_lib/vpu_lib.h	/^    RETCODE_JPEG_EOS = -19,$/;"	e	enum:__anon6
+RETCODE_MEMORY_ACCESS_VIOLATION	vpu_lib/vpu_lib.h	/^    RETCODE_MEMORY_ACCESS_VIOLATION = -18,$/;"	e	enum:__anon6
+RETCODE_NOT_INITIALIZED	vpu_lib/vpu_lib.h	/^    RETCODE_NOT_INITIALIZED = -13,$/;"	e	enum:__anon6
+RETCODE_NOT_SUPPORTED	vpu_lib/vpu_lib.h	/^    RETCODE_NOT_SUPPORTED = -15,$/;"	e	enum:__anon6
+RETCODE_REPORT_BUF_NOT_SET	vpu_lib/vpu_lib.h	/^    RETCODE_REPORT_BUF_NOT_SET = -16,$/;"	e	enum:__anon6
+RETCODE_ROTATOR_OUTPUT_NOT_SET	vpu_lib/vpu_lib.h	/^    RETCODE_ROTATOR_OUTPUT_NOT_SET = -5,$/;"	e	enum:__anon6
+RETCODE_ROTATOR_STRIDE_NOT_SET	vpu_lib/vpu_lib.h	/^    RETCODE_ROTATOR_STRIDE_NOT_SET = -11,$/;"	e	enum:__anon6
+RETCODE_SUCCESS	vpu_lib/vpu_lib.h	/^    RETCODE_SUCCESS = 0,$/;"	e	enum:__anon6
+RETCODE_WRONG_CALL_SEQUENCE	vpu_lib/vpu_lib.h	/^    RETCODE_WRONG_CALL_SEQUENCE = -10,$/;"	e	enum:__anon6
+RET_DEC_BUF_FLUSH_SUCCESS	vpu_lib/vpu_reg.h	381;"	d
+RET_DEC_PARA_SET_SUCCESS	vpu_lib/vpu_reg.h	376;"	d
+RET_DEC_PIC_ASPECT	vpu_lib/vpu_reg.h	279;"	d
+RET_DEC_PIC_AVC_FPA_SEI0	vpu_lib/vpu_reg.h	250;"	d
+RET_DEC_PIC_AVC_FPA_SEI1	vpu_lib/vpu_reg.h	251;"	d
+RET_DEC_PIC_AVC_FPA_SEI2	vpu_lib/vpu_reg.h	252;"	d
+RET_DEC_PIC_CROP_LEFT_RIGHT	vpu_lib/vpu_reg.h	275;"	d
+RET_DEC_PIC_CROP_TOP_BOTTOM	vpu_lib/vpu_reg.h	276;"	d
+RET_DEC_PIC_CUR_IDX	vpu_lib/vpu_reg.h	271;"	d
+RET_DEC_PIC_ERR_MB	vpu_lib/vpu_reg.h	257;"	d
+RET_DEC_PIC_FRAME_IDX	vpu_lib/vpu_reg.h	256;"	d
+RET_DEC_PIC_FRAME_NEED	vpu_lib/vpu_reg.h	272;"	d
+RET_DEC_PIC_FRAME_NUM	vpu_lib/vpu_reg.h	255;"	d
+RET_DEC_PIC_FRATE_DR	vpu_lib/vpu_reg.h	282;"	d
+RET_DEC_PIC_FRATE_NR	vpu_lib/vpu_reg.h	281;"	d
+RET_DEC_PIC_MVC_REPORT	vpu_lib/vpu_reg.h	261;"	d
+RET_DEC_PIC_OPTION	vpu_lib/vpu_reg.h	264;"	d
+RET_DEC_PIC_OPTION	vpu_lib/vpu_reg.h	267;"	d
+RET_DEC_PIC_POST	vpu_lib/vpu_reg.h	260;"	d
+RET_DEC_PIC_RV_TR	vpu_lib/vpu_reg.h	277;"	d
+RET_DEC_PIC_SIZE	vpu_lib/vpu_reg.h	254;"	d
+RET_DEC_PIC_SUCCESS	vpu_lib/vpu_reg.h	265;"	d
+RET_DEC_PIC_SUCCESS	vpu_lib/vpu_reg.h	268;"	d
+RET_DEC_PIC_TYPE	vpu_lib/vpu_reg.h	258;"	d
+RET_DEC_PIC_VP8_PIC_REPORT	vpu_lib/vpu_reg.h	278;"	d
+RET_DEC_PIC_VP8_SCALE_INFO	vpu_lib/vpu_reg.h	280;"	d
+RET_DEC_PIC_VUI_INFO	vpu_lib/vpu_reg.h	273;"	d
+RET_DEC_SEQ_ASPECT	vpu_lib/vpu_reg.h	130;"	d
+RET_DEC_SEQ_ASPECT	vpu_lib/vpu_reg.h	132;"	d
+RET_DEC_SEQ_BIT_RATE	vpu_lib/vpu_reg.h	127;"	d
+RET_DEC_SEQ_CROP_LEFT_RIGHT	vpu_lib/vpu_reg.h	144;"	d
+RET_DEC_SEQ_CROP_TOP_BOTTOM	vpu_lib/vpu_reg.h	145;"	d
+RET_DEC_SEQ_END_SUCCESS	vpu_lib/vpu_reg.h	215;"	d
+RET_DEC_SEQ_ERR_REASON	vpu_lib/vpu_reg.h	146;"	d
+RET_DEC_SEQ_FRAME_DELAY	vpu_lib/vpu_reg.h	141;"	d
+RET_DEC_SEQ_FRAME_NEED	vpu_lib/vpu_reg.h	140;"	d
+RET_DEC_SEQ_FRATE_DR	vpu_lib/vpu_reg.h	148;"	d
+RET_DEC_SEQ_FRATE_NR	vpu_lib/vpu_reg.h	147;"	d
+RET_DEC_SEQ_HEADER_REPORT	vpu_lib/vpu_reg.h	152;"	d
+RET_DEC_SEQ_INFO	vpu_lib/vpu_reg.h	142;"	d
+RET_DEC_SEQ_JPG_PARA	vpu_lib/vpu_reg.h	150;"	d
+RET_DEC_SEQ_JPG_THUMB_IND	vpu_lib/vpu_reg.h	151;"	d
+RET_DEC_SEQ_NEXT_FRAME_NUM	vpu_lib/vpu_reg.h	154;"	d
+RET_DEC_SEQ_SRC_FMT	vpu_lib/vpu_reg.h	138;"	d
+RET_DEC_SEQ_SRC_F_RATE	vpu_lib/vpu_reg.h	135;"	d
+RET_DEC_SEQ_SRC_SIZE	vpu_lib/vpu_reg.h	139;"	d
+RET_DEC_SEQ_SUCCESS	vpu_lib/vpu_reg.h	137;"	d
+RET_DEC_SEQ_VP8_SCALE_INFO	vpu_lib/vpu_reg.h	143;"	d
+RET_DEC_SEQ_VUI_INFO	vpu_lib/vpu_reg.h	126;"	d
+RET_ENC_HEADER_SUCCESS	vpu_lib/vpu_reg.h	369;"	d
+RET_ENC_PARA_SET_SIZE	vpu_lib/vpu_reg.h	387;"	d
+RET_ENC_PARA_SET_SUCCESS	vpu_lib/vpu_reg.h	388;"	d
+RET_ENC_PIC_FLAG	vpu_lib/vpu_reg.h	317;"	d
+RET_ENC_PIC_FRAME_IDX	vpu_lib/vpu_reg.h	315;"	d
+RET_ENC_PIC_FRAME_NUM	vpu_lib/vpu_reg.h	313;"	d
+RET_ENC_PIC_SLICE_NUM	vpu_lib/vpu_reg.h	316;"	d
+RET_ENC_PIC_SUCCESS	vpu_lib/vpu_reg.h	318;"	d
+RET_ENC_PIC_TYPE	vpu_lib/vpu_reg.h	314;"	d
+RET_ENC_SEQ_ENC_SUCCESS	vpu_lib/vpu_reg.h	196;"	d
+RET_ENC_SEQ_END_SUCCESS	vpu_lib/vpu_reg.h	287;"	d
+RET_ENC_SEQ_PARA_CHANGE_SUCCESS	vpu_lib/vpu_reg.h	210;"	d
+RET_FW_CODE_REV	vpu_lib/vpu_reg.h	396;"	d
+RET_SET_FRAME_SUCCESS	vpu_lib/vpu_reg.h	350;"	d
+RET_VER_NUM	vpu_lib/vpu_reg.h	395;"	d
+RST_Marker	vpu_lib/vpu_util.h	/^    RST_Marker      = 0xD,              \/* 0xD0 ~0xD7 *\/$/;"	e	enum:__anon42
+RV_DEC	vpu_lib/vpu_util.h	/^    RV_DEC = 4,$/;"	e	enum:__anon35
+Rect	vpu_lib/vpu_lib.h	/^} Rect;$/;"	t	typeref:struct:__anon10
+Reserved	vpu_lib/vpu_util.h	/^    unsigned Reserved   : 16;$/;"	m	struct:CacheSizeCfg
+RetCode	vpu_lib/vpu_lib.h	/^} RetCode;$/;"	t	typeref:enum:__anon6
+SAMPLE_PER_PIXEL	vpu_lib/vpu_util.h	/^    SAMPLE_PER_PIXEL	= 0x0115,$/;"	e	enum:__anon43
+SEQ_END	vpu_lib/vpu_util.h	/^    SEQ_END = 2,$/;"	e	enum:__anon39
+SEQ_INIT	vpu_lib/vpu_util.h	/^    SEQ_INIT = 1,$/;"	e	enum:__anon39
+SET_DBK_OFFSET	vpu_lib/vpu_lib.h	/^    SET_DBK_OFFSET,$/;"	e	enum:__anon8
+SET_FRAME_BUF	vpu_lib/vpu_util.h	/^    SET_FRAME_BUF = 4,$/;"	e	enum:__anon39
+SET_MIRROR_DIRECTION	vpu_lib/vpu_lib.h	/^    SET_MIRROR_DIRECTION,$/;"	e	enum:__anon8
+SET_ROTATION_ANGLE	vpu_lib/vpu_lib.h	/^    SET_ROTATION_ANGLE,$/;"	e	enum:__anon8
+SET_ROTATOR_OUTPUT	vpu_lib/vpu_lib.h	/^    SET_ROTATOR_OUTPUT,$/;"	e	enum:__anon8
+SET_ROTATOR_STRIDE	vpu_lib/vpu_lib.h	/^    SET_ROTATOR_STRIDE,$/;"	e	enum:__anon8
+SET_WRITE_MEM_PROTECT	vpu_lib/vpu_lib.h	/^    SET_WRITE_MEM_PROTECT,$/;"	e	enum:__anon8
+SIZE_CONTEXT_BUF	vpu_lib/vpu_util.h	46;"	d
+SIZE_FRAME_BUF_STAT	vpu_lib/vpu_util.h	52;"	d
+SIZE_MB_DATA	vpu_lib/vpu_util.h	51;"	d
+SIZE_MV_DATA	vpu_lib/vpu_util.h	50;"	d
+SIZE_PIC_PARA_BASE_BUF	vpu_lib/vpu_util.h	49;"	d
+SIZE_SLICE_INFO	vpu_lib/vpu_util.h	53;"	d
+SIZE_USER_BUF	application/vpu_test.h	75;"	d
+SIZE_USER_BUF	application/vpu_test.h.BACKUP.805.h	103;"	d
+SIZE_USER_BUF	application/vpu_test.h.LOCAL.805.h	73;"	d
+SIZE_USER_BUF	application/vpu_test.h.REMOTE.805.h	75;"	d
+SOF_Marker	vpu_lib/vpu_util.h	/^    SOF_Marker      = 0xFFC0,           \/* Start of frame : Baseline DCT *\/$/;"	e	enum:__anon42
+SOI_Marker	vpu_lib/vpu_util.h	/^    SOI_Marker      = 0xFFD8,           \/* Start of image *\/$/;"	e	enum:__anon42
+SOS_Marker	vpu_lib/vpu_util.h	/^    SOS_Marker      = 0xFFDA,           \/* Start of scan *\/$/;"	e	enum:__anon42
+SPS_RBSP	vpu_lib/vpu_lib.h	/^    SPS_RBSP,$/;"	e	enum:__anon26
+SPS_RBSP_MVC	vpu_lib/vpu_lib.h	/^    SPS_RBSP_MVC,$/;"	e	enum:__anon26
+START_GET_LOCK	vpu_lib/vpu_util.h	/^    START_GET_LOCK,$/;"	e	enum:__anon34
+START_TRY_LOCK	vpu_lib/vpu_util.h	/^    START_TRY_LOCK = 0,$/;"	e	enum:__anon34
+STD_AVC	vpu_lib/vpu_lib.h	/^    STD_AVC = 2,$/;"	e	enum:__anon5
+STD_AVS	vpu_lib/vpu_lib.h	/^    STD_AVS = 8,$/;"	e	enum:__anon5
+STD_DIV3	vpu_lib/vpu_lib.h	/^    STD_DIV3 =5,$/;"	e	enum:__anon5
+STD_H263	vpu_lib/vpu_lib.h	/^    STD_H263 = 1,$/;"	e	enum:__anon5
+STD_MJPG	vpu_lib/vpu_lib.h	/^    STD_MJPG = 7,$/;"	e	enum:__anon5
+STD_MPEG2	vpu_lib/vpu_lib.h	/^    STD_MPEG2 = 4,$/;"	e	enum:__anon5
+STD_MPEG4	vpu_lib/vpu_lib.h	/^    STD_MPEG4 = 0,$/;"	e	enum:__anon5
+STD_RV	vpu_lib/vpu_lib.h	/^    STD_RV = 6,$/;"	e	enum:__anon5
+STD_VC1	vpu_lib/vpu_lib.h	/^    STD_VC1 = 3,$/;"	e	enum:__anon5
+STD_VP8	vpu_lib/vpu_lib.h	/^    STD_VP8 = 9$/;"	e	enum:__anon5
+STREAM_BUF_SIZE	application/vpu_test.h	49;"	d
+STREAM_BUF_SIZE	application/vpu_test.h.BACKUP.805.h	71;"	d
+STREAM_BUF_SIZE	application/vpu_test.h.LOCAL.805.h	49;"	d
+STREAM_BUF_SIZE	application/vpu_test.h.REMOTE.805.h	49;"	d
+STREAM_ENC_PIC_RESET	application/vpu_test.h	57;"	d
+STREAM_ENC_PIC_RESET	application/vpu_test.h.BACKUP.805.h	79;"	d
+STREAM_ENC_PIC_RESET	application/vpu_test.h.LOCAL.805.h	57;"	d
+STREAM_ENC_PIC_RESET	application/vpu_test.h.REMOTE.805.h	57;"	d
+STREAM_ENDIAN	vpu_lib/vpu_lib.c	42;"	d	file:
+STREAM_END_SIZE	application/vpu_test.h	52;"	d
+STREAM_END_SIZE	application/vpu_test.h.BACKUP.805.h	74;"	d
+STREAM_END_SIZE	application/vpu_test.h.LOCAL.805.h	52;"	d
+STREAM_END_SIZE	application/vpu_test.h.REMOTE.805.h	52;"	d
+STREAM_FILL_SIZE	application/vpu_test.h	50;"	d
+STREAM_FILL_SIZE	application/vpu_test.h.BACKUP.805.h	72;"	d
+STREAM_FILL_SIZE	application/vpu_test.h.LOCAL.805.h	50;"	d
+STREAM_FILL_SIZE	application/vpu_test.h.REMOTE.805.h	50;"	d
+STREAM_FULL_EMPTY_CHECK_DISABLE	vpu_lib/vpu_lib.h	30;"	d
+STREAM_READ_SIZE	application/vpu_test.h	51;"	d
+STREAM_READ_SIZE	application/vpu_test.h.BACKUP.805.h	73;"	d
+STREAM_READ_SIZE	application/vpu_test.h.LOCAL.805.h	51;"	d
+STREAM_READ_SIZE	application/vpu_test.h.REMOTE.805.h	51;"	d
+SZ_4K	application/vpu_test.h	47;"	d
+SZ_4K	application/vpu_test.h.BACKUP.805.h	69;"	d
+SZ_4K	application/vpu_test.h.LOCAL.805.h	47;"	d
+SZ_4K	application/vpu_test.h.REMOTE.805.h	47;"	d
+SamplePerPixel	vpu_lib/vpu_util.h	/^    int			SamplePerPixel;$/;"	m	struct:__anon47
+SecAxiUse	vpu_lib/vpu_util.h	/^} SecAxiUse;$/;"	t	typeref:struct:__anon49
+SetGDIRegs	vpu_lib/vpu_gdi.c	/^void SetGDIRegs(GdiTiledMap *pTiledInfo)$/;"	f
+SetIramParam	vpu_lib/vpu_util.h	/^} SetIramParam;$/;"	t	typeref:struct:__anon56
+SetMaverickCache	vpu_lib/vpu_util.c	/^void SetMaverickCache(MaverickCacheConfig *pCacheConf, int mapType, int chromInterleave)$/;"	f
+SetParaSet	vpu_lib/vpu_util.c	/^void SetParaSet(DecHandle handle, int paraSetType, DecParamSet * para)$/;"	f
+SetTiledMapTypeInfo	vpu_lib/vpu_gdi.c	/^int SetTiledMapTypeInfo(GDI_TILED_MAP_TYPE TiledMapType, GdiTiledMap *pTiledInfo)$/;"	f
+SocIndex	vpu_lib/vpu_lib.h	/^} SocIndex;$/;"	t	typeref:enum:__anon28
+SocInfo	vpu_lib/vpu_lib.h	/^} SocInfo;$/;"	t	typeref:struct:__anon29
+SwapArray	vpu_lib/vpu_util.c	/^void SwapArray(Uint16 *input, Uint32 size)$/;"	f
+TAG	vpu_lib/vpu_util.h	/^}TAG;$/;"	t	typeref:struct:__anon44
+TEMP_BUF_SIZE	vpu_lib/vpu_reg.h	400;"	d
+THUMB_INFO	vpu_lib/vpu_util.h	/^} THUMB_INFO;$/;"	t	typeref:struct:__anon48
+TILED_FIELD_MB_RASTER_MAP	vpu_lib/vpu_lib.h	/^    TILED_FIELD_MB_RASTER_MAP = 2,$/;"	e	enum:__anon7
+TILED_FRAME_MB_RASTER_MAP	vpu_lib/vpu_lib.h	/^    TILED_FRAME_MB_RASTER_MAP = 1,$/;"	e	enum:__anon7
+TILED_MAP_TYPE_MAX	vpu_lib/vpu_lib.h	/^    TILED_MAP_TYPE_MAX$/;"	e	enum:__anon7
+TRANSCODE	application/vpu_test.h	70;"	d
+TRANSCODE	application/vpu_test.h.BACKUP.805.h	98;"	d
+TRANSCODE	application/vpu_test.h.LOCAL.805.h	68;"	d
+TRANSCODE	application/vpu_test.h.REMOTE.805.h	70;"	d
+ThumbType	vpu_lib/vpu_util.h	/^    int  		ThumbType;$/;"	m	struct:__anon48
+USER_DATA_INFO_OFFSET	application/vpu_test.h	76;"	d
+USER_DATA_INFO_OFFSET	application/vpu_test.h.BACKUP.805.h	104;"	d
+USER_DATA_INFO_OFFSET	application/vpu_test.h.LOCAL.805.h	74;"	d
+USER_DATA_INFO_OFFSET	application/vpu_test.h.REMOTE.805.h	76;"	d
+USER_DATA_INFO_OFFSET	vpu_lib/vpu_util.h	54;"	d
+Uint16	vpu_lib/vpu_lib.h	/^typedef unsigned short Uint16;$/;"	t
+Uint32	vpu_lib/vpu_lib.h	/^typedef unsigned long Uint32;$/;"	t
+Uint64	vpu_lib/vpu_lib.h	/^typedef unsigned long long Uint64;$/;"	t
+Uint8	vpu_lib/vpu_lib.h	/^typedef unsigned char Uint8;$/;"	t
+UnlockVpu	vpu_lib/vpu_util.h	/^static inline void UnlockVpu(semaphore_t *semap)$/;"	f
+UnlockVpuReg	vpu_lib/vpu_util.h	/^static inline void UnlockVpuReg(semaphore_t *semap)$/;"	f
+VC1_DEC	vpu_lib/vpu_util.h	/^    VC1_DEC = 1,$/;"	e	enum:__anon35
+VP8_MB_SAVE_SIZE	application/vpu_test.h	54;"	d
+VP8_MB_SAVE_SIZE	application/vpu_test.h.BACKUP.805.h	76;"	d
+VP8_MB_SAVE_SIZE	application/vpu_test.h.LOCAL.805.h	54;"	d
+VP8_MB_SAVE_SIZE	application/vpu_test.h.REMOTE.805.h	54;"	d
+VPU_FW_VERSION	vpu_lib/vpu_lib.h	427;"	d
+VPU_GBU_SIZE	vpu_lib/vpu_util.h	55;"	d
+VPU_LIB_VERSION	vpu_lib/vpu_lib.h	430;"	d
+VPU_LIB_VERSION_CODE	vpu_lib/vpu_lib.h	445;"	d
+VPU_SW_RESET_BPU_BUS	vpu_lib/vpu_util.h	76;"	d
+VPU_SW_RESET_BPU_CORE	vpu_lib/vpu_util.h	75;"	d
+VPU_SW_RESET_GDI_BUS	vpu_lib/vpu_util.h	80;"	d
+VPU_SW_RESET_GDI_CORE	vpu_lib/vpu_util.h	79;"	d
+VPU_SW_RESET_VCE_BUS	vpu_lib/vpu_util.h	78;"	d
+VPU_SW_RESET_VCE_CORE	vpu_lib/vpu_util.h	77;"	d
+VPU_WAKE	vpu_lib/vpu_util.h	/^    VPU_WAKE = 11,$/;"	e	enum:__anon39
+VPX_AUX_THO	vpu_lib/vpu_util.h	/^    VPX_AUX_THO = 0,$/;"	e	enum:__anon37
+VPX_AUX_VP6	vpu_lib/vpu_util.h	/^    VPX_AUX_VP6 = 1,$/;"	e	enum:__anon37
+VPX_AUX_VP8	vpu_lib/vpu_util.h	/^    VPX_AUX_VP8 = 2$/;"	e	enum:__anon37
+VPX_DEC	vpu_lib/vpu_util.h	/^    VPX_DEC = 7,$/;"	e	enum:__anon35
+Version	vpu_lib/vpu_util.h	/^    int  		Version;$/;"	m	struct:__anon48
+VirtualAddress	vpu_lib/vpu_lib.h	/^typedef Uint32 VirtualAddress;$/;"	t
+VlcPutBitstream	vpu_lib/vpu_util.h	/^} VlcPutBitstream;$/;"	t	typeref:struct:__anon61
+VpuReadReg	vpu_lib/vpu_io.c	/^Value VpuReadReg(Address addr){$/;"	f
+VpuWriteReg	vpu_lib/vpu_io.c	/^Value VpuWriteReg(Address addr, Value data){$/;"	f
+VuiParam	vpu_lib/vpu_lib.h	/^} VuiParam;$/;"	t	typeref:struct:__anon25
+WriteMemProtectCfg	vpu_lib/vpu_util.h	/^} WriteMemProtectCfg;$/;"	t	typeref:struct:__anon55
+WriteMemProtectRegion	vpu_lib/vpu_util.h	/^} WriteMemProtectRegion;$/;"	t	typeref:struct:__anon54
+XY2	vpu_lib/vpu_gdi.h	30;"	d
+XY2BANK	vpu_lib/vpu_gdi.h	31;"	d
+XY2CONFIG	vpu_lib/vpu_gdi.h	29;"	d
+X_SEL	vpu_lib/vpu_gdi.h	/^    X_SEL = 0,$/;"	e	enum:__anon30
+YCBCR_SUBSAMPLING	vpu_lib/vpu_util.h	/^    YCBCR_SUBSAMPLING	= 0x0212,$/;"	e	enum:__anon43
+YCbCrSubSample	vpu_lib/vpu_util.h	/^    int			YCbCrSubSample; \/\/ 00020002 for YCbCr 4:2:0 \/ 00020001 for YCbCr 4:2:2$/;"	m	struct:__anon47
+Y_SEL	vpu_lib/vpu_gdi.h	/^    Y_SEL = 1,$/;"	e	enum:__anon30
+Z_SEL	vpu_lib/vpu_gdi.h	/^	Z_SEL = 3,$/;"	e	enum:__anon31
+_DEC_H	application/vpu_test.h	15;"	d
+_DEC_H	application/vpu_test.h.BACKUP.805.h	15;"	d
+_DEC_H	application/vpu_test.h.LOCAL.805.h	15;"	d
+_DEC_H	application/vpu_test.h.REMOTE.805.h	15;"	d
+_VPU_UTIL_H_	vpu_lib/vpu_util.h	14;"	d
+__VPU_DEBUG_H	vpu_lib/vpu_debug.h	15;"	d
+__VPU__IO__H	vpu_lib/vpu_io.h	18;"	d
+__VPU__LIB__H	vpu_lib/vpu_lib.h	20;"	d
+__VPU__REG__H	vpu_lib/vpu_reg.h	17;"	d
+addrCb	application/vpu_test.h	/^	int addrCb;$/;"	m	struct:frame_buf
+addrCb	application/vpu_test.h.LOCAL.805.h	/^    int addrCb;$/;"	m	struct:frame_buf
+addrCb	application/vpu_test.h.REMOTE.805.h	/^	int addrCb;$/;"	m	struct:frame_buf
+addrCr	application/vpu_test.h	/^	int addrCr;$/;"	m	struct:frame_buf
+addrCr	application/vpu_test.h.LOCAL.805.h	/^    int addrCr;$/;"	m	struct:frame_buf
+addrCr	application/vpu_test.h.REMOTE.805.h	/^	int addrCr;$/;"	m	struct:frame_buf
+addrY	application/vpu_test.h	/^	int addrY;$/;"	m	struct:frame_buf
+addrY	application/vpu_test.h.LOCAL.805.h	/^    int addrY;$/;"	m	struct:frame_buf
+addrY	application/vpu_test.h.REMOTE.805.h	/^	int addrY;$/;"	m	struct:frame_buf
+adwRBSPStart	vpu_lib/vpu_util.h	/^    unsigned long  adwRBSPStart[MAX_RBSP_SIZE];$/;"	m	struct:__anon61
+api_lock	vpu_lib/vpu_util.h	/^    fifo_mutex_t api_lock;$/;"	m	struct:__anon63
+aspectRateInfo	vpu_lib/vpu_lib.h	/^    int aspectRateInfo;$/;"	m	struct:__anon14
+aspectRateInfo	vpu_lib/vpu_lib.h	/^    int aspectRateInfo;$/;"	m	struct:__anon23
+avcExtension	vpu_lib/vpu_lib.h	/^    int avcExtension;$/;"	m	struct:__anon13
+avcFpaSei	vpu_lib/vpu_lib.h	/^    AvcFpaSei avcFpaSei;$/;"	m	struct:__anon23
+avcSliceBufInfo	vpu_lib/vpu_lib.h	/^    ExtBufCfg avcSliceBufInfo;$/;"	m	struct:__anon18
+bitCode	vpu_lib/vpu_bitcode.c	/^Uint16 bitCode[] = { 0x0ee4, 0x2000, 0x70e4, 0x90e1, 0x70e4, 0x90e1, 0x70e4, 0x90e1,$/;"	v
+bitCodeInfo	vpu_lib/vpu_bitcode.c	/^Uint16 bitCodeInfo[] = { 0x4d58, 0x3651, 0x0000, 0x0000, 0x0000, 0x0000, 0x00f0, 0x0100 };$/;"	v
+bitRate	vpu_lib/vpu_lib.h	/^    int bitRate;$/;"	m	struct:__anon14
+bit_dec_work_addr	vpu_lib/vpu_io.c	/^vpu_mem_desc bit_dec_work_addr; \/\/ Keeps track of working address for Decoder$/;"	v
+bit_work_addr	vpu_lib/vpu_io.c	/^vpu_mem_desc bit_work_addr;$/;"	v
+bitrate	application/vpu_test.h	/^	int bitrate;$/;"	m	struct:cmd_line
+bitrate	application/vpu_test.h.LOCAL.805.h	/^    int bitrate;$/;"	m	struct:cmd_line
+bitrate	application/vpu_test.h.REMOTE.805.h	/^	int bitrate;$/;"	m	struct:cmd_line
+bitrate	vpu_lib/vpu_lib.h	/^    Uint32 bitrate;$/;"	m	struct:__anon27
+bitstreamBuffer	vpu_lib/vpu_lib.h	/^    PhysicalAddress bitstreamBuffer;$/;"	m	struct:__anon13
+bitstreamBufferSize	vpu_lib/vpu_lib.h	/^    int bitstreamBufferSize;$/;"	m	struct:__anon13
+bitstreamFormat	vpu_lib/vpu_lib.h	/^    CodStd bitstreamFormat;$/;"	m	struct:__anon13
+bitstreamMode	vpu_lib/vpu_lib.h	/^    int bitstreamMode;$/;"	m	struct:__anon13
+bottom	vpu_lib/vpu_lib.h	/^    Uint32 bottom;$/;"	m	struct:__anon10
+bs_mode	application/vpu_test.h	/^	int bs_mode;$/;"	m	struct:cmd_line
+bs_mode	application/vpu_test.h.LOCAL.805.h	/^    int bs_mode;$/;"	m	struct:cmd_line
+bs_mode	application/vpu_test.h.REMOTE.805.h	/^	int bs_mode;$/;"	m	struct:cmd_line
+bufBitUse	vpu_lib/vpu_util.h	/^    PhysicalAddress bufBitUse;$/;"	m	struct:__anon49
+bufBtpUse	vpu_lib/vpu_util.h	/^    PhysicalAddress bufBtpUse;$/;"	m	struct:__anon49
+bufCb	vpu_lib/vpu_lib.h	/^    PhysicalAddress bufCb;$/;"	m	struct:__anon9
+bufCr	vpu_lib/vpu_lib.h	/^    PhysicalAddress bufCr;$/;"	m	struct:__anon9
+bufDbkCUse	vpu_lib/vpu_util.h	/^    PhysicalAddress bufDbkCUse;$/;"	m	struct:__anon49
+bufDbkYUse	vpu_lib/vpu_util.h	/^    PhysicalAddress bufDbkYUse;$/;"	m	struct:__anon49
+bufIpAcDcUse	vpu_lib/vpu_util.h	/^    PhysicalAddress bufIpAcDcUse;$/;"	m	struct:__anon49
+bufMvCol	vpu_lib/vpu_lib.h	/^    PhysicalAddress bufMvCol; \/\/TODO: Check if this is used ?$/;"	m	struct:__anon9
+bufOvlUse	vpu_lib/vpu_util.h	/^    PhysicalAddress bufOvlUse;$/;"	m	struct:__anon49
+bufY	vpu_lib/vpu_lib.h	/^    PhysicalAddress bufY;$/;"	m	struct:__anon9
+buf_head	vpu_lib/vpu_util.h	/^    int buf_head;$/;"	m	struct:fifo_mutex
+buf_tail	vpu_lib/vpu_util.h	/^    int buf_tail;$/;"	m	struct:fifo_mutex
+buffer	vpu_lib/vpu_util.h	/^    Uint8 *buffer;$/;"	m	struct:__anon46
+bufferBase	vpu_lib/vpu_lib.h	/^    PhysicalAddress bufferBase;$/;"	m	struct:__anon15
+bufferSize	vpu_lib/vpu_lib.h	/^    int bufferSize;$/;"	m	struct:__anon15
+ca_inc_hor	vpu_lib/vpu_gdi.h	/^	int ca_inc_hor;$/;"	m	struct:__anon32
+cacheConfig	vpu_lib/vpu_util.h	/^    MaverickCacheConfig cacheConfig;$/;"	m	struct:__anon58
+capture_testbuffer	application/vpu_test.h	/^struct capture_testbuffer {$/;"	s
+capture_testbuffer	application/vpu_test.h.LOCAL.805.h	/^struct capture_testbuffer {$/;"	s
+capture_testbuffer	application/vpu_test.h.REMOTE.805.h	/^struct capture_testbuffer {$/;"	s
+cfg	vpu_lib/vpu_util.h	/^        CacheSizeCfg cfg;$/;"	m	union:__anon50::__anon51
+cfg	vpu_lib/vpu_util.h	/^        CacheSizeCfg cfg;$/;"	m	union:__anon50::__anon52
+chroma	vpu_lib/vpu_util.h	/^    } chroma;$/;"	m	struct:__anon50	typeref:union:__anon50::__anon52
+chromaInterleave	application/vpu_test.h	/^	int chromaInterleave;$/;"	m	struct:cmd_line
+chromaInterleave	application/vpu_test.h.LOCAL.805.h	/^    int chromaInterleave;$/;"	m	struct:cmd_line
+chromaInterleave	application/vpu_test.h.REMOTE.805.h	/^	int chromaInterleave;$/;"	m	struct:cmd_line
+chromaInterleave	vpu_lib/vpu_lib.h	/^    int chromaInterleave;$/;"	m	struct:__anon13
+cmd_line	application/vpu_test.h	/^struct cmd_line {$/;"	s
+cmd_line	application/vpu_test.h.BACKUP.805.h	/^struct cmd_line {$/;"	s
+cmd_line	application/vpu_test.h.LOCAL.805.h	/^struct cmd_line {$/;"	s
+cmd_line	application/vpu_test.h.REMOTE.805.h	/^struct cmd_line {$/;"	s
+cmdl	application/vpu_test.h	/^	struct cmd_line *cmdl;$/;"	m	struct:decode	typeref:struct:decode::cmd_line
+cmdl	application/vpu_test.h.LOCAL.805.h	/^    struct cmd_line *cmdl;$/;"	m	struct:decode	typeref:struct:decode::cmd_line
+cmdl	application/vpu_test.h.REMOTE.805.h	/^	struct cmd_line *cmdl;$/;"	m	struct:decode	typeref:struct:decode::cmd_line
+codeBuffer	vpu_lib/vpu_lib.c	/^Address codeBuffer;$/;"	v
+codecInstPool	vpu_lib/vpu_util.h	/^    CodecInst codecInstPool[MAX_NUM_INSTANCE];$/;"	m	struct:__anon62
+codecMode	vpu_lib/vpu_util.h	/^    int codecMode;$/;"	m	struct:CodecInst
+codecMode	vpu_lib/vpu_util.h	/^    int codecMode;$/;"	m	struct:__anon56
+codecModeAux	vpu_lib/vpu_util.h	/^    int codecModeAux;$/;"	m	struct:CodecInst
+colour_descrip_pres_flag	vpu_lib/vpu_lib.h	/^    int colour_descrip_pres_flag;$/;"	m	struct:__anon25
+colour_primaries	vpu_lib/vpu_lib.h	/^    char colour_primaries;$/;"	m	struct:__anon25
+complete	application/vpu_test.h	/^	Uint16 complete; \/* wait for the requested buf to be filled completely *\/$/;"	m	struct:cmd_line
+complete	application/vpu_test.h.LOCAL.805.h	/^    Uint16 complete; \/* wait for the requested buf to be filled completely *\/$/;"	m	struct:cmd_line
+complete	application/vpu_test.h.REMOTE.805.h	/^	Uint16 complete; \/* wait for the requested buf to be filled completely *\/$/;"	m	struct:cmd_line
+cond	vpu_lib/vpu_util.h	/^    pthread_cond_t cond;$/;"	m	struct:fifo_mutex
+constraint_set_flag	vpu_lib/vpu_lib.h	/^    int constraint_set_flag[4];$/;"	m	struct:__anon14
+consumedByte	vpu_lib/vpu_lib.h	/^    int consumedByte;   $/;"	m	struct:__anon23
+content_interpretation_type	vpu_lib/vpu_lib.h	/^    unsigned content_interpretation_type;$/;"	m	struct:__anon22
+contextBufMem	vpu_lib/vpu_util.h	/^    vpu_mem_desc contextBufMem; \/* For context buffer *\/$/;"	m	struct:CodecInst
+count	application/vpu_test.h	/^	int count;$/;"	m	struct:cmd_line
+count	application/vpu_test.h.LOCAL.805.h	/^    int count;$/;"	m	struct:cmd_line
+count	application/vpu_test.h.REMOTE.805.h	/^	int count;$/;"	m	struct:cmd_line
+count	vpu_lib/vpu_util.h	/^    int		count;$/;"	m	struct:__anon44
+cpu_addr	vpu_lib/vpu_io.h	/^	unsigned long cpu_addr;	\/*!cpu addr for system free usage *\/$/;"	m	struct:vpu_mem_desc
+ctxRegs	vpu_lib/vpu_util.h	/^    unsigned long ctxRegs[CTX_MAX_REGS];$/;"	m	struct:CodecInst
+current_frame_is_frame0_flag	vpu_lib/vpu_lib.h	/^    unsigned current_frame_is_frame0_flag;$/;"	m	struct:__anon22
+dbkOffset	vpu_lib/vpu_util.h	/^    DbkOffset dbkOffset;$/;"	m	struct:__anon58
+deBlockingFilterOutput	vpu_lib/vpu_util.h	/^    FrameBuffer deBlockingFilterOutput;$/;"	m	struct:__anon58
+deBlockingFilterOutputValid	vpu_lib/vpu_util.h	/^    int deBlockingFilterOutputValid;$/;"	m	struct:__anon58
+deblock_en	application/vpu_test.h	/^	int deblock_en;$/;"	m	struct:cmd_line
+deblock_en	application/vpu_test.h.LOCAL.805.h	/^    int deblock_en;$/;"	m	struct:cmd_line
+deblock_en	application/vpu_test.h.REMOTE.805.h	/^	int deblock_en;$/;"	m	struct:cmd_line
+decInfo	vpu_lib/vpu_util.h	/^        DecInfo decInfo;$/;"	m	union:CodecInst::__anon59
+decParam	vpu_lib/vpu_util.h	/^        DecParam decParam;$/;"	m	union:CodecInst::__anon60
+decPicCrop	vpu_lib/vpu_lib.h	/^    Rect decPicCrop;$/;"	m	struct:__anon23
+decPicHeight	vpu_lib/vpu_lib.h	/^    int decPicHeight;$/;"	m	struct:__anon23
+decPicWidth	vpu_lib/vpu_lib.h	/^    int decPicWidth;$/;"	m	struct:__anon23
+dec_fill_bsbuffer	vpu_as.c	/^int dec_fill_bsbuffer(DecHandle handle, struct cmd_line *cmd, Uint32 bs_va_startaddr, Uint32 bs_va_endaddr,$/;"	f
+decode	application/vpu_test.h	/^struct decode {$/;"	s
+decode	application/vpu_test.h.LOCAL.805.h	/^struct decode {$/;"	s
+decode	application/vpu_test.h.REMOTE.805.h	/^struct decode {$/;"	s
+decoded_field	application/vpu_test.h	/^	int decoded_field[32];$/;"	m	struct:decode
+decoded_field	application/vpu_test.h.LOCAL.805.h	/^    int decoded_field[32];$/;"	m	struct:decode
+decoded_field	application/vpu_test.h.REMOTE.805.h	/^	int decoded_field[32];$/;"	m	struct:decode
+decoded_pictype	vpu_lib/vpu_util.h	/^    int decoded_pictype[32];$/;"	m	struct:__anon58
+decoder_allocate_framebuffer	vpu_as.c	/^int decoder_allocate_framebuffer(struct decode *dec){$/;"	f
+decoder_parse	vpu_as.c	/^int decoder_parse(struct decode *dec)$/;"	f
+decoder_start	vpu_as.c	/^int decoder_start(struct decode *dec)$/;"	f
+decodingSuccess	vpu_lib/vpu_lib.h	/^    int decodingSuccess;$/;"	m	struct:__anon23
+deringEnable	vpu_lib/vpu_util.h	/^    int deringEnable;$/;"	m	struct:__anon58
+dering_en	application/vpu_test.h	/^	int dering_en;$/;"	m	struct:cmd_line
+dering_en	application/vpu_test.h.LOCAL.805.h	/^    int dering_en;$/;"	m	struct:cmd_line
+dering_en	application/vpu_test.h.REMOTE.805.h	/^	int dering_en;$/;"	m	struct:cmd_line
+desc	application/vpu_test.h	/^	vpu_mem_desc desc;$/;"	m	struct:frame_buf
+desc	application/vpu_test.h.LOCAL.805.h	/^    vpu_mem_desc desc;$/;"	m	struct:frame_buf
+desc	application/vpu_test.h.REMOTE.805.h	/^	vpu_mem_desc desc;$/;"	m	struct:frame_buf
+direct8x8Flag	vpu_lib/vpu_lib.h	/^    int direct8x8Flag;$/;"	m	struct:__anon14
+disp	application/vpu_test.h	/^	struct vpu_display *disp;$/;"	m	struct:decode	typeref:struct:decode::vpu_display
+disp	application/vpu_test.h.LOCAL.805.h	/^    struct vpu_display *disp;$/;"	m	struct:decode	typeref:struct:decode::vpu_display
+disp	application/vpu_test.h.REMOTE.805.h	/^	struct vpu_display *disp;$/;"	m	struct:decode	typeref:struct:decode::vpu_display
+dispReorderBuf	vpu_lib/vpu_lib.h	/^    int dispReorderBuf;$/;"	m	struct:__anon20
+dprintf	vpu_lib/vpu_debug.h	36;"	d
+dst_fd	application/vpu_test.h	/^	int dst_fd;$/;"	m	struct:cmd_line
+dst_fd	application/vpu_test.h.LOCAL.805.h	/^    int dst_fd;$/;"	m	struct:cmd_line
+dst_fd	application/vpu_test.h.REMOTE.805.h	/^	int dst_fd;$/;"	m	struct:cmd_line
+dst_scheme	application/vpu_test.h	/^	int dst_scheme;$/;"	m	struct:cmd_line
+dst_scheme	application/vpu_test.h.LOCAL.805.h	/^    int dst_scheme;$/;"	m	struct:cmd_line
+dst_scheme	application/vpu_test.h.REMOTE.805.h	/^	int dst_scheme;$/;"	m	struct:cmd_line
+dumpSizeInIntegrity	vpu_lib/vpu_lib.c	/^void dumpSizeInIntegrity(){$/;"	f
+dump_reg	vpu_lib/vpu_debug.c	/^void dump_reg(Uint32 base,char *regname)$/;"	f
+dump_regs	vpu_lib/vpu_debug.c	/^void dump_regs(Uint32 base, int cnt)$/;"	f
+dwWordStorage	vpu_lib/vpu_util.h	/^    unsigned long  dwWordStorage;$/;"	m	struct:__anon61
+dynamicAllocEnable	vpu_lib/vpu_util.h	/^    int dynamicAllocEnable;$/;"	m	struct:__anon58
+enable	vpu_lib/vpu_util.h	/^    int enable;$/;"	m	struct:__anon54
+enc_height	application/vpu_test.h	/^	int enc_height;$/;"	m	struct:cmd_line
+enc_height	application/vpu_test.h.LOCAL.805.h	/^    int enc_height;$/;"	m	struct:cmd_line
+enc_height	application/vpu_test.h.REMOTE.805.h	/^	int enc_height;$/;"	m	struct:cmd_line
+enc_width	application/vpu_test.h	/^	int enc_width;$/;"	m	struct:cmd_line
+enc_width	application/vpu_test.h.LOCAL.805.h	/^    int enc_width;$/;"	m	struct:cmd_line
+enc_width	application/vpu_test.h.REMOTE.805.h	/^	int enc_width;$/;"	m	struct:cmd_line
+end	vpu_lib/vpu_io.h	/^        unsigned long end;$/;"	m	struct:iram_t
+end_address	vpu_lib/vpu_util.h	/^    PhysicalAddress end_address;$/;"	m	struct:__anon54
+err_msg	vpu_lib/vpu_debug.h	22;"	d
+errorcode	vpu_lib/vpu_lib.h	/^    Uint32 errorcode;$/;"	m	struct:__anon14
+exist	vpu_lib/vpu_lib.h	/^    unsigned exist;$/;"	m	struct:__anon22
+extrafb	application/vpu_test.h	/^	int extrafb;$/;"	m	struct:decode
+extrafb	application/vpu_test.h.LOCAL.805.h	/^    int extrafb;$/;"	m	struct:decode
+extrafb	application/vpu_test.h.REMOTE.805.h	/^	int extrafb;$/;"	m	struct:decode
+fakeipu	application/vpu_test.h	/^struct fakeipu {$/;"	s
+fakeipu	application/vpu_test.h.BACKUP.805.h	/^struct fakeipu {$/;"	s
+fakeipu	application/vpu_test.h.LOCAL.805.h	/^struct fakeipu {$/;"	s
+fakeipu	application/vpu_test.h.REMOTE.805.h	/^struct fakeipu {$/;"	s
+false	vpu_lib/vpu_io.h	39;"	d
+fb	application/vpu_test.h	/^	FrameBuffer *fb;$/;"	m	struct:decode
+fb	application/vpu_test.h.LOCAL.805.h	/^    FrameBuffer *fb;$/;"	m	struct:decode
+fb	application/vpu_test.h.REMOTE.805.h	/^	FrameBuffer *fb;$/;"	m	struct:decode
+fb_index	application/fb.c	/^static int fb_index;$/;"	v	file:
+fbarray	application/fb.c	/^static struct frame_buf *fbarray[NUM_FRAME_BUFS];$/;"	v	typeref:struct:frame_buf	file:
+fbpool	application/fb.c	/^static struct frame_buf fbpool[NUM_FRAME_BUFS];$/;"	v	typeref:struct:frame_buf	file:
+field	application/vpu_test.h	/^	int field;$/;"	m	struct:ipu_buf
+field	application/vpu_test.h.LOCAL.805.h	/^    int field;$/;"	m	struct:ipu_buf
+field	application/vpu_test.h.REMOTE.805.h	/^	int field;$/;"	m	struct:ipu_buf
+fieldSequence	vpu_lib/vpu_lib.h	/^    int fieldSequence;$/;"	m	struct:__anon23
+field_views_flag	vpu_lib/vpu_lib.h	/^    unsigned field_views_flag;$/;"	m	struct:__anon22
+fifo_mutex	vpu_lib/vpu_util.h	/^typedef struct fifo_mutex {$/;"	s
+fifo_mutex_t	vpu_lib/vpu_util.h	/^} fifo_mutex_t;$/;"	t	typeref:struct:fifo_mutex
+filePlayEnable	vpu_lib/vpu_util.h	/^    int filePlayEnable;$/;"	m	struct:__anon58
+format	application/vpu_test.h	/^	CodStd format;$/;"	m	struct:cmd_line
+format	application/vpu_test.h.LOCAL.805.h	/^    CodStd format;$/;"	m	struct:cmd_line
+format	application/vpu_test.h.REMOTE.805.h	/^	CodStd format;$/;"	m	struct:cmd_line
+fps	application/vpu_test.h	/^	int fps;$/;"	m	struct:cmd_line
+fps	application/vpu_test.h.LOCAL.805.h	/^    int fps;$/;"	m	struct:cmd_line
+fps	application/vpu_test.h.REMOTE.805.h	/^	int fps;$/;"	m	struct:cmd_line
+frame0_flipped_flag	vpu_lib/vpu_lib.h	/^    unsigned frame0_flipped_flag;$/;"	m	struct:__anon22
+frame0_grid_position_x	vpu_lib/vpu_lib.h	/^    unsigned frame0_grid_position_x;$/;"	m	struct:__anon22
+frame0_grid_position_y	vpu_lib/vpu_lib.h	/^    unsigned frame0_grid_position_y;$/;"	m	struct:__anon22
+frame0_self_contained_flag	vpu_lib/vpu_lib.h	/^    unsigned frame0_self_contained_flag;$/;"	m	struct:__anon22
+frame1_grid_position_x	vpu_lib/vpu_lib.h	/^    unsigned frame1_grid_position_x;$/;"	m	struct:__anon22
+frame1_grid_position_y	vpu_lib/vpu_lib.h	/^    unsigned frame1_grid_position_y;$/;"	m	struct:__anon22
+frame1_self_contained_flag	vpu_lib/vpu_lib.h	/^    unsigned frame1_self_contained_flag;$/;"	m	struct:__anon22
+frameBufDelay	vpu_lib/vpu_lib.h	/^    int frameBufDelay;$/;"	m	struct:__anon14
+frameBufPool	vpu_lib/vpu_util.h	/^    FrameBuffer *frameBufPool;$/;"	m	struct:__anon58
+frameBufStat	application/vpu_test.h.LOCAL.805.h	/^    DecReportInfo frameBufStat;$/;"	m	struct:decode
+frameBufStat	application/vpu_test.h.REMOTE.805.h	/^	DecReportInfo frameBufStat;$/;"	m	struct:decode
+frameEndPos	vpu_lib/vpu_lib.h	/^    int frameEndPos;    $/;"	m	struct:__anon23
+frameRateDiv	vpu_lib/vpu_lib.h	/^    Uint32 frameRateDiv;   $/;"	m	struct:__anon23
+frameRateDiv	vpu_lib/vpu_lib.h	/^ Uint32 frameRateDiv;   $/;"	m	struct:__anon14
+frameRateRes	vpu_lib/vpu_lib.h	/^     Uint32 frameRateRes;   $/;"	m	struct:__anon23
+frameRateRes	vpu_lib/vpu_lib.h	/^ Uint32 frameRateRes;$/;"	m	struct:__anon14
+frameStartPos	vpu_lib/vpu_lib.h	/^    int frameStartPos;   $/;"	m	struct:__anon23
+frame_buf	application/vpu_test.h	/^struct frame_buf {$/;"	s
+frame_buf	application/vpu_test.h.BACKUP.805.h	/^struct frame_buf {$/;"	s
+frame_buf	application/vpu_test.h.LOCAL.805.h	/^struct frame_buf {$/;"	s
+frame_buf	application/vpu_test.h.REMOTE.805.h	/^struct frame_buf {$/;"	s
+frame_delay	vpu_lib/vpu_util.h	/^    int frame_delay;$/;"	m	struct:__anon58
+frame_packing_arrangement_cancel_flag	vpu_lib/vpu_lib.h	/^    unsigned frame_packing_arrangement_cancel_flag;$/;"	m	struct:__anon22
+frame_packing_arrangement_ext_flag	vpu_lib/vpu_lib.h	/^    unsigned frame_packing_arrangement_ext_flag;$/;"	m	struct:__anon22
+frame_packing_arrangement_id	vpu_lib/vpu_lib.h	/^    unsigned frame_packing_arrangement_id;$/;"	m	struct:__anon22
+frame_packing_arrangement_repetition_period	vpu_lib/vpu_lib.h	/^    unsigned frame_packing_arrangement_repetition_period;$/;"	m	struct:__anon22
+frame_packing_arrangement_type	vpu_lib/vpu_lib.h	/^    unsigned frame_packing_arrangement_type;$/;"	m	struct:__anon22
+framebuf_alloc	application/fb.c	/^struct frame_buf *framebuf_alloc(int stdMode, int format, int strideY, int height, int mvCol)$/;"	f
+framebuf_free	application/fb.c	/^void framebuf_free(struct frame_buf *fb)$/;"	f
+framebuf_init	application/fb.c	/^void framebuf_init(void)$/;"	f
+framerate	vpu_lib/vpu_lib.h	/^    Uint32 framerate;$/;"	m	struct:__anon27
+freadn	vpu_as.c	/^int freadn(int fd, void *vptr, size_t n)$/;"	f
+fw_code	vpu_lib/vpu_lib.h	/^    int fw_code;		\/* firmware checkin code number *\/$/;"	m	struct:vpu_versioninfo
+fw_major	vpu_lib/vpu_lib.h	/^    int fw_major;		\/* firmware major version *\/$/;"	m	struct:vpu_versioninfo
+fw_minor	vpu_lib/vpu_lib.h	/^    int fw_minor;		\/* firmware minor version *\/$/;"	m	struct:vpu_versioninfo
+fw_release	vpu_lib/vpu_lib.h	/^    int fw_release;		\/* firmware release version *\/$/;"	m	struct:vpu_versioninfo
+fwriten	vpu_as.c	/^int fwriten(int fd, void *vptr, size_t n)$/;"	f
+getSharedMemory	vpu_lib/vpu_io.c	/^static Error getSharedMemory( const char *regionName, Value *Start, Value *Size )$/;"	f	file:
+get_bits	vpu_lib/vpu_util.h	192;"	d
+get_bits_count	vpu_lib/vpu_util.h	194;"	d
+get_bits_left	vpu_lib/vpu_util.h	193;"	d
+get_dec_work_addr	vpu_lib/vpu_io.c	/^RetCode get_dec_work_addr(vpu_mem_desc *mem_desc){$/;"	f
+get_framebuf	application/fb.c	/^struct frame_buf *get_framebuf(void)$/;"	f
+gop	application/vpu_test.h	/^	int gop;$/;"	m	struct:cmd_line
+gop	application/vpu_test.h.LOCAL.805.h	/^    int gop;$/;"	m	struct:cmd_line
+gop	application/vpu_test.h.REMOTE.805.h	/^	int gop;$/;"	m	struct:cmd_line
+gopNumber	vpu_lib/vpu_lib.h	/^    Uint32 gopNumber;$/;"	m	struct:__anon27
+h264Npf	vpu_lib/vpu_lib.h	/^    int h264Npf;$/;"	m	struct:__anon23
+hScaleFlag	vpu_lib/vpu_lib.h	/^    int hScaleFlag;$/;"	m	struct:__anon23
+handle	application/vpu_test.h	/^	DecHandle handle;$/;"	m	struct:decode
+handle	application/vpu_test.h.LOCAL.805.h	/^    DecHandle handle;$/;"	m	struct:decode
+handle	application/vpu_test.h.REMOTE.805.h	/^	DecHandle handle;$/;"	m	struct:decode
+head	application/vpu_test.h	/^	int head;$/;"	m	struct:ipu_queue
+head	application/vpu_test.h.LOCAL.805.h	/^    int head;$/;"	m	struct:ipu_queue
+head	application/vpu_test.h.REMOTE.805.h	/^	int head;$/;"	m	struct:ipu_queue
+headerInfo	vpu_lib/vpu_util.c	/^} headerInfo;$/;"	t	typeref:struct:__anon64	file:
+height	application/vpu_test.h	/^	int height;$/;"	m	struct:cmd_line
+height	application/vpu_test.h.LOCAL.805.h	/^    int height;$/;"	m	struct:cmd_line
+height	application/vpu_test.h.REMOTE.805.h	/^	int height;$/;"	m	struct:cmd_line
+height	vpu_lib/vpu_util.h	/^    int height;$/;"	m	struct:__anon56
+iWordRemBits	vpu_lib/vpu_util.h	/^    int            iWordRemBits; \/* MAX 32 bit *\/$/;"	m	struct:__anon61
+id	vpu_lib/vpu_lib.h	/^    int id;$/;"	m	struct:__anon29
+idrFlg	vpu_lib/vpu_lib.h	/^    int idrFlg;      $/;"	m	struct:__anon23
+iframe	application/vpu_test.h	/^	int iframe;$/;"	m	struct:cmd_line
+iframe	application/vpu_test.h.LOCAL.805.h	/^    int iframe;$/;"	m	struct:cmd_line
+iframe	application/vpu_test.h.REMOTE.805.h	/^	int iframe;$/;"	m	struct:cmd_line
+iframeSearchEnable	vpu_lib/vpu_lib.h	/^    int iframeSearchEnable;$/;"	m	struct:__anon20
+inUse	vpu_lib/vpu_util.h	/^    int inUse;$/;"	m	struct:CodecInst
+inUse	vpu_lib/vpu_util.h	/^    int inUse;$/;"	m	struct:ts_item
+index	vpu_lib/vpu_util.h	/^    int index;$/;"	m	struct:__anon46
+indexFrameDecoded	vpu_lib/vpu_lib.h	/^    int indexFrameDecoded;$/;"	m	struct:__anon23
+indexFrameDisplay	vpu_lib/vpu_lib.h	/^    int indexFrameDisplay;$/;"	m	struct:__anon23
+indexFrameRangemap	vpu_lib/vpu_lib.h	/^    int indexFrameRangemap;$/;"	m	struct:__anon23
+info_msg	vpu_lib/vpu_debug.h	26;"	d
+init_get_bits	vpu_lib/vpu_util.h	190;"	d
+initialInfo	vpu_lib/vpu_util.h	/^    DecInitialInfo initialInfo;$/;"	m	struct:__anon58
+initialInfoObtained	vpu_lib/vpu_util.h	/^    int initialInfoObtained;$/;"	m	struct:__anon58
+input	application/vpu_test.h	/^	char input[MAX_PATH];	\/* Input file name *\/$/;"	m	struct:cmd_line
+input	application/vpu_test.h.LOCAL.805.h	/^    char input[MAX_PATH];	\/* Input file name *\/$/;"	m	struct:cmd_line
+input	application/vpu_test.h.REMOTE.805.h	/^	char input[MAX_PATH];	\/* Input file name *\/$/;"	m	struct:cmd_line
+instIndex	vpu_lib/vpu_util.h	/^    int instIndex;$/;"	m	struct:CodecInst
+interlace	vpu_lib/vpu_lib.h	/^    int interlace;$/;"	m	struct:__anon14
+interlacedFrame	vpu_lib/vpu_lib.h	/^    int interlacedFrame;$/;"	m	struct:__anon23
+intraQp	vpu_lib/vpu_lib.h	/^    Uint32 intraQp;$/;"	m	struct:__anon27
+ipu_buf	application/vpu_test.h	/^struct ipu_buf {$/;"	s
+ipu_buf	application/vpu_test.h.LOCAL.805.h	/^struct ipu_buf {$/;"	s
+ipu_buf	application/vpu_test.h.REMOTE.805.h	/^struct ipu_buf {$/;"	s
+ipu_paddr	application/vpu_test.h	/^	int ipu_paddr;$/;"	m	struct:ipu_buf
+ipu_paddr	application/vpu_test.h.LOCAL.805.h	/^    int ipu_paddr;$/;"	m	struct:ipu_buf
+ipu_paddr	application/vpu_test.h.REMOTE.805.h	/^	int ipu_paddr;$/;"	m	struct:ipu_buf
+ipu_queue	application/vpu_test.h	/^struct ipu_queue {$/;"	s
+ipu_queue	application/vpu_test.h.BACKUP.805.h	/^struct ipu_queue {$/;"	s
+ipu_queue	application/vpu_test.h.LOCAL.805.h	/^struct ipu_queue {$/;"	s
+ipu_queue	application/vpu_test.h.REMOTE.805.h	/^struct ipu_queue {$/;"	s
+ipu_rot_en	application/vpu_test.h	/^	int ipu_rot_en;$/;"	m	struct:cmd_line
+ipu_rot_en	application/vpu_test.h	/^	int ipu_rot_en;$/;"	m	struct:rot
+ipu_rot_en	application/vpu_test.h.LOCAL.805.h	/^    int ipu_rot_en;$/;"	m	struct:cmd_line
+ipu_rot_en	application/vpu_test.h.LOCAL.805.h	/^    int ipu_rot_en;$/;"	m	struct:rot
+ipu_rot_en	application/vpu_test.h.REMOTE.805.h	/^	int ipu_rot_en;$/;"	m	struct:cmd_line
+ipu_rot_en	application/vpu_test.h.REMOTE.805.h	/^	int ipu_rot_en;$/;"	m	struct:rot
+ipu_vaddr	application/vpu_test.h	/^	void * ipu_vaddr;$/;"	m	struct:ipu_buf
+ipu_vaddr	application/vpu_test.h.LOCAL.805.h	/^    void * ipu_vaddr;$/;"	m	struct:ipu_buf
+ipu_vaddr	application/vpu_test.h.REMOTE.805.h	/^	void * ipu_vaddr;$/;"	m	struct:ipu_buf
+iram_t	vpu_lib/vpu_io.h	/^typedef struct iram_t {$/;"	s
+iram_t	vpu_lib/vpu_io.h	/^} iram_t;$/;"	t	typeref:struct:iram_t
+isVpuInitialized	vpu_lib/vpu_io.c	/^int isVpuInitialized(void){$/;"	f
+is_initialized	vpu_lib/vpu_util.h	/^    int is_initialized;$/;"	m	struct:__anon62
+is_secondary	vpu_lib/vpu_util.h	/^    int is_secondary;$/;"	m	struct:__anon54
+left	vpu_lib/vpu_lib.h	/^    Uint32 left;$/;"	m	struct:__anon10
+length	application/vpu_test.h	/^	size_t length;$/;"	m	struct:v4l_buf
+length	application/vpu_test.h	/^	unsigned int length;$/;"	m	struct:capture_testbuffer
+length	application/vpu_test.h.LOCAL.805.h	/^    size_t length;$/;"	m	struct:v4l_buf
+length	application/vpu_test.h.LOCAL.805.h	/^    unsigned int length;$/;"	m	struct:capture_testbuffer
+length	application/vpu_test.h.REMOTE.805.h	/^	size_t length;$/;"	m	struct:v4l_buf
+length	application/vpu_test.h.REMOTE.805.h	/^	unsigned int length;$/;"	m	struct:capture_testbuffer
+level	vpu_lib/vpu_lib.h	/^    int level;$/;"	m	struct:__anon14
+lib_major	vpu_lib/vpu_lib.h	/^    int lib_major;		\/* library major version *\/$/;"	m	struct:vpu_versioninfo
+lib_minor	vpu_lib/vpu_lib.h	/^    int lib_minor;		\/* library minor version *\/$/;"	m	struct:vpu_versioninfo
+lib_release	vpu_lib/vpu_lib.h	/^    int lib_release;	\/* library release version *\/$/;"	m	struct:vpu_versioninfo
+list	application/vpu_test.h	/^	int list[MAX_BUF_NUM + 1];$/;"	m	struct:ipu_queue
+list	application/vpu_test.h.LOCAL.805.h	/^    int list[MAX_BUF_NUM + 1];$/;"	m	struct:ipu_queue
+list	application/vpu_test.h.REMOTE.805.h	/^	int list[MAX_BUF_NUM + 1];$/;"	m	struct:ipu_queue
+locked	vpu_lib/vpu_util.h	/^    int locked;$/;"	m	struct:fifo_mutex
+loff	application/vpu_test.h	/^	int loff;$/;"	m	struct:cmd_line
+loff	application/vpu_test.h.LOCAL.805.h	/^    int loff;$/;"	m	struct:cmd_line
+loff	application/vpu_test.h.REMOTE.805.h	/^	int loff;$/;"	m	struct:cmd_line
+log_time	vpu_lib/vpu_util.h	482;"	d
+luma	vpu_lib/vpu_util.h	/^    } luma;$/;"	m	struct:__anon50	typeref:union:__anon50::__anon51
+main	vpu_as.c	/^int main(void)$/;"	f
+mapType	application/vpu_test.h	/^	int mapType;$/;"	m	struct:cmd_line
+mapType	application/vpu_test.h.LOCAL.805.h	/^    int mapType;$/;"	m	struct:cmd_line
+mapType	application/vpu_test.h.REMOTE.805.h	/^	int mapType;$/;"	m	struct:cmd_line
+mapType	vpu_lib/vpu_lib.h	/^    int mapType;$/;"	m	struct:__anon13
+mapType	vpu_lib/vpu_util.h	/^    int mapType;$/;"	m	struct:__anon58
+matrix_coeff	vpu_lib/vpu_lib.h	/^    char matrix_coeff;$/;"	m	struct:__anon25
+maxDecFrmInfo	vpu_lib/vpu_lib.h	/^    DecMaxFrmInfo	maxDecFrmInfo;$/;"	m	struct:__anon18
+maxMbNum	vpu_lib/vpu_lib.h	/^    int maxMbNum;$/;"	m	struct:__anon17
+maxMbX	vpu_lib/vpu_lib.h	/^    int maxMbX;$/;"	m	struct:__anon17
+maxMbY	vpu_lib/vpu_lib.h	/^    int maxMbY;$/;"	m	struct:__anon17
+mbInfo	application/vpu_test.h.LOCAL.805.h	/^    DecReportInfo mbInfo;$/;"	m	struct:decode
+mbInfo	application/vpu_test.h.REMOTE.805.h	/^	DecReportInfo mbInfo;$/;"	m	struct:decode
+minFrameBufferCount	vpu_lib/vpu_lib.h	/^    int minFrameBufferCount;$/;"	m	struct:__anon14
+minfbcount	application/vpu_test.h	/^	int minfbcount;$/;"	m	struct:decode
+minfbcount	application/vpu_test.h.LOCAL.805.h	/^    int minfbcount;$/;"	m	struct:decode
+minfbcount	application/vpu_test.h.REMOTE.805.h	/^	int minfbcount;$/;"	m	struct:decode
+mirror	application/vpu_test.h	/^	int mirror;$/;"	m	struct:cmd_line
+mirror	application/vpu_test.h.LOCAL.805.h	/^    int mirror;$/;"	m	struct:cmd_line
+mirror	application/vpu_test.h.REMOTE.805.h	/^	int mirror;$/;"	m	struct:cmd_line
+mjpg_fmt	application/vpu_test.h	/^	int mjpg_fmt;$/;"	m	struct:decode
+mjpg_fmt	application/vpu_test.h.LOCAL.805.h	/^    int mjpg_fmt;$/;"	m	struct:decode
+mjpg_fmt	application/vpu_test.h.REMOTE.805.h	/^	int mjpg_fmt;$/;"	m	struct:decode
+motion_sel	application/vpu_test.h	/^	int motion_sel;$/;"	m	struct:fakeipu
+motion_sel	application/vpu_test.h.LOCAL.805.h	/^    int motion_sel;$/;"	m	struct:fakeipu
+motion_sel	application/vpu_test.h.REMOTE.805.h	/^	int motion_sel;$/;"	m	struct:fakeipu
+mp4Class	vpu_lib/vpu_lib.h	/^    int mp4Class;$/;"	m	struct:__anon13
+mp4DeblkEnable	vpu_lib/vpu_lib.h	/^    int mp4DeblkEnable;			\/\/TODO: Check this$/;"	m	struct:__anon13
+mp4PackedPBframe	vpu_lib/vpu_lib.h	/^    int mp4PackedPBframe;$/;"	m	struct:__anon23
+mp4_dataPartitionEnable	vpu_lib/vpu_lib.h	/^    int mp4_dataPartitionEnable;$/;"	m	struct:__anon14
+mp4_h264Class	application/vpu_test.h	/^	int mp4_h264Class;$/;"	m	struct:cmd_line
+mp4_h264Class	application/vpu_test.h.LOCAL.805.h	/^    int mp4_h264Class;$/;"	m	struct:cmd_line
+mp4_h264Class	application/vpu_test.h.REMOTE.805.h	/^	int mp4_h264Class;$/;"	m	struct:cmd_line
+mp4_reversibleVlcEnable	vpu_lib/vpu_lib.h	/^    int mp4_reversibleVlcEnable;$/;"	m	struct:__anon14
+mp4_shortVideoHeader	vpu_lib/vpu_lib.h	/^    int mp4_shortVideoHeader;$/;"	m	struct:__anon14
+mutex	vpu_lib/vpu_util.h	/^    pthread_mutex_t mutex;$/;"	m	struct:fifo_mutex
+mvColBuf	application/vpu_test.h	/^	int mvColBuf;$/;"	m	struct:frame_buf
+mvColBuf	application/vpu_test.h.LOCAL.805.h	/^    int mvColBuf;$/;"	m	struct:frame_buf
+mvColBuf	application/vpu_test.h.REMOTE.805.h	/^	int mvColBuf;$/;"	m	struct:frame_buf
+mvInfo	application/vpu_test.h.LOCAL.805.h	/^    DecReportInfo mvInfo;$/;"	m	struct:decode
+mvInfo	application/vpu_test.h.REMOTE.805.h	/^	DecReportInfo mvInfo;$/;"	m	struct:decode
+mvcPicInfo	vpu_lib/vpu_lib.h	/^    MvcPicInfo mvcPicInfo; $/;"	m	struct:__anon23
+mvcol_memdesc	application/vpu_test.h	/^	vpu_mem_desc *mvcol_memdesc;$/;"	m	struct:decode
+mvcol_memdesc	application/vpu_test.h.LOCAL.805.h	/^    vpu_mem_desc *mvcol_memdesc;$/;"	m	struct:decode
+mvcol_memdesc	application/vpu_test.h.REMOTE.805.h	/^	vpu_mem_desc *mvcol_memdesc;$/;"	m	struct:decode
+myIndex	vpu_lib/vpu_lib.h	/^    int myIndex;$/;"	m	struct:__anon9
+name	vpu_lib/vpu_lib.h	/^    char *name;$/;"	m	struct:__anon29
+nbuf	application/vpu_test.h	/^	char *nbuf; \/* network buffer *\/$/;"	m	struct:cmd_line
+nbuf	application/vpu_test.h.LOCAL.805.h	/^    char *nbuf; \/* network buffer *\/$/;"	m	struct:cmd_line
+nbuf	application/vpu_test.h.REMOTE.805.h	/^	char *nbuf; \/* network buffer *\/$/;"	m	struct:cmd_line
+next	vpu_lib/vpu_util.h	/^    int next;$/;"	m	struct:ts_item
+nextDecodedIdxNum	vpu_lib/vpu_lib.h	/^    int nextDecodedIdxNum;$/;"	m	struct:__anon14
+nlen	application/vpu_test.h	/^	int nlen; \/* remaining data in network buffer *\/$/;"	m	struct:cmd_line
+nlen	application/vpu_test.h.LOCAL.805.h	/^    int nlen; \/* remaining data in network buffer *\/$/;"	m	struct:cmd_line
+nlen	application/vpu_test.h.REMOTE.805.h	/^	int nlen; \/* remaining data in network buffer *\/$/;"	m	struct:cmd_line
+noffset	application/vpu_test.h	/^	int noffset; \/* offset into network buffer *\/$/;"	m	struct:cmd_line
+noffset	application/vpu_test.h.LOCAL.805.h	/^    int noffset; \/* offset into network buffer *\/$/;"	m	struct:cmd_line
+noffset	application/vpu_test.h.REMOTE.805.h	/^	int noffset; \/* offset into network buffer *\/$/;"	m	struct:cmd_line
+normalSliceSize	vpu_lib/vpu_lib.h	/^    int normalSliceSize;$/;"	m	struct:__anon14
+notSufficientPsBuffer	vpu_lib/vpu_lib.h	/^    int notSufficientPsBuffer;$/;"	m	struct:__anon23
+notSufficientSliceBuffer	vpu_lib/vpu_lib.h	/^    int notSufficientSliceBuffer;$/;"	m	struct:__anon23
+numFrameBuffers	vpu_lib/vpu_util.h	/^    int numFrameBuffers;$/;"	m	struct:__anon58
+numInst	vpu_lib/vpu_util.h	/^    int numInst;$/;"	m	struct:__anon62
+numOfErrMBs	vpu_lib/vpu_lib.h	/^    int numOfErrMBs;$/;"	m	struct:__anon23
+offset	application/vpu_test.h	/^	off_t offset;$/;"	m	struct:v4l_buf
+offset	application/vpu_test.h	/^	size_t offset;$/;"	m	struct:capture_testbuffer
+offset	application/vpu_test.h.LOCAL.805.h	/^    off_t offset;$/;"	m	struct:v4l_buf
+offset	application/vpu_test.h.LOCAL.805.h	/^    size_t offset;$/;"	m	struct:capture_testbuffer
+offset	application/vpu_test.h.REMOTE.805.h	/^	off_t offset;$/;"	m	struct:v4l_buf
+offset	application/vpu_test.h.REMOTE.805.h	/^	size_t offset;$/;"	m	struct:capture_testbuffer
+offset	vpu_lib/vpu_util.h	/^    int		offset;$/;"	m	struct:__anon44
+openParam	vpu_lib/vpu_util.h	/^    DecOpenParam openParam;$/;"	m	struct:__anon58
+output	application/vpu_test.h	/^	char output[MAX_PATH];  \/* Output file name *\/$/;"	m	struct:cmd_line
+output	application/vpu_test.h.LOCAL.805.h	/^    char output[MAX_PATH];  \/* Output file name *\/$/;"	m	struct:cmd_line
+output	application/vpu_test.h.REMOTE.805.h	/^	char output[MAX_PATH];  \/* Output file name *\/$/;"	m	struct:cmd_line
+pBitStream	vpu_lib/vpu_lib.h	/^    Uint8 *pBitStream;$/;"	m	struct:__anon13
+pCodecInst	vpu_lib/vpu_lib.c	/^static CodecInst *pCodecInst;$/;"	v	file:
+paraBuffer	vpu_lib/vpu_lib.c	/^Address paraBuffer;$/;"	v
+paraSet	vpu_lib/vpu_util.h	/^    Uint32 *paraSet;$/;"	m	struct:__anon53
+pbyBitstreamStart	vpu_lib/vpu_util.h	/^    unsigned char* pbyBitstreamStart;$/;"	m	struct:__anon61
+pdwRBSPPtr	vpu_lib/vpu_util.h	/^    unsigned long* pdwRBSPPtr;$/;"	m	struct:__anon61
+pendingInst	vpu_lib/vpu_util.h	/^    CodecInst *pendingInst;$/;"	m	struct:__anon62
+pfbpool	application/vpu_test.h	/^	struct frame_buf **pfbpool;$/;"	m	struct:decode	typeref:struct:decode::frame_buf
+pfbpool	application/vpu_test.h.LOCAL.805.h	/^    struct frame_buf **pfbpool;$/;"	m	struct:decode	typeref:struct:decode::frame_buf
+pfbpool	application/vpu_test.h.REMOTE.805.h	/^	struct frame_buf **pfbpool;$/;"	m	struct:decode	typeref:struct:decode::frame_buf
+phy_addr	vpu_lib/vpu_io.h	/^	unsigned long phy_addr;	\/*!physical memory address allocated *\/$/;"	m	struct:vpu_mem_desc
+phy_bsbuf_addr	application/vpu_test.h	/^	PhysicalAddress phy_bsbuf_addr;$/;"	m	struct:decode
+phy_bsbuf_addr	application/vpu_test.h.LOCAL.805.h	/^    PhysicalAddress phy_bsbuf_addr;$/;"	m	struct:decode
+phy_bsbuf_addr	application/vpu_test.h.REMOTE.805.h	/^	PhysicalAddress phy_bsbuf_addr;$/;"	m	struct:decode
+phy_ps_buf	application/vpu_test.h	/^	PhysicalAddress phy_ps_buf;$/;"	m	struct:decode
+phy_ps_buf	application/vpu_test.h.LOCAL.805.h	/^    PhysicalAddress phy_ps_buf;$/;"	m	struct:decode
+phy_ps_buf	application/vpu_test.h.REMOTE.805.h	/^	PhysicalAddress phy_ps_buf;$/;"	m	struct:decode
+phy_slice_buf	application/vpu_test.h	/^	PhysicalAddress phy_slice_buf;$/;"	m	struct:decode
+phy_slice_buf	application/vpu_test.h.LOCAL.805.h	/^    PhysicalAddress phy_slice_buf;$/;"	m	struct:decode
+phy_slice_buf	application/vpu_test.h.REMOTE.805.h	/^	PhysicalAddress phy_slice_buf;$/;"	m	struct:decode
+phy_slicebuf_size	application/vpu_test.h	/^	int phy_slicebuf_size;$/;"	m	struct:decode
+phy_slicebuf_size	application/vpu_test.h.LOCAL.805.h	/^    int phy_slicebuf_size;$/;"	m	struct:decode
+phy_slicebuf_size	application/vpu_test.h.REMOTE.805.h	/^	int phy_slicebuf_size;$/;"	m	struct:decode
+phy_vp8_mbparam_buf	application/vpu_test.h.LOCAL.805.h	/^    PhysicalAddress phy_vp8_mbparam_buf;$/;"	m	struct:decode
+phy_vp8_mbparam_buf	application/vpu_test.h.REMOTE.805.h	/^	PhysicalAddress phy_vp8_mbparam_buf;$/;"	m	struct:decode
+phy_vp8_mbparam_size	application/vpu_test.h.LOCAL.805.h	/^    int phy_vp8_mbparam_size;$/;"	m	struct:decode
+phy_vp8_mbparam_size	application/vpu_test.h.REMOTE.805.h	/^	int phy_vp8_mbparam_size;$/;"	m	struct:decode
+picCropRect	application/vpu_test.h	/^	Rect picCropRect;$/;"	m	struct:decode
+picCropRect	application/vpu_test.h.LOCAL.805.h	/^    Rect picCropRect;$/;"	m	struct:decode
+picCropRect	application/vpu_test.h.REMOTE.805.h	/^	Rect picCropRect;$/;"	m	struct:decode
+picCropRect	vpu_lib/vpu_lib.h	/^    Rect picCropRect;$/;"	m	struct:__anon14
+picHeight	vpu_lib/vpu_lib.h	/^    int picHeight;$/;"	m	struct:__anon13
+picHeight	vpu_lib/vpu_lib.h	/^    int picHeight;$/;"	m	struct:__anon14
+picParaBaseMem	vpu_lib/vpu_util.h	/^    vpu_mem_desc picParaBaseMem;$/;"	m	struct:__anon58
+picSrcSize	vpu_lib/vpu_util.h	/^    int picSrcSize;$/;"	m	struct:__anon58
+picType	vpu_lib/vpu_lib.h	/^    int picType;$/;"	m	struct:__anon23
+picTypeFirst	vpu_lib/vpu_lib.h	/^    int picTypeFirst;  $/;"	m	struct:__anon23
+picWidth	vpu_lib/vpu_lib.h	/^    int picWidth;$/;"	m	struct:__anon13
+picWidth	vpu_lib/vpu_lib.h	/^    int picWidth;$/;"	m	struct:__anon14
+picheight	application/vpu_test.h	/^	int picheight;$/;"	m	struct:decode
+picheight	application/vpu_test.h.LOCAL.805.h	/^    int picheight;$/;"	m	struct:decode
+picheight	application/vpu_test.h.REMOTE.805.h	/^	int picheight;$/;"	m	struct:decode
+pictureStructure	vpu_lib/vpu_lib.h	/^    int pictureStructure;$/;"	m	struct:__anon23
+picwidth	application/vpu_test.h	/^	int picwidth;$/;"	m	struct:decode
+picwidth	application/vpu_test.h.LOCAL.805.h	/^    int picwidth;$/;"	m	struct:decode
+picwidth	application/vpu_test.h.REMOTE.805.h	/^	int picwidth;$/;"	m	struct:decode
+platform	vpu_lib/vpu_util.c	/^    Uint8 platform[12];$/;"	m	struct:__anon64	file:
+port	application/vpu_test.h	/^	Uint16 port; \/* udp port number *\/$/;"	m	struct:cmd_line
+port	application/vpu_test.h.LOCAL.805.h	/^    Uint16 port; \/* udp port number *\/$/;"	m	struct:cmd_line
+port	application/vpu_test.h.REMOTE.805.h	/^	Uint16 port; \/* udp port number *\/$/;"	m	struct:cmd_line
+post_processing	application/vpu_test.h	/^	int post_processing;$/;"	m	struct:decode
+post_processing	application/vpu_test.h.LOCAL.805.h	/^    int post_processing;$/;"	m	struct:decode
+post_processing	application/vpu_test.h.REMOTE.805.h	/^	int post_processing;$/;"	m	struct:decode
+ppendingInst	vpu_lib/vpu_lib.c	/^static CodecInst *ppendingInst;$/;"	v	file:
+prescan	application/vpu_test.h	/^	int prescan;$/;"	m	struct:cmd_line
+prescan	application/vpu_test.h.LOCAL.805.h	/^    int prescan;$/;"	m	struct:cmd_line
+prescan	application/vpu_test.h.REMOTE.805.h	/^	int prescan;$/;"	m	struct:cmd_line
+prev	vpu_lib/vpu_util.h	/^    int prev;$/;"	m	struct:ts_item
+profile	vpu_lib/vpu_lib.h	/^    int profile;$/;"	m	struct:__anon14
+profile	vpu_lib/vpu_util.h	/^    int profile;$/;"	m	struct:__anon56
+progressiveFrame	vpu_lib/vpu_lib.h	/^        int progressiveFrame;$/;"	m	union:__anon23::__anon24
+psSaveBuffer	vpu_lib/vpu_lib.h	/^    PhysicalAddress psSaveBuffer;$/;"	m	struct:__anon13
+psSaveBufferSize	vpu_lib/vpu_lib.h	/^    int psSaveBufferSize;$/;"	m	struct:__anon13
+put_framebuf	application/fb.c	/^void put_framebuf(struct frame_buf *fb)$/;"	f
+qpReport	vpu_lib/vpu_lib.h	/^    int qpReport;$/;"	m	struct:__anon13
+quantParam	application/vpu_test.h	/^	int quantParam;$/;"	m	struct:cmd_line
+quantParam	application/vpu_test.h.LOCAL.805.h	/^    int quantParam;$/;"	m	struct:cmd_line
+quantParam	application/vpu_test.h.REMOTE.805.h	/^	int quantParam;$/;"	m	struct:cmd_line
+quincunx_sampling_flag	vpu_lib/vpu_lib.h	/^    unsigned quincunx_sampling_flag;$/;"	m	struct:__anon22
+rbc2axi_map	vpu_lib/vpu_gdi.h	/^	int rbc2axi_map[32];$/;"	m	struct:__anon32
+recFrame	vpu_lib/vpu_util.h	/^    FrameBuffer *recFrame;$/;"	m	struct:__anon58
+reg_lock	vpu_lib/vpu_util.h	/^    pthread_mutex_t reg_lock;$/;"	m	struct:__anon63
+reg_map	vpu_lib/vpu_io.c	/^inline Address *reg_map(Address offset){$/;"	f
+regfbcount	application/vpu_test.h	/^	int regfbcount;$/;"	m	struct:decode
+regfbcount	application/vpu_test.h.LOCAL.805.h	/^    int regfbcount;$/;"	m	struct:decode
+regfbcount	application/vpu_test.h.REMOTE.805.h	/^	int regfbcount;$/;"	m	struct:decode
+region	vpu_lib/vpu_util.h	/^    WriteMemProtectRegion region[6];$/;"	m	struct:__anon55
+reorderEnable	application/vpu_test.h	/^	int reorderEnable;$/;"	m	struct:decode
+reorderEnable	application/vpu_test.h.LOCAL.805.h	/^    int reorderEnable;$/;"	m	struct:decode
+reorderEnable	application/vpu_test.h.REMOTE.805.h	/^	int reorderEnable;$/;"	m	struct:decode
+reorderEnable	vpu_lib/vpu_lib.h	/^    int reorderEnable;$/;"	m	struct:__anon13
+repeatFirstField	vpu_lib/vpu_lib.h	/^    int repeatFirstField;$/;"	m	struct:__anon23
+right	vpu_lib/vpu_lib.h	/^    Uint32 right;$/;"	m	struct:__anon10
+rot	application/vpu_test.h	/^struct rot {$/;"	s
+rot	application/vpu_test.h.LOCAL.805.h	/^struct rot {$/;"	s
+rot	application/vpu_test.h.REMOTE.805.h	/^struct rot {$/;"	s
+rot_angle	application/vpu_test.h	/^	int rot_angle;$/;"	m	struct:cmd_line
+rot_angle	application/vpu_test.h	/^	int rot_angle;$/;"	m	struct:rot
+rot_angle	application/vpu_test.h.LOCAL.805.h	/^    int rot_angle;$/;"	m	struct:cmd_line
+rot_angle	application/vpu_test.h.LOCAL.805.h	/^    int rot_angle;$/;"	m	struct:rot
+rot_angle	application/vpu_test.h.REMOTE.805.h	/^	int rot_angle;$/;"	m	struct:cmd_line
+rot_angle	application/vpu_test.h.REMOTE.805.h	/^	int rot_angle;$/;"	m	struct:rot
+rot_buf_count	application/vpu_test.h	/^	int rot_buf_count;$/;"	m	struct:decode
+rot_buf_count	application/vpu_test.h.LOCAL.805.h	/^    int rot_buf_count;$/;"	m	struct:decode
+rot_buf_count	application/vpu_test.h.REMOTE.805.h	/^	int rot_buf_count;$/;"	m	struct:decode
+rot_en	application/vpu_test.h	/^	int rot_en;$/;"	m	struct:cmd_line
+rot_en	application/vpu_test.h	/^	int rot_en;$/;"	m	struct:rot
+rot_en	application/vpu_test.h.LOCAL.805.h	/^    int rot_en;$/;"	m	struct:cmd_line
+rot_en	application/vpu_test.h.LOCAL.805.h	/^    int rot_en;$/;"	m	struct:rot
+rot_en	application/vpu_test.h.REMOTE.805.h	/^	int rot_en;$/;"	m	struct:cmd_line
+rot_en	application/vpu_test.h.REMOTE.805.h	/^	int rot_en;$/;"	m	struct:rot
+rotationEnable	vpu_lib/vpu_util.h	/^    int rotationEnable;$/;"	m	struct:__anon58
+sTiledInfo	vpu_lib/vpu_util.h	/^    GdiTiledMap sTiledInfo;$/;"	m	struct:__anon58
+saveNV12ImageHelper	vpu_as.c	/^static void saveNV12ImageHelper(Uint8 *pYuv, struct decode *dec, Uint8 *buf)$/;"	f	file:
+save_enc_hdr	application/vpu_test.h	/^	int save_enc_hdr;$/;"	m	struct:cmd_line
+save_enc_hdr	application/vpu_test.h.LOCAL.805.h	/^    int save_enc_hdr;$/;"	m	struct:cmd_line
+save_enc_hdr	application/vpu_test.h.REMOTE.805.h	/^	int save_enc_hdr;$/;"	m	struct:cmd_line
+searchRamAddr	vpu_lib/vpu_util.h	/^    PhysicalAddress searchRamAddr;$/;"	m	struct:__anon49
+searchRamSize	vpu_lib/vpu_util.h	/^    int searchRamSize;$/;"	m	struct:__anon49
+secAxiUse	vpu_lib/vpu_util.h	/^    SecAxiUse secAxiUse;$/;"	m	struct:__anon58
+semaphore_t	vpu_lib/vpu_util.h	/^} semaphore_t;$/;"	t	typeref:struct:__anon63
+seq_no	application/vpu_test.h	/^	int seq_no; \/* seq numbering to detect skipped frames *\/$/;"	m	struct:cmd_line
+seq_no	application/vpu_test.h.LOCAL.805.h	/^    int seq_no; \/* seq numbering to detect skipped frames *\/$/;"	m	struct:cmd_line
+seq_no	application/vpu_test.h.REMOTE.805.h	/^	int seq_no; \/* seq numbering to detect skipped frames *\/$/;"	m	struct:cmd_line
+shared_mem_t	vpu_lib/vpu_util.h	/^} shared_mem_t;$/;"	t	typeref:struct:__anon62
+show_bits	vpu_lib/vpu_util.h	191;"	d
+size	vpu_lib/vpu_io.h	/^	int size;		\/*!requested memory size *\/$/;"	m	struct:vpu_mem_desc
+size	vpu_lib/vpu_util.c	/^    Uint32 size;$/;"	m	struct:__anon64	file:
+size	vpu_lib/vpu_util.h	/^    int size;$/;"	m	struct:__anon46
+size	vpu_lib/vpu_util.h	/^    int size;$/;"	m	struct:__anon53
+sizeOfBitCode	vpu_lib/vpu_bitcode.c	/^int sizeOfBitCode(void){$/;"	f
+skipframeMode	vpu_lib/vpu_lib.h	/^    int skipframeMode;$/;"	m	struct:__anon20
+skipframeNum	vpu_lib/vpu_lib.h	/^    int skipframeNum;$/;"	m	struct:__anon20
+sliceSaveBuffer	vpu_lib/vpu_lib.h	/^    PhysicalAddress sliceSaveBuffer;$/;"	m	struct:__anon16
+sliceSaveBufferSize	vpu_lib/vpu_lib.h	/^    int sliceSaveBufferSize;$/;"	m	struct:__anon16
+soc_info	vpu_lib/vpu_lib.h	/^static const SocInfo soc_info[] = {$/;"	v
+sourceBufIndexBase	vpu_lib/vpu_util.h	/^    unsigned sourceBufIndexBase : 8;$/;"	m	struct:__anon57
+sourceBufNumber	vpu_lib/vpu_util.h	/^    unsigned sourceBufNumber : 7;$/;"	m	struct:__anon57
+spatial_flipping_flag	vpu_lib/vpu_lib.h	/^    unsigned spatial_flipping_flag;$/;"	m	struct:__anon22
+src_fd	application/vpu_test.h	/^	int src_fd;$/;"	m	struct:cmd_line
+src_fd	application/vpu_test.h.LOCAL.805.h	/^    int src_fd;$/;"	m	struct:cmd_line
+src_fd	application/vpu_test.h.REMOTE.805.h	/^	int src_fd;$/;"	m	struct:cmd_line
+src_scheme	application/vpu_test.h	/^	int src_scheme;$/;"	m	struct:cmd_line
+src_scheme	application/vpu_test.h.LOCAL.805.h	/^    int src_scheme;$/;"	m	struct:cmd_line
+src_scheme	application/vpu_test.h.REMOTE.805.h	/^	int src_scheme;$/;"	m	struct:cmd_line
+stChangeRcPara	vpu_lib/vpu_lib.h	/^} stChangeRcPara;$/;"	t	typeref:struct:__anon27
+start	application/vpu_test.h	/^	void *start;$/;"	m	struct:v4l_buf
+start	application/vpu_test.h.LOCAL.805.h	/^    void *start;$/;"	m	struct:v4l_buf
+start	application/vpu_test.h.REMOTE.805.h	/^	void *start;$/;"	m	struct:v4l_buf
+start	vpu_lib/vpu_io.h	/^        unsigned long start;$/;"	m	struct:iram_t
+start_address	vpu_lib/vpu_util.h	/^    PhysicalAddress start_address;$/;"	m	struct:__anon54
+streamBufEndAddr	vpu_lib/vpu_util.h	/^    PhysicalAddress streamBufEndAddr;$/;"	m	struct:__anon58
+streamBufSize	vpu_lib/vpu_util.h	/^    int streamBufSize;$/;"	m	struct:__anon58
+streamBufStartAddr	vpu_lib/vpu_util.h	/^    PhysicalAddress streamBufStartAddr;$/;"	m	struct:__anon58
+streamEndflag	vpu_lib/vpu_util.h	/^    int streamEndflag;$/;"	m	struct:__anon58
+streamInfoObtained	vpu_lib/vpu_lib.h	/^    int streamInfoObtained;$/;"	m	struct:__anon14
+streamStartByteOffset	vpu_lib/vpu_lib.h	/^    int streamStartByteOffset;$/;"	m	struct:__anon13
+streamWrPtr	vpu_lib/vpu_util.h	/^    PhysicalAddress streamWrPtr;$/;"	m	struct:__anon58
+stride	application/vpu_test.h	/^	int stride;$/;"	m	struct:decode
+stride	application/vpu_test.h.LOCAL.805.h	/^    int stride;$/;"	m	struct:decode
+stride	application/vpu_test.h.REMOTE.805.h	/^	int stride;$/;"	m	struct:decode
+stride	vpu_lib/vpu_util.h	/^    int stride;$/;"	m	struct:__anon58
+strideC	application/vpu_test.h	/^	int strideC;$/;"	m	struct:frame_buf
+strideC	application/vpu_test.h.LOCAL.805.h	/^    int strideC;$/;"	m	struct:frame_buf
+strideC	application/vpu_test.h.REMOTE.805.h	/^	int strideC;$/;"	m	struct:frame_buf
+strideC	vpu_lib/vpu_lib.h	/^    Uint32 strideC;$/;"	m	struct:__anon9
+strideY	application/vpu_test.h	/^	int strideY;$/;"	m	struct:frame_buf
+strideY	application/vpu_test.h.LOCAL.805.h	/^    int strideY;$/;"	m	struct:frame_buf
+strideY	application/vpu_test.h.REMOTE.805.h	/^	int strideY;$/;"	m	struct:frame_buf
+strideY	vpu_lib/vpu_lib.h	/^    Uint32 strideY;$/;"	m	struct:__anon9
+subFrameSyncOn	vpu_lib/vpu_util.h	/^    unsigned subFrameSyncOn : 1;$/;"	m	struct:__anon57
+swab32	vpu_lib/vpu_util.h	485;"	d
+tag	vpu_lib/vpu_util.h	/^    Uint32	tag;$/;"	m	struct:__anon44
+tail	application/vpu_test.h	/^	int tail;$/;"	m	struct:ipu_queue
+tail	application/vpu_test.h.LOCAL.805.h	/^    int tail;$/;"	m	struct:ipu_queue
+tail	application/vpu_test.h.REMOTE.805.h	/^	int tail;$/;"	m	struct:ipu_queue
+tb_separate_map	vpu_lib/vpu_gdi.h	/^	int tb_separate_map;$/;"	m	struct:__anon32
+tempBuffer	vpu_lib/vpu_lib.c	/^Address tempBuffer;$/;"	v
+tiled2LinearEnable	application/vpu_test.h	/^	int tiled2LinearEnable;$/;"	m	struct:decode
+tiled2LinearEnable	application/vpu_test.h.LOCAL.805.h	/^    int tiled2LinearEnable;$/;"	m	struct:decode
+tiled2LinearEnable	application/vpu_test.h.REMOTE.805.h	/^	int tiled2LinearEnable;$/;"	m	struct:decode
+tiled2LinearEnable	vpu_lib/vpu_lib.h	/^    int tiled2LinearEnable;$/;"	m	struct:__anon13
+tiledLinearEnable	vpu_lib/vpu_util.h	/^    int tiledLinearEnable;$/;"	m	struct:__anon58
+tiledMap	vpu_lib/vpu_gdi.h	/^	int tiledMap;$/;"	m	struct:__anon32
+toff	application/vpu_test.h	/^	int toff;$/;"	m	struct:cmd_line
+toff	application/vpu_test.h.LOCAL.805.h	/^    int toff;$/;"	m	struct:cmd_line
+toff	application/vpu_test.h.REMOTE.805.h	/^	int toff;$/;"	m	struct:cmd_line
+top	vpu_lib/vpu_lib.h	/^    Uint32 top;$/;"	m	struct:__anon10
+topFieldFirst	vpu_lib/vpu_lib.h	/^    int topFieldFirst;$/;"	m	struct:__anon23
+top_bot_split	vpu_lib/vpu_gdi.h	/^	int top_bot_split;$/;"	m	struct:__anon32
+transfer_characteristics	vpu_lib/vpu_lib.h	/^    char transfer_characteristics;$/;"	m	struct:__anon25
+true	vpu_lib/vpu_io.h	36;"	d
+ts	vpu_lib/vpu_util.h	/^    int ts;$/;"	m	struct:ts_item
+ts_buf	vpu_lib/vpu_util.h	/^    ts_item_t ts_buf[MAX_ITEM_NUM];$/;"	m	struct:fifo_mutex
+ts_item	vpu_lib/vpu_util.h	/^typedef struct ts_item {$/;"	s
+ts_item_t	vpu_lib/vpu_util.h	/^} ts_item_t;$/;"	t	typeref:struct:ts_item
+ts_late	vpu_lib/vpu_util.h	/^    int ts_late;$/;"	m	struct:fifo_mutex
+type	vpu_lib/vpu_util.h	/^    Uint32	type;$/;"	m	struct:__anon44
+uCodedBytes	vpu_lib/vpu_util.h	/^    unsigned int   uCodedBytes;$/;"	m	struct:__anon61
+uRBSPLast2Bytes	vpu_lib/vpu_util.h	/^    unsigned int   uRBSPLast2Bytes;$/;"	m	struct:__anon61
+uRBSPRemBytes	vpu_lib/vpu_util.h	/^    unsigned int   uRBSPRemBytes;$/;"	m	struct:__anon61
+useBitEnable	vpu_lib/vpu_util.h	/^    int useBitEnable;$/;"	m	struct:__anon49
+useBtpEnable	vpu_lib/vpu_util.h	/^    int useBtpEnable;$/;"	m	struct:__anon49
+useDbkEnable	vpu_lib/vpu_util.h	/^    int useDbkEnable;$/;"	m	struct:__anon49
+useHostBitEnable	vpu_lib/vpu_util.h	/^    int useHostBitEnable;$/;"	m	struct:__anon49
+useHostBtpEnable	vpu_lib/vpu_util.h	/^    int useHostBtpEnable;$/;"	m	struct:__anon49
+useHostDbkEnable	vpu_lib/vpu_util.h	/^    int useHostDbkEnable;$/;"	m	struct:__anon49
+useHostIpEnable	vpu_lib/vpu_util.h	/^    int useHostIpEnable;$/;"	m	struct:__anon49
+useHostMeEnable	vpu_lib/vpu_util.h	/^    int useHostMeEnable;$/;"	m	struct:__anon49
+useHostOvlEnable	vpu_lib/vpu_util.h	/^    int useHostOvlEnable;$/;"	m	struct:__anon49
+useIpEnable	vpu_lib/vpu_util.h	/^    int useIpEnable;$/;"	m	struct:__anon49
+useMeEnable	vpu_lib/vpu_util.h	/^    int useMeEnable;$/;"	m	struct:__anon49
+useOvlEnable	vpu_lib/vpu_util.h	/^    int useOvlEnable;$/;"	m	struct:__anon49
+userData	application/vpu_test.h.LOCAL.805.h	/^    DecReportInfo userData;$/;"	m	struct:decode
+userData	application/vpu_test.h.REMOTE.805.h	/^	DecReportInfo userData;$/;"	m	struct:decode
+userDataBufMem	vpu_lib/vpu_util.h	/^    vpu_mem_desc userDataBufMem;$/;"	m	struct:__anon58
+v4l_buf	application/vpu_test.h	/^struct v4l_buf {$/;"	s
+v4l_buf	application/vpu_test.h.LOCAL.805.h	/^struct v4l_buf {$/;"	s
+v4l_buf	application/vpu_test.h.REMOTE.805.h	/^struct v4l_buf {$/;"	s
+vScaleFlag	vpu_lib/vpu_lib.h	/^    int vScaleFlag;$/;"	m	struct:__anon23
+value	vpu_lib/vpu_gdi.h	/^	int value;$/;"	m	struct:__anon32
+vc1BframeDisplayValid	vpu_lib/vpu_util.h	/^    int vc1BframeDisplayValid;$/;"	m	struct:__anon58
+vc1_psf	vpu_lib/vpu_lib.h	/^    int vc1_psf;$/;"	m	struct:__anon14
+vc1_repeatFrame	vpu_lib/vpu_lib.h	/^        int vc1_repeatFrame;$/;"	m	union:__anon23::__anon24
+vdi_motion	application/vpu_test.h	/^	char vdi_motion;	\/* VDI motion algorithm *\/$/;"	m	struct:cmd_line
+vdi_motion	application/vpu_test.h.LOCAL.805.h	/^    char vdi_motion;	\/* VDI motion algorithm *\/$/;"	m	struct:cmd_line
+vdi_motion	application/vpu_test.h.REMOTE.805.h	/^	char vdi_motion;	\/* VDI motion algorithm *\/$/;"	m	struct:cmd_line
+video_format	vpu_lib/vpu_lib.h	/^    char video_format;$/;"	m	struct:__anon25
+video_full_range_flag	vpu_lib/vpu_lib.h	/^    char video_full_range_flag;$/;"	m	struct:__anon25
+video_node	application/vpu_test.h	/^	int video_node;$/;"	m	struct:cmd_line
+video_node	application/vpu_test.h.LOCAL.805.h	/^    int video_node;$/;"	m	struct:cmd_line
+video_node	application/vpu_test.h.REMOTE.805.h	/^	int video_node;$/;"	m	struct:cmd_line
+video_signal_type_pres_flag	vpu_lib/vpu_lib.h	/^    int video_signal_type_pres_flag;$/;"	m	struct:__anon25
+viewIdxDecoded	vpu_lib/vpu_lib.h	/^    int viewIdxDecoded;$/;"	m	struct:__anon21
+viewIdxDisplay	vpu_lib/vpu_lib.h	/^    int viewIdxDisplay;$/;"	m	struct:__anon21
+virt_bsbuf_addr	application/vpu_test.h	/^	Uint32 virt_bsbuf_addr;$/;"	m	struct:decode
+virt_bsbuf_addr	application/vpu_test.h.LOCAL.805.h	/^    Uint32 virt_bsbuf_addr;$/;"	m	struct:decode
+virt_bsbuf_addr	application/vpu_test.h.REMOTE.805.h	/^	Uint32 virt_bsbuf_addr;$/;"	m	struct:decode
+virt_codeBuf	vpu_lib/vpu_lib.c	/^Address virt_codeBuf;$/;"	v
+virt_paraBuf	vpu_lib/vpu_lib.c	/^Address *virt_paraBuf;$/;"	v
+virt_paraBuf2	vpu_lib/vpu_lib.c	/^Address *virt_paraBuf2;$/;"	v
+virt_uaddr	vpu_lib/vpu_io.h	/^	unsigned long virt_uaddr;\/* user space address *\/$/;"	m	struct:vpu_mem_desc
+vp8MbDataBufInfo	vpu_lib/vpu_lib.h	/^    ExtBufCfg vp8MbDataBufInfo;$/;"	m	struct:__anon18
+vpu_DecClrDispFlag	vpu_lib/vpu_lib.c	/^RetCode vpu_DecClrDispFlag(DecHandle handle, int index)$/;"	f
+vpu_DecGetBitstreamBuffer	vpu_lib/vpu_lib.c	/^RetCode vpu_DecGetBitstreamBuffer(DecHandle handle,PhysicalAddress * paRdPtr,PhysicalAddress * paWrPtr, Uint32 * size)$/;"	f
+vpu_DecGetInitialInfo	vpu_lib/vpu_lib.c	/^RetCode vpu_DecGetInitialInfo(DecHandle handle, DecInitialInfo * info)$/;"	f
+vpu_DecGetOutputInfo	vpu_lib/vpu_lib.c	/^RetCode vpu_DecGetOutputInfo(DecHandle handle, DecOutputInfo * info)$/;"	f
+vpu_DecGiveCommand	vpu_lib/vpu_lib.c	/^RetCode vpu_DecGiveCommand(DecHandle handle, CodecCommand cmd, void *param)$/;"	f
+vpu_DecOpen	vpu_lib/vpu_lib.c	/^RetCode vpu_DecOpen(DecHandle * pHandle, DecOpenParam * pop)$/;"	f
+vpu_DecRegisterFrameBuffer	vpu_lib/vpu_lib.c	/^RetCode vpu_DecRegisterFrameBuffer(DecHandle handle,FrameBuffer * bufArray, int num, int stride,DecBufInfo * pBufInfo)$/;"	f
+vpu_DecSetEscSeqInit	vpu_lib/vpu_lib.c	/^RetCode vpu_DecSetEscSeqInit(DecHandle handle, int escape)$/;"	f
+vpu_DecStartOneFrame	vpu_lib/vpu_lib.c	/^RetCode vpu_DecStartOneFrame(DecHandle handle, DecParam * param)$/;"	f
+vpu_DecUpdateBitstreamBuffer	vpu_lib/vpu_lib.c	/^RetCode vpu_DecUpdateBitstreamBuffer(DecHandle handle, Uint32 size)$/;"	f
+vpu_GetVersionInfo	vpu_lib/vpu_lib.c	/^RetCode vpu_GetVersionInfo(vpu_versioninfo * verinfo)$/;"	f
+vpu_Init	vpu_lib/vpu_lib.c	/^RetCode vpu_Init( void )$/;"	f
+vpu_IsBusy	vpu_lib/vpu_lib.c	/^int vpu_IsBusy()$/;"	f
+vpu_SWReset	vpu_lib/vpu_lib.c	/^RetCode vpu_SWReset(DecHandle handle, int index)$/;"	f
+vpu_WaitForInt	vpu_lib/vpu_lib.c	/^int vpu_WaitForInt(int timeout_in_ms)$/;"	f
+vpu_callback	vpu_lib/vpu_io.h	/^typedef void (*vpu_callback) (int status);$/;"	t
+vpu_getbit_context_t	vpu_lib/vpu_util.h	/^} vpu_getbit_context_t;$/;"	t	typeref:struct:__anon46
+vpu_lib_dbg_level	vpu_lib/vpu_lib.c	/^int vpu_lib_dbg_level;$/;"	v
+vpu_mem_desc	vpu_lib/vpu_io.h	/^typedef struct vpu_mem_desc {$/;"	s
+vpu_mem_desc	vpu_lib/vpu_io.h	/^} vpu_mem_desc;$/;"	t	typeref:struct:vpu_mem_desc
+vpu_reg_base	vpu_lib/vpu_io.c	/^static Address vpu_reg_base;$/;"	v	file:
+vpu_versioninfo	vpu_lib/vpu_lib.h	/^typedef struct vpu_versioninfo {$/;"	s
+vpu_versioninfo	vpu_lib/vpu_lib.h	/^} vpu_versioninfo;$/;"	t	typeref:struct:vpu_versioninfo
+warn_msg	vpu_lib/vpu_debug.h	30;"	d
+width	application/vpu_test.h	/^	int width;$/;"	m	struct:cmd_line
+width	application/vpu_test.h.LOCAL.805.h	/^    int width;$/;"	m	struct:cmd_line
+width	application/vpu_test.h.REMOTE.805.h	/^	int width;$/;"	m	struct:cmd_line
+width	vpu_lib/vpu_util.h	/^    int width;$/;"	m	struct:__anon56
+word	vpu_lib/vpu_util.h	/^        Uint32 word;$/;"	m	union:__anon50::__anon51
+word	vpu_lib/vpu_util.h	/^        Uint32 word;$/;"	m	union:__anon50::__anon52
+worstSliceSize	vpu_lib/vpu_lib.h	/^    int worstSliceSize;$/;"	m	struct:__anon14
+writeMemProtectCfg	vpu_lib/vpu_util.h	/^    WriteMemProtectCfg writeMemProtectCfg;$/;"	m	struct:__anon58
+write_to_file	vpu_as.c	/^static void write_to_file(struct decode *dec, int index)$/;"	f	file:
+xy2ba_map	vpu_lib/vpu_gdi.h	/^	int xy2ba_map[16];$/;"	m	struct:__anon32
+xy2ca_map	vpu_lib/vpu_gdi.h	/^	int xy2ca_map[16];$/;"	m	struct:__anon32
+xy2ra_map	vpu_lib/vpu_gdi.h	/^	int xy2ra_map[16];$/;"	m	struct:__anon32
+xy2rbc_config	vpu_lib/vpu_gdi.h	/^	int xy2rbc_config;$/;"	m	struct:__anon32
