@@ -70,6 +70,7 @@
         . keepassx
         . tmux
         . ack-grep (used to grep a pattern in the all the file)
+        . login to ubuntu one
 
 9) Install Tlist - for gvim
 
@@ -85,3 +86,9 @@
     (Use it by typing :Ack <patern> -> searches in the current directory)
     . vim-airline (Status Bar)
     . multiple cursers
+
+12) Add Hangouts for ubuntu
+    wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+    sudo sh -c 'echo "deb http://dl.google.com/linux/talkplugin/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+    sudo apt-get update
+    sudo apt-get install google-talkplugin 
