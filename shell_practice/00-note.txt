@@ -43,6 +43,8 @@ Commands:
         :.!!<command> -> does the above
     - Calculate the mathematics and insert into the file in insert mode using: ^r =
     - Use gqap commad in normal mode to format the whole file with good indentation
+    - u -> in normal Mode - undo the changes.
+    - ^R -> Redo the Changes.
 
     Windows:
     --------
@@ -112,6 +114,11 @@ Commands:
 17) gconftool --type string --set /desktop/gnome/applications/terminal/exec <YOUR-TERMINAL>
     - Used to change the default terminal in ubuntu
     eg: gconftool --type string --set /desktop/gnome/applications/terminal/exec 'xterm -fa ******' - You know it
+
+18) Ctrl+l -> Clears the console
+19) Ctrl+u -> Clears the whole line in the shell
+20) Ctrl+k -> Clears the the line from the current cursor position to the end
+21) Ctrl+y -> recall the cleared data
 
 
 Shell Scpring:
