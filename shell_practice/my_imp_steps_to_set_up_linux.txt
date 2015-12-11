@@ -70,6 +70,7 @@
         . keepassx
         . tmux
         . ack-grep (used to grep a pattern in the all the file)
+        . login to ubuntu one
 
 9) Install Tlist - for gvim
 
