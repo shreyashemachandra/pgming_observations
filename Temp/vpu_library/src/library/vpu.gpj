@@ -1,0 +1,11 @@
+#!gbuild
+#component integrity_monolith
+[INTEGRITY Application]
+	-call_shared
+	-I$__OS_DIR/modules/ghs/vfs_server
+	:sourceDir=$__OS_DIR/modules/ghs/vfs_server
+vpu_kernel.gpj		[Program]
+vpu_as.gpj		[Program]
+vpu.int
+vpu_readme.txt
+ivfsserver_module.gpj		[Program]

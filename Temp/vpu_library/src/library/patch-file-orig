@@ -1,0 +1,619 @@
+diff --git a/vpu_library/src/library/vpu_as.c b/vpu_library/src/library/vpu_as.c
+index f76a8cf..d6119b9 100644
+--- a/vpu_library/src/library/vpu_as.c
++++ b/vpu_library/src/library/vpu_as.c
+@@ -95,8 +95,10 @@ int dec_fill_bsbuffer(DecHandle handle, struct cmd_line *cmd, Uint32 bs_va_start
+     }
+ 
+     /* Decoder bitstream buffer is empty */
+-    if (space <= 0)
++    if (space <= 0){
++        warn_msg("space %lu <= 0\n",space);
+         return 0;
++    }
+ 
+     if (defaultsize > 0) {
+         if (space < defaultsize)
+@@ -107,12 +109,13 @@ int dec_fill_bsbuffer(DecHandle handle, struct cmd_line *cmd, Uint32 bs_va_start
+         size = ((space >> 9) << 9);
+     }
+ 
+-    if (size == 0)
++    if (size == 0){
++        warn_msg("size == 0, space %lu\n", space);
+         return 0;
++    }
+ 
+     /* Fill the bitstream buffer */
+     target_addr = bs_va_startaddr + (pa_write_ptr - bs_pa_startaddr);
+-
+     if ( (target_addr + size) > bs_va_endaddr) {
+         room = bs_va_endaddr - target_addr;
+         nread = freadn(cmd->src_fd,(void *)target_addr,room);
+@@ -121,7 +124,7 @@ int dec_fill_bsbuffer(DecHandle handle, struct cmd_line *cmd, Uint32 bs_va_start
+             if (nread < 0) {
+                 if (nread == -EAGAIN)
+                     return 0;
+-
++                err_msg("nread %d < 0\n", nread);
+                 return -1;
+             }
+ 
+@@ -227,6 +230,10 @@ int decoder_parse(struct decode *dec)
+                 break;
+         }
+     }
++    
++    dec->lastPicWidth = initinfo.picWidth;
++    dec->lastPicHeight = initinfo.picHeight;
++
+     printf("Decoder: width = %d, height = %d, frameRateRes = %d, frameRateDiv = %d, count = %u\n",
+             initinfo.picWidth, initinfo.picHeight,
+             initinfo.frameRateRes, initinfo.frameRateDiv,
+@@ -240,6 +247,11 @@ int decoder_parse(struct decode *dec)
+     else
+         dec->regfbcount = dec->minfbcount + extended_fbcount;
+ 
++    printf("Minfb: %d , Extfb: %d",dec->minfbcount, extended_fdbount);
++
++    origPicWidth = initinfo.picWidth;
++    origPicHeight = initinfo.picHeight;
++
+     dec->picwidth = ((initinfo.picWidth + 15) & ~15);
+ 
+     align = 16;
+@@ -247,6 +259,7 @@ int decoder_parse(struct decode *dec)
+         align = 32;
+ 
+     dec->picheight = ((initinfo.picHeight + align - 1) & ~(align - 1));
++
+     if ((dec->picwidth == 0) || (dec->picheight == 0))
+         return -1;
+ 
+@@ -283,6 +296,26 @@ int decoder_allocate_framebuffer(struct decode *dec){
+     struct frame_buf **pfbpool;
+     int stride;
+ 
++    if (rot_en || dering_en || tiled2LinearEnable) {
++        /*
++         * At least 1 extra fb for rotation(or dering) is needed, two extrafb
++         * are allocated for rotation if path is V4L,then we can delay 1 frame
++         * de-queue from v4l queue to improve performance.
++         */
++        dec->rot_buf_count = 1;// TODO Depends on Destination Scheme
++        /*
++         * Need more buffers for V4L2 performance mode
++         * otherwise, buffer will be queued twice
++         */
++        dec->rot_buf_count = dec->regfbcount - dec->minfbcount + 1;
++        dec->extrafb += dec->rot_buf_count;
++        dec->post_processing = 1;
++    }
++
++    if(deblock_en){
++        dec->extrafb++;
++    }
++
+     totalfb = regfbcount + dec->extrafb;// TODO Check
+     printf("Total FrameBuffers Used: %d\n",totalfb);
+ 
+@@ -305,7 +338,7 @@ int decoder_allocate_framebuffer(struct decode *dec){
+     if (dec->cmdl->mapType == LINEAR_FRAME_MAP) {
+         /* All buffers are linear */
+         for (i = 0; i < totalfb; i++) {
+-            pfbpool[i] = framebuf_alloc(dec->cmdl->format, dec->mjpg_fmt,dec->stride, dec->picheight, mvCol);// :TODO
++            pfbpool[i] = framebuf_alloc(&dec->fbpool[i], dec->cmdl->format, dec->mjpg_fmt,dec->stride, dec->picheight, mvCol);//:TODO
+             if (pfbpool[i] == NULL){
+                 printf("pfbpool[%d] == NULL\n",i);
+                 // :TODO Free pfbpool
+@@ -314,7 +347,10 @@ int decoder_allocate_framebuffer(struct decode *dec){
+ 	    printf("pfbpool[%d]->fb's Phy Start Addr: 0x%x\n",i,pfbpool[i]->desc.phy_addr);
+ 	    printf("pfbpool[%d]->fb's Virt Start Addr: 0x%x\n",i,pfbpool[i]->desc.virt_uaddr);
+         }
+-    } 
++    } else {// Ignring else part tiled_framebuf_alloc
++        printf("Tiled_frame_Buf Not codded -- ERROR\n");
++        return -1;
++    }
+ 
+     for (i = 0; i < totalfb; i++) {
+         fb[i].myIndex = i;
+@@ -327,8 +363,6 @@ int decoder_allocate_framebuffer(struct decode *dec){
+ 
+     stride = ((dec->stride + 15) & ~15);
+ 
+-    printf ("%s - Line: %d -> Done allocation\n","decoder_allocate_framebuffer", __LINE__);
+-
+     bufinfo.avcSliceBufInfo.bufferBase = dec->phy_slice_buf;
+     bufinfo.avcSliceBufInfo.bufferSize = dec->phy_slicebuf_size;
+ 
+@@ -336,6 +370,14 @@ int decoder_allocate_framebuffer(struct decode *dec){
+     bufinfo.maxDecFrmInfo.maxMbX = dec->stride / 16;
+     bufinfo.maxDecFrmInfo.maxMbY = dec->picheight / 16;
+     bufinfo.maxDecFrmInfo.maxMbNum = dec->stride * dec->picheight / 256;
++    
++    /* For H.264, we can overwrite initial delay calculated from syntax.
++     * delay can be 0,1,... (in unit of frames)
++     * Set to -1 or do not call this command if you don't want to overwrite it.
++     * Take care not to set initial delay lower than reorder depth of the clip,
++     * otherwise, display will be out of order. */
++    vpu_DecGiveCommand(handle, DEC_SET_FRAME_DELAY, &delay);
++
+     ret = vpu_DecRegisterFrameBuffer(handle, fb, dec->regfbcount, stride, &bufinfo);
+     if (ret != RETCODE_SUCCESS) {
+         err_msg("Register frame buffer failed, ret=%d\n", ret);
+@@ -408,12 +450,11 @@ int decoder_start(struct decode *dec)
+         deblock_fb->bufCb = pfb->addrCb;
+         deblock_fb->bufCr = pfb->addrCr;
+     }
+-    
++ 
+     //while (1) {
+ 
+         if (deblock_en) {   
+-            ret = vpu_DecGiveCommand(handle, DEC_SET_DEBLOCK_OUTPUT,
+-                    (void *)deblock_fb);
++            ret = vpu_DecGiveCommand(handle, DEC_SET_DEBLOCK_OUTPUT,(void *)deblock_fb);
+             if (ret != RETCODE_SUCCESS) {
+                 err_msg("Failed to set deblocking output\n");
+                 return -1;  
+@@ -421,15 +462,16 @@ int decoder_start(struct decode *dec)
+         }
+ 
+        
+-
+         ret = vpu_DecStartOneFrame(handle, &decparam);
+         if (ret != RETCODE_SUCCESS) {
+             err_msg("DecStartOneFrame failed, ret=%d\n", ret);
+             return -1;
+         }
+ 
++#if 0
+         is_waited_int = 0;
+         loop_id = 0;
++
+         while (vpu_IsBusy()) {
+             /*
+              * Suppose vpu is hang if one frame cannot be decoded in 5s,
+@@ -446,17 +488,9 @@ int decoder_start(struct decode *dec)
+             loop_id ++;
+         }
+ 
+-#if 0
+         if (!is_waited_int) 
+             vpu_WaitForInt(100);
+ 
+-        if (usec < 0) {
+-            sec--;
+-            usec = usec + 1000000;
+-        }
+-
+-        tdec_time += (sec * 1000000) + usec;
+-
+         ret = vpu_DecGetOutputInfo(handle, &outinfo);// TODO imp vpu_DecGetOutputInfo
+         printf("frame_id = %d\n", (int)frame_id);
+         if (ret != RETCODE_SUCCESS) {
+@@ -464,6 +498,10 @@ int decoder_start(struct decode *dec)
+             return -1;
+         }
+ 
++        printf("DecodingSuccess = %d\n",outinfo.decodingSuccess);
++        printf("Decoding Done!!");
++
++
+         if (outinfo.decodingSuccess == 0) {
+             warn_msg("Incomplete finish of decoding process.\n\tframe_id = %d\n", (int)frame_id);
+             if (quitflag)
+@@ -631,7 +669,7 @@ int main( void )
+ int main(void)
+ {
+     struct decode *dec;
+-    struct cmd_line cmdl; // :TODO Set the Structure before Decode Open
++    struct cmd_line cmdl = {0}; // :TODO Set the Structure before Decode Open
+     vpu_mem_desc mem_desc = {0};
+     vpu_mem_desc ps_mem_desc = {0};
+     vpu_mem_desc slice_mem_desc = {0};
+@@ -646,8 +684,6 @@ int main(void)
+     dummy_fd = open("/sda/dummy",O_RDWR,0); // TODO: remove it. Just to invoke the VFS to open before other Open calls
+     printf("Dummy fileFD: %d\n",dummy_fd);
+ 
+-    framebuf_init();
+-    printf("framebuf initialised!");
+     ret = vpu_Init();
+     if(ret != RETCODE_SUCCESS){
+         err_msg("VPU INIT Failed! retured %d\n",ret);
+@@ -675,7 +711,6 @@ int main(void)
+ 
+     dec->reorderEnable = 0;
+     dec->tiled2LinearEnable = 0;
+-   
+ 
+     // :TODO Hard Coding Cmd Line Args
+     cmdl.format = STD_AVC;
+@@ -759,6 +794,9 @@ int main(void)
+ 
+     status = dec_fill_bsbuffer(dec->handle, &cmdl,dec->virt_bsbuf_addr,(dec->virt_bsbuf_addr + STREAM_BUF_SIZE),dec->phy_bsbuf_addr, fillsize, &eos, &fill_end_bs);
+     cmdl.complete = 0;
++    if (fill_end_bs) {
++        err_msg("Update 0 before seqinit, fill_end_bs = %d\n",fill_end_bs);
++    }
+     if (status < 0) {
+         err_msg("dec_fill_bsbuffer failed\n");
+         return -1;
+@@ -795,7 +833,6 @@ int main(void)
+     }
+ 
+     printf("END!!!\n");
+-
+     return 0;
+ }
+ #endif
+diff --git a/vpu_library/src/library/vpu_lib/vpu_lib.c b/vpu_library/src/library/vpu_lib/vpu_lib.c
+index 92c4a26..adcebd7 100644
+--- a/vpu_library/src/library/vpu_lib/vpu_lib.c
++++ b/vpu_library/src/library/vpu_lib/vpu_lib.c
+@@ -20,8 +20,9 @@
+  *                      vpu_DecUpdateBitstreamBuffer,
+  *                      vpu_DecGetBitstreamBuffer 
+  *                      added.
+- *  03/11/15    04      vpu_DecStartOneFrame,
++ *  03/12/15    04      vpu_DecStartOneFrame,
+  *                      vpu_IsBusy function added   Shreyas
++ *  08/12/15    05      vpu_DecGetOutputInfo
+  ******************************************************************************/ 
+ 
+ #include <INTEGRITY.h>
+@@ -352,9 +353,6 @@ RetCode vpu_DecGetInitialInfo(DecHandle handle, DecInitialInfo * info)
+     VpuWriteReg(CMD_DEC_SEQ_BB_START, pDecInfo->streamBufStartAddr);
+     VpuWriteReg(CMD_DEC_SEQ_BB_SIZE, pDecInfo->streamBufSize / 1024);
+ 
+-    if (inst->codecMode == VPX_DEC)
+-        VpuWriteReg(CMD_DEC_SEQ_START_BYTE, 0);//:TODO CHECK
+-
+     val = 0;
+ 
+     val |= ((pDecInfo->openParam.reorderEnable << 1) & 0x2);
+@@ -408,34 +406,25 @@ RetCode vpu_DecGetInitialInfo(DecHandle handle, DecInitialInfo * info)
+     info->frameRateDiv = VpuReadReg(RET_DEC_SEQ_FRATE_DR);
+     info->bitRate = VpuReadReg(RET_DEC_SEQ_BIT_RATE);
+ 
+-
+-
+     info->minFrameBufferCount = VpuReadReg(RET_DEC_SEQ_FRAME_NEED);
+     info->frameBufDelay = VpuReadReg(RET_DEC_SEQ_FRAME_DELAY);
+ 
+-    if (inst->codecMode == AVC_DEC) {
+-        val = VpuReadReg(RET_DEC_SEQ_CROP_LEFT_RIGHT);
+-        val2 = VpuReadReg(RET_DEC_SEQ_CROP_TOP_BOTTOM);
+-        if (val == 0 && val2 == 0) {
+-            info->picCropRect.left = 0;
+-            info->picCropRect.right = 0;
+-            info->picCropRect.top = 0;
+-            info->picCropRect.bottom = 0;
+-        }else {
+-            info->picCropRect.left = ((val >> 16) & 0xFFFF);
+-            info->picCropRect.right = info->picWidth - ((val & 0xFFFF));
+-            info->picCropRect.top = ((val2 >> 16) & 0xFFFF);
+-            info->picCropRect.bottom = info->picHeight - ((val2 & 0xFFFF));
+-        }
+-        val = info->picWidth * info->picHeight;
+-        info->normalSliceSize = (val * 3 / 2) / 1024 / 4;
+-        info->worstSliceSize = ((val / 256) * 3200 / 8  + 512)/ 1024;
+-    } else {
++    val = VpuReadReg(RET_DEC_SEQ_CROP_LEFT_RIGHT);
++    val2 = VpuReadReg(RET_DEC_SEQ_CROP_TOP_BOTTOM);
++    if (val == 0 && val2 == 0) {
+         info->picCropRect.left = 0;
+         info->picCropRect.right = 0;
+         info->picCropRect.top = 0;
+         info->picCropRect.bottom = 0;
++    }else {
++        info->picCropRect.left = ((val >> 16) & 0xFFFF);
++        info->picCropRect.right = info->picWidth - ((val & 0xFFFF));
++        info->picCropRect.top = ((val2 >> 16) & 0xFFFF);
++        info->picCropRect.bottom = info->picHeight - ((val2 & 0xFFFF));
+     }
++    val = info->picWidth * info->picHeight;
++    info->normalSliceSize = (val * 3 / 2) / 1024 / 4;
++    info->worstSliceSize = ((val / 256) * 3200 / 8  + 512)/ 1024;
+ 
+     val = VpuReadReg(RET_DEC_SEQ_HEADER_REPORT);
+     info->profile = (val >> 0) & 0xFF;
+@@ -450,7 +439,6 @@ RetCode vpu_DecGetInitialInfo(DecHandle handle, DecInitialInfo * info)
+ 
+     val = VpuReadReg(RET_DEC_SEQ_ASPECT);
+     info->aspectRateInfo = val;
+-
+    
+     info->streamInfoObtained = 1;
+ 
+@@ -502,7 +490,7 @@ RetCode vpu_DecStartOneFrame(DecHandle handle, DecParam * param)
+     CodecInst *inst;
+     DecInfo *pDecInfo;
+     DecParam *pDecParam;
+-    Uint32 reg = 0;
++    Uint32 reg = 0, rotMir = 0;
+     RetCode ret;
+ 
+     ENTER_FUNC("vpu_DecStartOneFrame");
+@@ -534,14 +522,22 @@ RetCode vpu_DecStartOneFrame(DecHandle handle, DecParam * param)
+     // Ignoring logtime TODO
+ 
+     SetGDIRegs(&pDecInfo->sTiledInfo);
++    
++    if (pDecInfo->tiledLinearEnable) {// TODO CHECK
++	rotMir |= 0x10;
++    }
++
++    if (pDecInfo->deringEnable) {// TODO CHECK
++	rotMir |= 0x20; /* Enable Dering Filter */
++    }
++
++    VpuWriteReg(CMD_DEC_PIC_ROT_MODE, rotMir);// TODO CHECK
+ 
+     // ignoring mx6x_mjpg
+ 
+     // ignoring tiled enable
+     // ignoring dering enable
+ 
+-    
+-
+     reg |= (1 << 10); /* hardcode to use interrupt disable mode  */
+ 
+     /* if iframeSearch is Enable, other bit is ignored. */
+@@ -551,8 +547,6 @@ RetCode vpu_DecStartOneFrame(DecHandle handle, DecParam * param)
+     } else {
+         if (param->skipframeMode)
+             reg |= (param->skipframeMode << 3);
+-        //else
+-            //reg |= (pDecInfo->decReportUserData.enable << 5); //TODO: Check if the whole "if" can be removed.
+     }
+ 
+     VpuWriteReg(CMD_DEC_PIC_OPTION, reg);
+@@ -574,7 +568,7 @@ RetCode vpu_DecStartOneFrame(DecHandle handle, DecParam * param)
+     VpuWriteReg(BIT_AXI_SRAM_USE, reg);
+     BitIssueCommand(inst, PIC_RUN);
+     ppendingInst = inst;
+-
++    
+     EXIT_FUNC("vpu_DecStartOneFrame");
+     return RETCODE_SUCCESS;
+ }
+@@ -656,9 +650,6 @@ RetCode vpu_DecGiveCommand(DecHandle handle, CodecCommand cmd, void *param)
+     pDecInfo = &inst->CodecInfo.decInfo;
+ 
+     switch (cmd) {
+-        
+-          
+-
+         case DEC_SET_SPS_RBSP:
+             {
+                 if (inst->codecMode != AVC_DEC) {
+@@ -682,20 +673,17 @@ RetCode vpu_DecGiveCommand(DecHandle handle, CodecCommand cmd, void *param)
+                 SetParaSet(handle, 1, param);
+                 break;
+             }
+-     
+         case ENABLE_DERING:
+             {       
+                 
+                 pDecInfo->deringEnable = 1;
+                 break;
+             }
+-
+         case DISABLE_DERING:
+             {   
+                 pDecInfo->deringEnable = 0;
+                 break;
+             }
+-
+         case SET_DBK_OFFSET :
+             {   
+                 DbkOffset dbkOffset;
+@@ -707,17 +695,14 @@ RetCode vpu_DecGiveCommand(DecHandle handle, CodecCommand cmd, void *param)
+                 pDecInfo->dbkOffset.DbkOffsetEnable = ((pDecInfo->dbkOffset.DbkOffsetA !=0 ) && (pDecInfo->dbkOffset.DbkOffsetB != 0));
+                 break;
+             }
+-
+         case DEC_SET_FRAME_DELAY:
+             {
+                 pDecInfo->frame_delay = *(int *)param;
+                 break;
+             }
+-
+         default:
+-	    //TODO: Print Err msg with command.
++	        printf("Invalid CodecCommand - %d\n",cmd);
+             return RETCODE_INVALID_COMMAND;
+-
+     }
+ 
+     return RETCODE_SUCCESS;
+@@ -843,7 +828,6 @@ RetCode vpu_DecGetBitstreamBuffer(DecHandle handle,PhysicalAddress * paRdPtr,Phy
+         printf("CheckDecInstanceValidity Returned Error!\n");
+         return ret;
+     }
+-    inst = handle;
+ 
+     if (paRdPtr == 0 || paWrPtr == 0 || size == 0){
+         printf("Read | Write Pointers or size is Zero! - Error\n");
+@@ -1152,3 +1136,179 @@ RetCode vpu_DecOpen(DecHandle * pHandle, DecOpenParam * pop)
+ 
+     return RETCODE_SUCCESS;
+ }
++
++/*!
++ * @brief Get the information of output of decoding.
++ *
++ * @param handle [Input] The handle obtained from vpu_DecOpen().
++ * @param info [Output] Pointer to DecOutputInfo data structure.
++ *
++ * @return
++ * @li RETCODE_SUCCESS Successful operation.
++ * @li RETCODE_INVALID_HANDLE decHandle is invalid.
++ * @li RETCODE_WRONG_CALL_SEQUENCE Wrong calling sequence.
++ * @li RETCODE_INVALID_PARAM Info is an invalid pointer.
++ */
++RetCode vpu_DecGetOutputInfo(DecHandle handle, DecOutputInfo * info)
++{
++    CodecInst *inst;
++    DecInfo *pDecInfo;
++    RetCode ret; 
++    Uint32 val = 0; 
++    Uint32 val2 = 0; 
++
++    ENTER_FUNC("vpu_DecGetOutputInfo");
++
++    if (pCodecInst != handle) {
++        printf("Invalid Handle Returned Error\n");
++        return RETCODE_INVALID_HANDLE;
++    }
++
++    ret = CheckDecInstanceValidity(handle);
++    if (ret != RETCODE_SUCCESS) {
++        err_msg("CheckInst, ret=%d\n", ret);
++        return ret; 
++    }    
++
++    if (info == 0) { 
++        return RETCODE_INVALID_PARAM;
++    }    
++
++    inst = handle;
++    pDecInfo = &inst->CodecInfo.decInfo;
++
++    if (ppendingInst == 0) {
++        return RETCODE_WRONG_CALL_SEQUENCE;
++    }
++
++    if (inst != ppendingInst) {
++        err_msg("inst 0x%p, pendingInst 0x%p\n", inst, ppendingInst);
++        return RETCODE_INVALID_HANDLE;
++    }
++
++    memset(info, 0, sizeof(DecOutputInfo));
++
++    if (VpuReadReg(BIT_BUSY_FLAG))
++        err_msg("fatal: VPU is busy in %s\n", "vpu_DecGetOutputInfo");
++
++    val = VpuReadReg(RET_DEC_PIC_SUCCESS);
++    info->decodingSuccess = (val & 0x01);
++
++    if (pDecInfo->openParam.bitstreamMode && (val & (1 << 4))) {
++        info->decodingSuccess |= 0x10;
++        VpuWriteReg(BIT_RUN_INDEX, inst->instIndex);
++    }
++
++    info->decodingSuccess |= val & (1 << 20);
++
++    info->notSufficientPsBuffer = (val >> 3) & 0x1;
++    info->notSufficientSliceBuffer = (val >> 2) & 0x1;
++
++    val = VpuReadReg(RET_DEC_PIC_SIZE);     /* decoding picture size */
++    info->decPicHeight = val & 0xFFFF;
++    info->decPicWidth = (val >> 16) & 0xFFFF;
++
++    info->frameStartPos = inst->ctxRegs[CTX_BIT_RD_PTR];
++    info->frameEndPos = VpuReadReg(BIT_RD_PTR);
++
++    if (info->frameEndPos < info->frameStartPos) {
++        info->consumedByte = pDecInfo->streamBufEndAddr - info->frameStartPos;
++        info->consumedByte += info->frameEndPos - pDecInfo->streamBufStartAddr;
++    } else
++        info->consumedByte = info->frameEndPos - info->frameStartPos;
++
++    val = VpuReadReg(RET_DEC_PIC_CROP_LEFT_RIGHT);
++    val2 = VpuReadReg(RET_DEC_PIC_CROP_TOP_BOTTOM);
++    if (val == 0xFFFFFFFF && val2 == 0xFFFFFFFF) {
++        /* Keep current crop information */
++    } else if (val == 0 && val2 == 0) {
++        info->decPicCrop.left = 0;
++        info->decPicCrop.right = 0;
++        info->decPicCrop.top = 0;
++        info->decPicCrop.bottom = 0;
++    } else {
++        info->decPicCrop.left = ((val >> 16) & 0xFFFF);
++        info->decPicCrop.right = info->decPicWidth - ((val & 0xFFFF));
++        info->decPicCrop.top = ((val2 >> 16) & 0xFFFF);
++        info->decPicCrop.bottom = info->decPicHeight - ((val2 & 0xFFFF));
++    }
++
++    val = VpuReadReg(RET_DEC_PIC_TYPE);
++
++    info->picType = val & 0x7;
++
++    info->picTypeFirst = (val & 0x38) >> 3;
++    info->idrFlg = (val & 0xC0) >> 6;
++
++    info->interlacedFrame = (val >> 16) & 0x1;
++
++    info->h264Npf = (val >> 16) & 0x3;
++    info->interlacedFrame = (val >> 18) & 0x1;
++    info->pictureStructure = (val >> 19) & 0x0003;  /* MbAffFlag[17], FieldPicFlag[16] */
++    info->topFieldFirst = (val >> 21) & 0x0001; /* TopFieldFirst[18] */
++    info->repeatFirstField = (val >> 22) & 0x0001;
++
++    info->progressiveFrame = (val >> 23) & 0x0003;
++    info->fieldSequence = (val >> 25) & 0x0007;
++
++    info->frameRateRes = VpuReadReg(RET_DEC_PIC_FRATE_NR);
++    info->frameRateDiv = VpuReadReg(RET_DEC_PIC_FRATE_DR);
++    if (inst->codecMode == AVC_DEC && info->frameRateDiv)
++        info->frameRateDiv *= 2;
++
++    info->aspectRateInfo = VpuReadReg(RET_DEC_PIC_ASPECT);
++
++    info->numOfErrMBs = VpuReadReg(RET_DEC_PIC_ERR_MB);
++
++    info->indexFrameDisplay = VpuReadReg(RET_DEC_PIC_FRAME_IDX);
++    info->indexFrameDecoded = VpuReadReg(RET_DEC_PIC_CUR_IDX);
++
++    /* save decoded picType to this array */
++    if (info->indexFrameDecoded >= 0)
++        pDecInfo->decoded_pictype[info->indexFrameDecoded] = info->picType;
++
++    if (inst->codecModeAux == AVC_AUX_MVC) {
++        val = VpuReadReg(RET_DEC_PIC_MVC_REPORT);
++        info->mvcPicInfo.viewIdxDisplay = val & 1;
++        info->mvcPicInfo.viewIdxDecoded = (val >> 1) & 1;
++    }
++    
++    val = VpuReadReg(RET_DEC_PIC_AVC_FPA_SEI0);
++
++    if ((int)val < 0)
++        info->avcFpaSei.exist = 0;
++    else {
++        info->avcFpaSei.exist = 1;
++        info->avcFpaSei.frame_packing_arrangement_id = val & 0x7FFFFFFF;
++
++        val = VpuReadReg(RET_DEC_PIC_AVC_FPA_SEI1);
++        info->avcFpaSei.content_interpretation_type = val & 0x3F;
++        info->avcFpaSei.frame_packing_arrangement_type = (val >> 6) & 0x7F;
++        info->avcFpaSei.frame_packing_arrangement_ext_flag = (val >> 13) & 0x01;
++        info->avcFpaSei.frame1_self_contained_flag = (val >> 14) & 0x01;
++        info->avcFpaSei.frame0_self_contained_flag = (val >> 15) & 0x01;
++        info->avcFpaSei.current_frame_is_frame0_flag = (val >> 16) & 0x01;
++        info->avcFpaSei.field_views_flag = (val >> 17) & 0x01;
++        info->avcFpaSei.frame0_flipped_flag = (val >> 18) & 0x01;
++        info->avcFpaSei.spatial_flipping_flag = (val >> 19) & 0x01;
++        info->avcFpaSei.quincunx_sampling_flag = (val >> 20)&0x01;
++        info->avcFpaSei.frame_packing_arrangement_cancel_flag = (val >> 21) & 0x01;
++
++        val = VpuReadReg(RET_DEC_PIC_AVC_FPA_SEI2);
++        info->avcFpaSei.frame_packing_arrangement_repetition_period = val & 0x7FFF;
++        info->avcFpaSei.frame1_grid_position_y = (val >> 16) & 0x0F;
++        info->avcFpaSei.frame1_grid_position_x = (val >> 20) & 0x0F;
++        info->avcFpaSei.frame0_grid_position_y = (val >> 24) & 0x0F;
++        info->avcFpaSei.frame0_grid_position_x = (val >> 28) &0x0F;
++    }
++
++    /* Backup context regs, no need to save BIT_WR_PTR
++       and BIT_FRAME_MEM_CTRL since f/w doesn't update the registers */
++    inst->ctxRegs[CTX_BIT_FRM_DIS_FLG] = VpuReadReg(BIT_FRM_DIS_FLG);
++    inst->ctxRegs[CTX_BIT_RD_PTR] = VpuReadReg(BIT_RD_PTR);
++    inst->ctxRegs[CTX_BIT_STREAM_PARAM] = VpuReadReg(BIT_BIT_STREAM_PARAM);
++
++    ppendingInst = 0;
++
++    return RETCODE_SUCCESS;
++}
