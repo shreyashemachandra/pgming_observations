@@ -111,9 +111,8 @@ Commands:
     ------
     - 
 
-17) gconftool --type string --set /desktop/gnome/applications/terminal/exec <YOUR-TERMINAL>
+17) gsettings set org.gnome.desktop.default-applications.terminal exec 'xterm -fa 'Monospace' -fs 9 -maximized' - in Ubuntu12.04 and beyond
     - Used to change the default terminal in ubuntu
-    eg: gconftool --type string --set /desktop/gnome/applications/terminal/exec 'xterm -fa ******' - You know it
 
 18) Ctrl+l -> Clears the console
 19) Ctrl+u -> Clears the whole line in the shell
