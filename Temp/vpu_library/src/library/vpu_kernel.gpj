@@ -1,8 +1,0 @@
-#!gbuild
-#component integrity_kernel_monolith
-[Program]
-	-kernel
-	-ldebug
-	-lres
-	-lnk0=-C__VPUMemorySize=32M
-global_table.c
