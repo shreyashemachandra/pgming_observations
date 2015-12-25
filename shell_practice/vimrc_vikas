@@ -1,3 +1,4 @@
+set nocompatible
 set nobackup
 set clipboard=unnamed
 set tabstop=4
@@ -42,15 +43,6 @@ nnoremap <Leader>repb: s/q/\\b/g
 nnoremap <Leader>e : cp<CR>
 nnoremap <Leader>d : cn<CR>
 nnoremap <Leader>t :TagbarToggle<CR>
-"nnoremap <Leader>cc ::make! -j4 -C test/sample_code clean<CR>
-"nnoremap <Leader>c ::make -C ~/projects/3dAudio/ISO/3DAudio_RM4_ReferenceSoftware_20150116/modules/coreCoder/mpegD_usac/usacEncDec/make <CR>
-"nnoremap <Leader>cc ::make -C ~/projects/3dAudio/ISO/3DAudio_RM4_ReferenceSoftware_20150116/modules/coreCoder/mpegD_usac/usacEncDec/make clean <CR>
-"nnoremap <Leader>c :make -C /home/vikas/projects/mpegh_3d/test/3DAudio_RM4_ReferenceSoftware_20150116/modules/hoaCoder/hoaDec/make <CR>:copen<CR>
-
-"nnoremap <Leader>cc :make clean -C /home/vikas/projects/mpegh_3d/test/3DAudio_RM4_ReferenceSoftware_20150116/modules/hoaCoder/hoaDec/make clean <CR>
-
-"nnoremap <Leader>cc ::make -j4 -C utest_bs/ clean<CR>
-"nnoremap <Leader>c ::make -j4 -C utest_bs/ <CR>
 nnoremap <Leader>c q:
 nnoremap <Leader>sd :!svn_diff %<CR>
 "Maximize window
@@ -80,13 +72,23 @@ autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
      \ endif
+"Color stuff"
+set t_Co=256
 if has('gui_running')
   set guioptions-=T  " no toolbar
-  set guifont=Monospace\ 9 
+  set guifont=Monospace\ 9
   colorscheme desert
 endif
 colorscheme desert
 set path+=**
+highlight Search guibg='Yellow' guifg='NONE'
+
+let g:DoxygenToolkit_briefTag_pre="@Description"
+let g:DoxygenToolkit_paramTag_pre="@Param "
+let g:DoxygenToolkit_returnTag="@Returns   "
+let g:DoxygenToolkit_blockHeader="----------------------------------------------------------------------"
+let g:DoxygenToolkit_blockFooter="----------------------------------------------------------------------"
+let g:DoxygenToolkit_authorName="Vikas MK"
 "Do tags and cscope. Do this in the top directory
 "map <F2> :!ctags -R * <CR>:set tag=tags<CR>:!cscope -Rbkq<CR>:cs add cscope.out<CR>
 "Only add these files to cscope
@@ -105,9 +107,9 @@ nnoremap <Leader>rs :%s/^ \+//<CR>
 set complete-=i
 filetype plugin on
 filetype indent on
-set omnifunc=syntaxcomplete#Complete
-au FileType c setl ofu=ccomplete#CompleteCpp
-"autocmd BufWritePre * :%s/\s\+$//e
+"set omnifunc=syntaxcomplete#Complete
+"au FileType c setl ofu=ccomplete#CompleteCpp
+autocmd BufWritePre * :%s/\s\+$//e
 "
 if has('cscope')
     set cscopetag cscopeverbose
@@ -124,87 +126,6 @@ if has('cscope')
     cnoreabbrev csh cs help
 "    command -nargs=0 Cscope cs add $VIMSRC/src/cscope.out $VIMSRC/src
 endif
-"Dispatch plugin
-map <Leader>x <esc>:Dispatch
-"enable taglist plugin
-"
-map <Leader>tt <esc><C-]>
-""""""""""""""""CSCOPE STUFF"""""""""""""""""""""
-"map <Leader>f search for C symbol
-map <Leader>f <esc>:cscope find s <cword> <CR>:copen<CR>
-map <Leader>ft <esc>:cscope find t <cword> <CR>:copen<CR>
-"<Leader>fc functions calling this function
-map <Leader>fc <esc>:cscope find c <cword> <CR>:copen<CR>
-"map <F3> :execute "vimgrep /" . expand("<cword>") . "/j **/*.[ch]" <Bar> cw<CR>
-""function called by function under cursor
-nnoremap <Leader>fd : cs find d <cword> <CR>:copen<CR>
-"function definition of function under cursor
-nnoremap <Leader>fg : cs find g <cword><CR>:copen<CR>
-"""""""""""""CSCOPE STUFF ENDS""""""""""""""""
-"find file
-"nnoremap <Leader>ff : cs find f
-
-nnoremap <Leader>ff :CtrlP<CR>
-nnoremap <Leader>b :CtrlPBuffer<CR>
-
-"""""""""'vim fugitive gitstuff"""""""""""""""""""
-map  <Leader>gs <esc>:Gstatus <CR>
-nnoremap <Leader>gvd :Gvdiff
-nnoremap <Leader>gd :Gdiff
-nnoremap <Leader>gl :Gitlog<CR>
-"""""""""'vim fugitive gitstuff ends """""""""""""""""""
-"Paste the prototype of the function above it"
-map <Leader>r <esc>:w!<CR><C-]>vf(%y<C-t>O<esc>p<esc>
-
-"
-map <F2> :!find `pwd` -name "*.c" -o -name "*.h" -o -name "*.cpp" > cscope.files<CR>:!ctags -R * <CR>:set tag=tags<CR>:!cscope -Rbq <CR>:cscope add cscope.out<CR>:cs reset<CR>
-"Color stuff
-if $COLORTERM == 'gnome-terminal'
-	  set t_Co=256
-endif
-	  set t_Co=256
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-" Display git branch in status line
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-"Git branch
-function! GitBranch()
-    let branch = system("git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* //'")
-    if branch != ''
-        return '   Git Branch: ' . substitute(branch, '\n', '', 'g')
-    en
-    return ''
-endfunction
-
-function! CurDir()
-    return substitute(getcwd(), '/Users/amir/', "~/", "g")
-endfunction
-
-function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    en
-    return ''
-endfunction
-set laststatus=2
-" Format the statusline
-"set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L%{GitBranch()}
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ \ \ Line:\ %l/%L%{GitBranch()}
-""""""""""""""""""""""""""""""""""""""""""""""""""
-""CLANG complete stuff
-let g:clang_user_options='|| exit 0'
-let g:clang_complete_copen = 1
-"make is multiple jobs, plus dont jump to the first error after make
-set makeprg=make
-"conf for YCM
-"let g:ycm_global_ycm_extra_conf = "~/.vim/ycm_extra_conf.py"
-""set makeprg=!make -C ~/projects/Dolby/Dolby_Digital_Plus_Decoder_Imp/Source_Code/make/ddp_udc/
-"" vundle {{{
-"
- " needed to run vundle (but i want this anyways)
-set nocompatible
-
- " vundle needs filtype plugins off
- " i turn it on later
 filetype plugin indent off
 syntax off
 
@@ -217,7 +138,7 @@ let g:ctrlp_switch_buffer = 1
 "Use find command instead of vim's inbuild commands
 let g:ctrlp_user_command = 'find %s -type f' " MacOSX/Linux
 
-let g:ycm_global_ycm_extra_conf = '~/scrips/.ycm_extra_conf.py'
+"let g:ycm_global_ycm_extra_conf = '~/scrips/.ycm_extra_conf.py'
 
  " start vundle environment
  call vundle#begin()
@@ -234,9 +155,11 @@ let g:ycm_global_ycm_extra_conf = '~/scrips/.ycm_extra_conf.py'
  Plugin 'rdnetto/YCM-Generator'
  Plugin 'xolox/vim-misc'
  Plugin 'xolox/vim-notes'
- " to install a plugin add it here and run :PluginInstall.
- " to update the plugins run :PluginInstall! or :PluginUpdate
- " to delete a plugin remove it here and run :PluginClean
+ Plugin 'powerline/powerline'
+ Plugin 'mrtazz/DoxygenToolkit.vim'
+" to install a plugin add it here and run :PluginInstall.
+" to update the plugins run :PluginInstall! or :PluginUpdate
+" to delete a plugin remove it here and run :PluginClean
  "
 
  " YOUR LIST OF PLUGINS GOES HERE LIKE THIS:
@@ -257,5 +180,30 @@ syntax on
 " set title
 "end
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""CSCOPE STUFF"""""""""""""""""""""
+"map <Leader>f search for C symbol
+map <Leader>f <esc>:cscope find s <cword> <CR>:copen<CR>
+map <Leader>ft <esc>:cscope find t <cword> <CR>:copen<CR>
+"<Leader>fc functions calling this function
+map <Leader>fc <esc>:cscope find c <cword> <CR>:copen<CR>
+"map <F3> :execute "vimgrep /" . expand("<cword>") . "/j **/*.[ch]" <Bar> cw<CR>
+""function called by function under cursor
+nnoremap <Leader>fd : cs find d <cword> <CR>:copen<CR>
+"function definition of function under cursor
+nnoremap <Leader>fg : cs find g <cword><CR>:copen<CR>
+"""""""""""""CSCOPE STUFF ENDS""""""""""""""""
+
+nnoremap <Leader>ff :CtrlP<CR>
+nnoremap <Leader>b :CtrlPBuffer<CR>
+
+"""""""""'vim fugitive gitstuff"""""""""""""""""""
+map  <Leader>gs <esc>:Gstatus <CR>
+nnoremap <Leader>gvd :Gvdiff
+nnoremap <Leader>gd :Gdiff
+nnoremap <Leader>gl :Gitlog<CR>
+"""""""""'vim fugitive gitstuff ends """""""""""""""""""
+
+map <F2> :!find `pwd` -name "*.c" -o -name "*.h" -o -name "*.cpp" > cscope.files<CR>:!ctags -R * <CR>:set tag+=tags<CR>:!cscope -Rbq <CR>:cscope add cscope.out<CR>:cs reset<CR>
+set tag+=~/projects/labpc_mount/usr/ghs/int1104/tags
 
 
