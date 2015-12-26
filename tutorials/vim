@@ -49,46 +49,6 @@ General:
     - Macros
     --------
 
-
-
-Normal Mode:
-------------
-    - h / k / j / l - Cursor movements
-    - ^E - Scroll the window down
-    - ^Y - Scroll the window up
-    - ^F - Scroll one page down
-    - ^B - Scroll one page up
-    - H - Move Cursor to top of the window
-    - M - Move Cursor to middle of the window
-    - L - Move Corsor to Bottom of the window
-
-    - gg -> to make the cursor point on top of the file
-    - =G ->
-
-    - Macros
-    --------
-
-
-
-Normal Mode:
-------------
-    - h / k / j / l - Cursor movements
-    - ^E - Scroll the window down
-    - ^Y - Scroll the window up
-    - ^F - Scroll one page down
-    - ^B - Scroll one page up
-    - H - Move Cursor to top of the window
-    - M - Move Cursor to middle of the window
-    - L - Move Corsor to Bottom of the window
-
-    - gg -> to make the cursor point on top of the file
-    - =G -
-
-    - Macros
-    --------
-
-
-
 Normal Mode:
 ------------
     - h / k / j / l - Cursor movements
@@ -102,15 +62,6 @@ Normal Mode:
 
     - gg -> to make the cursor point on top of the file
     - =G -> to Alligh the lines till botom of the file
-    - Shift + k on a lib fuction, takes you to the man page of the function
-    - ^(Ctrl)x^o ->  Gives Sugessions on the path that you are typing - Read :help(:help ^x^o)
-    - :ia <abbrivation> <the actual word> --> Used to abrivate any symbol. To unabbrivate use :iuna
-    - ^a on any number it incriments the number, ^x -> decriments
-    - Inserting the output of the shell command into the file using !! (bang bang)            
-        :.!!<command> -> does the above
-    - Use gqap commad in normal mode to format the whole file with good indentation
-    - u -> in normal Mode - undo the changes.
-    - ^R -> Redo the Changes.
 
 Insert Mode:
 ------------
