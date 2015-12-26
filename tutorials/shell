@@ -1,0 +1,54 @@
+Commands:
+=========
+
+1) ls: 
+    Options:
+    --------
+    ls -a
+    ls -l
+
+2) file:
+    Options:
+    file *
+
+3) cp:
+    cp <src path> <dest path>
+
+4) mv:
+    mv <src path> <dest path>
+
+5) tail:
+    tail +10 <file name>  --> To output the last 10 lines of the file
+
+6) head:
+    head +10 <file Name>   --> To output the first 10 lines of the file
+
+7) ln:
+    ln -s <ActualFile> <Symbolic File Name> ---> To Crete a symbolic link
+
+8)  find . -name "*vpu*.c"
+    Finds the specific pattern file in the Current Directory (.)
+
+9) cscope
+    install "cscope" to do the same as ctags, its a differnt tool.
+    - cscope -R .
+
+10) vimtutor
+    Basic level tutor for vim
+
+11) du -sh .
+    gives the disk usage of the current directory
+
+12) ack-grep <pattern>
+    - Lists all the occurences of the pattern in all the file
+
+13) gsettings set org.gnome.desktop.default-applications.terminal exec 'xterm -fa 'Monospace' -fs 9 -maximized' - in Ubuntu12.04 and beyond
+    - Used to change the default terminal in ubuntu
+
+14) Ctrl+l -> Clears the console
+15) Ctrl+u -> Clears the whole line in the shell
+16) Ctrl+k -> Clears the the line from the current cursor position to the end
+17) Ctrl+y -> recall the cleared data
+
+
+

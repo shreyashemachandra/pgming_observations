@@ -1,0 +1,80 @@
+=========================================================================
+=                               VIM                                     =
+=========================================================================
+
+8) vi / vim / gvim:
+    General:
+    --------
+    - Esc - Normal Mode / Commad Mode
+    - i or Insert - Inset mode
+    - v - Visual Mode
+    - ^v - Visual Block Mode
+    - <Shift> + v - Visual Line Mode
+
+    Normal Mode:
+    ------------
+    - h / k / j / l - Cursor movements
+    - ^E - Scroll the window down
+    - ^Y - Scroll the window up
+    - ^F - Scroll one page down
+    - ^B - Scroll one page up
+    - H - Move Cursor to top of the window
+    - M - Move Cursor to middle of the window
+    - L - Move Corsor to Bottom of the window
+
+    - gg -> to make the cursor point on top of the file
+    - =G -> to Alligh the lines till botom of the file
+    - Shift + k on a lib fuction, takes you to the man page of the function
+    - ^(Ctrl)x^o ->  Gives Sugessions on the path that you are typing - Read :help(:help ^x^o)
+    - :ia <abbrivation> <the actual word> --> Used to abrivate any symbol. To unabbrivate use :iuna
+    - ^a on any number it incriments the number, ^x -> decriments
+    - Inserting the output of the shell command into the file using !! (bang bang)            
+        :.!!<command> -> does the above
+    - Use gqap commad in normal mode to format the whole file with good indentation
+    - u -> in normal Mode - undo the changes.
+    - ^R -> Redo the Changes.
+
+    Insert Mode:
+    ------------
+    - Calculate the mathematics and insert into the file in insert mode using: ^r =
+    
+
+    Windows:
+    --------
+    - ^+w v / :vsplit -> Vertically splits the window
+    - ^+w s / :split -> Horizontally splits the window
+    - ^+w o / :only -> Displays only that window
+    - ^+w c / :close -> Closes the window
+    - ^+w h/j/k/l : Moving cursor between windows
+    - ^+w H/J/K/L : Moving Window
+    - ^+w +/- / :resize +/-<Number> : Resizing the Wondow Height
+    - ^+w </> / :vertical resize +/<Number> : Resizing the window Width
+    - ^+w = : Resize windows to equal height and width
+    - :help ^w : reference to window
+
+    Plugins:
+    --------
+    ctags:
+    -----
+        install "ctags"  and use to jump to variables and functions.
+        - ctags -R . --> Execute ths command in the current directory,
+        This produces a "tags" file
+        - in vi editor --> :set <the path of the "tags" file>
+        - ctrl + ]  --> to jump to the functions and variables
+        - ctrl + t  --> to jump back to the previous position
+        - :!ts – shows the list.
+        - :!tn – goes to the next tag in that list.
+        - :!tp – goes to the previous tag in that list.
+        - :!tf – goes to the function which is in the first of the list.
+        - :!tl – goes to the function which is in the last of the list.
+        - :!ta <funtion Name> toggles to the funtion
+
+
+    Ack: <Note: Ack (Capital 'A')>
+    ----
+    - :Ack <pattern> -> lists all the occurences in multile files in the current and sub directories
+    - :cn to go to the next occurence
+    - :cp to go to the previous occurence
+    - ccopen / cclose to open or close the menu
+
+
