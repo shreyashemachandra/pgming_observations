@@ -71,13 +71,17 @@
         . tmux
         . ack-grep (used to grep a pattern in the all the file)
         . login to ubuntu one
+        . nvim
+        . gitg -> UI for Git
 
-9) Install Tlist - for gvim
-
-10) Only for Office - 
+9) Only for Office - 
         Configure Printer
 
-11) Add Plugins to vim:
+10) Important Installs or Plugins for VIM or NVIM:
+    - Install Tlist - for gvim
+
+    Pathogen:
+    ---------
     . pathogen.vim -> GitHub tpope --> Hosts many plugins in vim
     . vim-colorschemes -> GitHub flazz (:colo Blacksea) -> Gets millions of color schemes for gvim
     . ultisnips -> GitHub SirVir -> to get code snippets
@@ -85,10 +89,14 @@
     . ack.vim -> GitHub mileszs -> Used to search for patterns very fast inside vim 
     (Use it by typing :Ack <patern> -> searches in the current directory)
     . vim-airline (Status Bar)
-    . multiple cursers
-
-12) Add Hangouts for ubuntu
-    wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-    sudo sh -c 'echo "deb http://dl.google.com/linux/talkplugin/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-    sudo apt-get update
-    sudo apt-get install google-talkplugin 
+    . vim-multiple-cursers
+    . vim-fugitive -> Git inside Vim.
+    . vim-gitgutter -> Git Add Remove Modified indicator in everyfile you open
+    . neardtree -> Smart Directory Structure Representation
+    . tcomment_vim -> To comment and uncomment easily in vim
+    . vim-tmux-navigator - Navigate Smoothly when vim inside tmux
+    . terminus -> Makes working with terminal easy
+    . vim-autoformat -> Format the code with one press button
+    . vim-devicons -> Puts Icons on vim
+    . fzf -> fuzzyfinder
+    . 
