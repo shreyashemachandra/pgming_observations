@@ -1,0 +1,14 @@
+=========================================================================
+=                                GIT                                    =
+=========================================================================
+
+Config:
+------
+Diff tool:
+- To set the Diff tool in git:
+    git config --global diff.tool <your diff tool> (example: vimdiff / gvimdiff / meld)
+    git config --global difftool.prompt false
+- To use Diff tool in git
+    git difftool <name of the file> -> tells the difference in the cloud and the local
+- Similarly gitgutter tool can be used to make out the difference in runtime
+

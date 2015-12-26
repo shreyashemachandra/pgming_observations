@@ -1,0 +1,38 @@
+=========================================================================
+=                               TMUX                                    =
+=========================================================================
+
+Session Management:
+------------------
+- tmux new -s session_name 
+Creates new Session
+- tmux attach -t session_name
+Attach to a session
+- tmux switch -t session_name
+Switch b/w sessions
+- tmux list-sessions (or) tmux ls
+    List all session
+- tmux detach (or) (prefix + d)
+    Detach from the session
+
+Windows:
+-------
+- tmux new-window (or) (prefix + c)
+    Create new window in a session
+- tmux select-window -t :0-9 (or) (prefix + 0-9)
+    Toggle between the windows
+    - prefix + n
+    Toggel to the next window in the buffer
+    - prefix + p
+    Toggle to the previos window in the buffer
+-tmux rename-window (or) (prefix + ,)
+    Rename the window
+
+Panes:
+------
+- tmux split-window (or) (prefix + “)
+    Split window Horizontally
+- tmux split-window -h (or) (prefix + %)
+    Split window vertically
+-
+
