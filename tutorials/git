@@ -2,6 +2,13 @@
 =                                GIT                                    =
 =========================================================================
 
+General:
+--------
+- Deleting a remote branch
+    git push origin --delete <branchname>
+        (or)
+    git push origin :<branchname>
+
 Config:
 ------
 Diff tool:
