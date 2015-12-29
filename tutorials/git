@@ -2,6 +2,17 @@
 =                                GIT                                    =
 =========================================================================
 
+Remote:
+--------
+- Deleting a remote branch:
+    git push origin --delete <branchname>
+        (or)
+    git push origin :<branchname>
+- Pushing a new commit to the remote Branch:
+    Checkout to the <branch>
+    then,
+    git push origin <branch>
+
 Config:
 ------
 Diff tool:
