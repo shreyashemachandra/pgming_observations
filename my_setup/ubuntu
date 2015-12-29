@@ -80,9 +80,13 @@
 10) Important Installs or Plugins for VIM or NVIM:
     - Install Tlist - for gvim
 
-    Pathogen:
+    Pathogen: (Manually installation)(Not Recommended)
     ---------
     . pathogen.vim -> GitHub tpope --> Hosts many plugins in vim
+
+    Vundle:
+    -------
+    . Vundle.vim -> Github VundleVim
     . vim-colorschemes -> GitHub flazz (:colo Blacksea) -> Gets millions of color schemes for gvim
     . ultisnips -> GitHub SirVir -> to get code snippets
     . syntastic -> GitHub scrooloose -> to get the systactic errors when saving the file
@@ -99,4 +103,3 @@
     . vim-autoformat -> Format the code with one press button
     . vim-devicons -> Puts Icons on vim
     . fzf -> fuzzyfinder
-    . 
