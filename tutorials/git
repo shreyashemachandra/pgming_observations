@@ -12,3 +12,10 @@ Diff tool:
     git difftool <name of the file> -> tells the difference in the cloud and the local
 - Similarly gitgutter tool can be used to make out the difference in runtime
 
+Setting up UserName and EmailAddress:
+- git config user.email <your email>
+- git config user.name <userName>
+If Global Declaration has to be done,
+- git config --global user.email <your email>
+- git config --global user.name <userName>
+
