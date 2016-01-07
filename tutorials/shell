@@ -50,5 +50,9 @@ Commands:
 16) Ctrl+k -> Clears the the line from the current cursor position to the end
 17) Ctrl+y -> recall the cleared data
 
+18) sshfs <host@ipaddr:/remote_dir> <local empty_dir>
+    To mount the host dir to the local empty dir.
 
+    usermount -uz <local dir> (or) umount <local dir>
+    To unmount
 
