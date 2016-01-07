@@ -65,6 +65,7 @@
         . lynx-cur or lynx
         . subl
         . ssh
+        . sshfs
         . git
         . dropbox
         . keepassx
