@@ -2,6 +2,60 @@
 =                                GIT                                    =
 =========================================================================
 
+General:
+--------
+
+- How to ammed commit to previous commit in git?
+    1) git rebase -i HEAD~ <previous commit number>
+    2) You will get a edit page with all the commit above the previous
+    commits and including the commit asked for. Each commit will be added 
+    with a text "pick". Make the "pick" to "edit" for which ever commit
+    you want to ammend, then save and quit(:wq) the document.
+    3) This takes you to the asked commit, you can verify using "git log".
+    Note: Since we are rebasing the commit, the changes we are doing stays
+    in "no branch" mode.
+    4) Afte the changes made to the commit, commit ammend it.
+    Then, "git rebase --continue" to the next commit in the pick list
+    (document).
+
+    Eg:
+        Think we have 5 commits, 5th commit is the latest one and 1st commit
+    the oldest commit.
+        Now the use case, we have to change the 3rd and the 4th commit. 
+    (Change in the sense commit ammend)
+        So we give this command,
+    git rebase -i HEAD~3
+    Note: the privious commit number is 3, becase we want the change the 
+    commit 5th - 4th - 3rd commit from the HEAD. Count the number for commits
+    from the HEAD, gives ur prevois commit number.
+
+    this command brings us a document like this.
+
+        pick <5th commit message>
+        pick <4th Commit message>
+        pick <3rd commit message>
+
+    Make the "pick" to "edit", Sice we have to edit only the 4th and 3rd 
+    Commits, making "pick" to "edit" to those
+        
+        pick <5th commit message>
+        edit <4th Commit message>
+        edit <3rd commit message>
+
+    After this change save and quit the document.
+    This gets you to the 3rd commit.
+    Make the changes in the 3rd Commit, commit ammend it.
+    Then, git rebase --continue
+    To go to the 4th commit.
+    Make the changes in the 4th commit, commit ammend it.
+    Then, git rebase --continue
+    To go to the 5th commit.
+
+    Note: While rebase --continue, you might encounter conflicts if you are
+    changing the same document in the same line in 2 commits. You might have to
+    resolve it, "git add" and then again "git rebase --continue".
+
+
 Remote:
 --------
 - Deleting a remote branch:
