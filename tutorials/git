@@ -4,6 +4,19 @@
 
 General:
 --------
+- git status -> Status of the current Branch
+    - git status -uno -> status of only the staged untracked files
+- git add <files> -> adds file to be commited to the commit list.
+    - git add --all -> to add all the "Tracked" and "Untracked" file to
+    commit list.
+- git branch -> lists all the local branches in the repo
+    - git branch -a -> lists all the branches in the repo, includes
+    local and Remote branches
+- git commit -> Creates a NEW local commit.
+    - git commit --amend -> Amending to another commit.
+
+- How to checkout a remote branch to a local branch
+    git checkout --track -b <local_branch> origin/<remote_branch>
 
 - How to ammed commit to previous commit in git?
     1) git rebase -i HEAD~ <previous commit number>
