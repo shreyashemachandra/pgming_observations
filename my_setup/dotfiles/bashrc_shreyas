@@ -98,6 +98,7 @@ alias lpc='cd /mnt/labpc/'
 
 # App Shorcuts
 alias gi='gvim'
+alias v='vim'
 alias xt='xterm -fa 'Monospace' -fs 9 -maximized &'
 
 # cd aliases
@@ -107,8 +108,10 @@ alias ....='cd ../../..'
 alias .....='cd ../../../../'
 
 # Git Aliases
+alias G='git'
 alias Gs='git status'
 alias Gba='git branch -a'
+alias Gl='git log'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
