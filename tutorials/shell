@@ -36,8 +36,19 @@ Commands:
 10) vimtutor
     Basic level tutor for vim
 
-11) du -sh .
-    gives the disk usage of the current directory
+11) Disk Usage (du command)
+    -h -> human readable format
+    -a -> all files
+
+    du -sh .
+        gives the disk usage of the current directory
+
+    du -sh *
+        gives the disk usage of the files in the current directory
+
+    Trick:
+        To find the largrest file in the directory, use the following command
+        du -sh * | sort -rh | head -10
 
 12) ack-grep <pattern>
     - Lists all the occurences of the pattern in all the file
@@ -56,3 +67,23 @@ Commands:
     usermount -uz <local dir> (or) umount <local dir>
     To unmount
 
+19) File Indexing using updatedb and locate
+    sudo updatedb -> to update index file for locate
+    (or)
+    crontab -e
+    -> add "0 5 * * * updatedb" to the file
+    
+    Now locate command works.
+    eg: to locate a file exactly with the same name 
+        locate -b '\NAME'
+
+    To update locate, update mlocate package
+
+20) Emptying the file without changing the permission of the file
+    rm -rf exm.txt && touch exm.txt
+    -> will remove the file and create a new file but the new file will not have the same permission as the old one
+
+    cat /dev/null > exm.txt
+    -> will empty the file exm.txt and the permissions remains the same.
+
+21)
