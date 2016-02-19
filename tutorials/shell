@@ -23,8 +23,11 @@ Commands:
 6) head:
     head +10 <file Name>   --> To output the first 10 lines of the file
 
-7) ln:
-    ln -s <ActualFile> <Symbolic File Name> ---> To Crete a symbolic link
+7) Linking file: ln Command
+    1) ln <ActualFile> <LinkFileName> ---> To create a Hard Link
+    Note: We cannot create a Hard Link for a Directory
+
+    2) ln -s <ActualFile> <SymbolicFileName> ---> To Crete a symbolic link
 
 8)  find . -name "*vpu*.c"
     Finds the specific pattern file in the Current Directory (.)
