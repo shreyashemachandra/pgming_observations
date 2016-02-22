@@ -66,7 +66,16 @@ set rtp+=~/.fzf
 set history=700
 
 " Sets Line Numbers and Relative Numbers
-set number
+" Toggle between Numbers and Relative Numbers using Ctrl+n
+set number " Default is Numbers
+function! NumberToggle()
+    if(&relativenumber == 1)
+        set number
+    else
+        set relativenumber
+    endif
+endfunc
+nnoremap <C-n> :call NumberToggle()<cr>
 
 " Enable filetype plugins
 filetype plugin on
