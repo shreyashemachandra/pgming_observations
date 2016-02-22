@@ -89,4 +89,19 @@ Commands:
     cat /dev/null > exm.txt
     -> will empty the file exm.txt and the permissions remains the same.
 
-21)
+21) Detect your Linux Distribution
+    lsb_release -a
+
+22) Broadcast msg accross users in the systems
+    echo "<Msg>" | wall
+
+23) List of current Logged in Users
+    w
+
+24) Removing Old kernels in Debian Systems
+    uname -r --> gets the Linux kernel version used now
+    dpkg --list | grep linux-image  --> Lists all the kernel images in the systems
+    sudo apt-get purge linux-image-<version> --> To remove the kernel version
+    sudo update-grub2
+
+25) 
