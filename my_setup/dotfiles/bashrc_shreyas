@@ -101,6 +101,10 @@ alias gi='gvim'
 alias v='vim'
 alias xt='xterm -fa 'Monospace' -fs 9 -maximized &'
 
+# pushd and popd aliases
+alias Pd='pushd'
+alias pd='popd'
+
 # cd aliases
 alias ..='cd ..'
 alias cd..='cd ..'

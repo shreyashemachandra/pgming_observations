@@ -104,4 +104,92 @@ Commands:
     sudo apt-get purge linux-image-<version> --> To remove the kernel version
     sudo update-grub2
 
-25) 
+25) pushd and popd commands
+    pushd -> used to push the directory into the stack
+    popd -> used to pop the directory into the stack
+    dirs -> used to list of the the dirs in stack
+
+    usage: 
+        /usr/ports $ pushd /etc
+        /etc $ 
+        /etc $ popd
+        /usr/ports $
+
+26) To write the commands in vim:
+    'Ctrl + x' and then press 'e'
+    It opens the editor mentioned in $EDITOR env
+
+27) Crontab Job to execute scripts in regular intervals of time:
+    Linux Cron Utility is an effective way to schedule a routine backgrount job,
+
+    Crontab format:
+    MIN HOUR DATE MONTH DAY COMMAND
+
+    crontab -l -> to list all the cron jobs
+    crontab -u <username> -l -> to list other users cron jobs
+    crontab -e -> to edit the crontab file to create a new job
+
+    Eg1: To set a cron job that executes every weekday during work hours:
+    00 09-18 * * 1-5 <path of the bash file>
+
+    Eg2: To execute something every 10 mins:
+    */10 * * * * <Path to the bash file>
+
+    Note: Dont forget to add a new line after end of the Crontab file
+    Hence make a note in the end of the file:
+    crontab -e
+    
+    8 * * * * <some job>
+
+    # Dont forget the newLine!
+
+28) To keep track of all the Config Files in the system:
+    Create a git repo and associate to a  Crontab job.
+
+    Git part:
+    --------
+    git init
+    git add <conf files>
+    git commit -m "Initial Commit"
+    git remote add origin <git server> (Optional if u wanna put it into the server)
+    git push -u origin master (Optional)
+
+    Create a Bash file which commits:
+    ---------------------------------
+    #!/bin/bash
+    DDDD = `date +%Y_%m_%d`
+    cd /<path>
+    git commit -a -m "Auto commit $DDDD"
+    git push (Optional)
+
+    Make the bash file executable:
+    -----------------------------
+    chmod +x <name of the bash file>.sh
+
+    Create a CronTab Job:
+    ---------------------
+
+    eg:
+    crontab -e
+    45 2 1 * * /<path to the bashfile>
+
+29) Putting process to background:
+    $ ./bash_script.sh &
+
+    Runs the script in the back ground. But still prints in terminal,
+    to privent printing, redirect the output to /dev/null:
+    $ ./bash_script.sh > /dev/null &
+
+    Or to print only the error msgs:
+    $ ./bash_script.sh &> /dev/null &
+
+30) The 2>&1 redirection
+    
+    Using 2>&1 at the end of command is useful way to supress the output and only display errors.
+
+    1 -> stdout
+    2 -> stderr
+
+    & -> indicates that what follows is a file discriptor and not a filename. So the construct becomes.
+    2>&1
+    
