@@ -104,3 +104,13 @@
     . vim-autoformat -> Format the code with one press button
     . vim-devicons -> Puts Icons on vim
     . fzf -> fuzzyfinder
+
+11) Install zsh Shell and use zsh shell as default
+
+    Install zsh shell:
+    sudo apt-get install zsh
+
+    install "oh-my-zsh"
+    sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
+    now symobilc link zshrc_shreyas in dotfiles/ to ~/.zshrc
