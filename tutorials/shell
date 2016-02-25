@@ -90,7 +90,7 @@ Commands:
     -> will empty the file exm.txt and the permissions remains the same.
 
 21) Detect your Linux Distribution
-    lsb_release -a
+    lsb_release -a  -> Prints distribution-specific information
 
 22) Broadcast msg accross users in the systems
     echo "<Msg>" | wall
@@ -184,7 +184,6 @@ Commands:
     $ ./bash_script.sh &> /dev/null &
 
 30) The 2>&1 redirection
-    
     Using 2>&1 at the end of command is useful way to supress the output and only display errors.
 
     1 -> stdout
@@ -193,3 +192,23 @@ Commands:
     & -> indicates that what follows is a file discriptor and not a filename. So the construct becomes.
     2>&1
     
+31) Disable SSH password authentication
+
+    First, allow log-in by certificate. 
+    Copy the contents of your ~/.ssh/id_rsa.pub into the ~/.ssh/authorized_keys file on the server, 
+    or run:
+    ssh-copy-id [server IP]
+
+    Then, open /etc/ssh/sshd_config and find:
+    #PasswordAuthentication yes
+
+    Change it to:
+    PasswordAuthentication no
+
+    Restart the SSH server daemon to apply the change:
+    sudo service ssh restart
+
+    Now it is only possible to SSH into the server using a key that matches a line in ~/.ssh/authorized_keys.
+
+    Brute force attacks are no longer effective because even a correct password guess will be rejected.
+
