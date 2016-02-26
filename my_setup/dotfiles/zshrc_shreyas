@@ -1,3 +1,6 @@
+# Security News on Every Login to the shell
+dig +short -t txt istheinternetonfire.com
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
