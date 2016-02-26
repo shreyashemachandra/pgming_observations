@@ -62,15 +62,17 @@ Commands:
 14) Ctrl+l -> Clears the console
 15) Ctrl+u -> Clears the whole line in the shell
 16) Ctrl+k -> Clears the the line from the current cursor position to the end
-17) Ctrl+y -> recall the cleared data
+17) Ctrl+w -> Clears the last word typed.
+18) Ctrl+a -> To move to the begining of the line
+19) Ctrl+e -> To move to the ending of the Line
 
-18) sshfs <host@ipaddr:/remote_dir> <local empty_dir>
+20) sshfs <host@ipaddr:/remote_dir> <local empty_dir>
     To mount the host dir to the local empty dir.
 
     usermount -uz <local dir> (or) umount <local dir>
     To unmount
 
-19) File Indexing using updatedb and locate
+21) File Indexing using updatedb and locate
     sudo updatedb -> to update index file for locate
     (or)
     crontab -e
@@ -82,29 +84,29 @@ Commands:
 
     To update locate, update mlocate package
 
-20) Emptying the file without changing the permission of the file
+22) Emptying the file without changing the permission of the file
     rm -rf exm.txt && touch exm.txt
     -> will remove the file and create a new file but the new file will not have the same permission as the old one
 
     cat /dev/null > exm.txt
     -> will empty the file exm.txt and the permissions remains the same.
 
-21) Detect your Linux Distribution
+23) Detect your Linux Distribution
     lsb_release -a  -> Prints distribution-specific information
 
-22) Broadcast msg accross users in the systems
+24) Broadcast msg accross users in the systems
     echo "<Msg>" | wall
 
-23) List of current Logged in Users
+25) List of current Logged in Users
     w
 
-24) Removing Old kernels in Debian Systems
+26) Removing Old kernels in Debian Systems
     uname -r --> gets the Linux kernel version used now
     dpkg --list | grep linux-image  --> Lists all the kernel images in the systems
     sudo apt-get purge linux-image-<version> --> To remove the kernel version
     sudo update-grub2
 
-25) pushd and popd commands
+27) pushd and popd commands
     pushd -> used to push the directory into the stack
     popd -> used to pop the directory into the stack
     dirs -> used to list of the the dirs in stack
@@ -115,11 +117,11 @@ Commands:
         /etc $ popd
         /usr/ports $
 
-26) To write the commands in vim:
+28) To write the commands in vim:
     'Ctrl + x' and then press 'e'
     It opens the editor mentioned in $EDITOR env
 
-27) Crontab Job to execute scripts in regular intervals of time:
+29) Crontab Job to execute scripts in regular intervals of time:
     Linux Cron Utility is an effective way to schedule a routine backgrount job,
 
     Crontab format:
@@ -143,7 +145,7 @@ Commands:
 
     # Dont forget the newLine!
 
-28) To keep track of all the Config Files in the system:
+30) To keep track of all the Config Files in the system:
     Create a git repo and associate to a  Crontab job.
 
     Git part:
@@ -173,7 +175,7 @@ Commands:
     crontab -e
     45 2 1 * * /<path to the bashfile>
 
-29) Putting process to background:
+31) Putting process to background:
     $ ./bash_script.sh &
 
     Runs the script in the back ground. But still prints in terminal,
@@ -183,7 +185,7 @@ Commands:
     Or to print only the error msgs:
     $ ./bash_script.sh &> /dev/null &
 
-30) The 2>&1 redirection
+32) The 2>&1 redirection
     Using 2>&1 at the end of command is useful way to supress the output and only display errors.
 
     1 -> stdout
@@ -192,7 +194,7 @@ Commands:
     & -> indicates that what follows is a file discriptor and not a filename. So the construct becomes.
     2>&1
     
-31) Disable SSH password authentication
+33) Disable SSH password authentication
 
     First, allow log-in by certificate. 
     Copy the contents of your ~/.ssh/id_rsa.pub into the ~/.ssh/authorized_keys file on the server, 
@@ -212,3 +214,6 @@ Commands:
 
     Brute force attacks are no longer effective because even a correct password guess will be rejected.
 
+34) Else Statement using || operator:
+    
+    apt-get update || echo "update failed"
