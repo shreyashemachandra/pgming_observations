@@ -217,3 +217,79 @@ Commands:
 34) Else Statement using || operator:
     
     apt-get update || echo "update failed"
+
+35) nl - command
+    Used to put line numbers for the file.
+    Usage:
+        nl <file_name>
+
+        gives a new file with line number appended to the <file_name>
+
+36) Run previous command as root
+    sudo !!
+
+    Usage:
+        apt-get install libre
+
+        but the above command needs sudo permission to exacute.
+        hence.
+        sudo !! -> will execute the previous comand with sudo permission
+        In fact -> !! represents the previous command executed.
+        hence, sudo !! -> sudo apt-get install
+
+37) Linux User management
+    To list all users you can use:
+        cut -d: -f1 /etc/passwd
+
+    To add a new user you can use either:
+        sudo adduser new_username
+        sudo useradd new_username
+
+    To remove/delete a user, first you can use:
+        sudo userdel username
+
+    Then you may want to delete the home directory for the deleted user account :
+        sudo rm -r /home/username
+
+    To allow user to execute sudo commands:
+        sudo adduser username sudo
+
+    To modify the username of a user:
+        usermod -l new_username old_username
+
+    To change the password for a user:
+        sudo passwd username
+
+    To change the shell for a user:
+        sudo chsh username
+
+    To change the details for a user (for example real name):
+        sudo chfn username
+
+38) stat - Command
+    Use stat commad to list attributes attached with the file ex: permission, size etc.
+    usage:
+        stat <file_name>
+
+    Ex: Use the stat command to get a file's permissions in octal form:
+    stat -c "%a %n" file
+
+    From the man page of stat:
+    -c  --format=FORMAT
+    %a     Access rights in octal
+    %n     File name
+
+    stat -c "%a %A %n" *
+    gives all the permissions in Octal, human readable format and file name in the Currenct dir.
+
+39) Making a file unalterable with chattr
+    You can make a file unalterable so that it cannot be changed or deleted even by root.
+    $ chattr +i /path/to/file
+
+    After that the file is untouchable, it can only be read, and it can't be deleted or altered even by root.
+    To update the file, remove the attribute using the -i flag:
+    $ chattr -i /path/to/file
+
+40) SSH Connections:
+    ssh user@box 'ls -la /tmp' -> Lists all the files in /tmp folder
+
