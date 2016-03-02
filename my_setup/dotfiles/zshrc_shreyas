@@ -125,6 +125,7 @@ alias ..4='cd ../../../../'
 alias G='git'
 alias Gs='git status'
 alias Gba='git branch -a'
+alias Gb='git branch'
 alias Gl='git log'
 
 # FZF Bindings in zsh

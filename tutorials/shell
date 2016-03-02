@@ -293,3 +293,60 @@ Commands:
 40) SSH Connections:
     ssh user@box 'ls -la /tmp' -> Lists all the files in /tmp folder
 
+41) Running a command as another local user
+    Syntax: sudo -u <user> <command>
+
+    eg: sudo -u test whoami
+
+42) Giving sudo rights for a user
+    sudo usermod -a -G sudo <user_name>
+
+    This command just adds the user to the 'sudo' group.
+
+43) Executing commands with sudo without password
+
+    To sudo without password, you can:
+    set the sudoers group to execute commands without being prompted
+    set it up only for our user
+
+    Call 'visudo' to start editing the /etc/sudoers file and set to enable the feature for the group.
+        %sudo ALL=NOPASSWD: ALL
+
+    Alternatively, to enable it only for yourself:
+        YourUserName ALL=(ALL) NOPASSWD: ALL
+
+44) The sticky bit permission
+
+    The sticky bit is a permission bit that protects the files within a directory. If the directory has 
+    the sticky bit set, a file can be deleted only by the owner of the file, the owner of the directory,
+    or by root.
+
+    This special permission prevents a user from deleting other users' files from public directories such as /tmp:
+        $ ll .
+        drwxrwxrwt 17 root root 4096 Jul 20 01:09 ./
+
+    The 't' in the end of the permission set means that the sticky bit is active in this folder.
+
+    To set the sticky do:
+        $ chmod +t file
+
+    To unset it:
+        $ chmod -t file
+
+45) Execute a command without saving it in the history
+    Prepending one or more spaces to your command won't be saved in history.
+
+    For example:
+        $ echo 1 
+        1
+        $  echo 2
+        2
+        $ echo 3
+        3
+        $ history
+          ...
+          501  echo 1 
+          502  echo 3
+          503  history
+
+
