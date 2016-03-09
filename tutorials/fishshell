@@ -1,0 +1,12 @@
+********************************************************************************
+*                               Fish SHELL                                     *
+********************************************************************************
+
+1) Exporting Shell Variables:
+    set -x MyVariable SomeValue
+
+2) Unsetting Shell Variables
+    set -e MyVariable
+
+3) Listing all Shell Varibles
+    env
