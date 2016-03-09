@@ -333,4 +333,44 @@ Commands:
     To unset it:
         $ chmod -t file
 
+45) Execute a command without saving it in the history
+    Prepending one or more spaces to your command won't be saved in history.
+
+    For example:
+        $ echo 1 
+        1
+        $  echo 2
+        2
+        $ echo 3
+        3
+        $ history
+          ...
+          501  echo 1 
+          502  echo 3
+          503  history
+
+46) Aliasing ssh connections
+
+    Instead of:
+        ssh -i ~/.ssh/custom_id_rsa root@213.133.109.135 -p 31415
+
+    Start by editing this file:
+        vim .ssh/config
+
+    Add the following:
+
+        Host lisa
+        IdentityFile ~/.ssh/custom_id_rsa
+        HostName 213.133.109.135
+        User root
+        Port 31415
+
+    After that, you can ssh by alias:
+        ssh lisa
+
+47) Conditional command execution (&& operator)
+    Use the && operator to execute two consecutive commands in order.
+    The second command will only be executed if the first one is successful.
+    Eg.
+        make && make install
 
