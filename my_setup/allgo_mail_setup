@@ -1,0 +1,9 @@
+POP
+---
+
+		Server Hostname			Port No			SSL		Authentication
+Incomming	mail.allgosystems.com		110			None		Encrypted Password
+
+Outgoing	mail.allgosystems.com		587			None		Encrypted Password
+
+Incomming && Outgoing Username: my email id
