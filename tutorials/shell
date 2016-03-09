@@ -59,7 +59,8 @@ Commands:
 13) gsettings set org.gnome.desktop.default-applications.terminal exec 'xterm -fa 'Monospace' -fs 9 -maximized' - in Ubuntu12.04 and beyond
     - Used to change the default terminal in ubuntu
 
-14) Ctrl+l -> Clears the console
+14) Ctrl+l ('clear' - command) -> Clears the console
+        'reset' - command clears the consol by clearing all the previous logs
 15) Ctrl+u -> Clears the whole line in the shell
 16) Ctrl+k -> Clears the the line from the current cursor position to the end
 17) Ctrl+w -> Clears the last word typed.
@@ -373,4 +374,22 @@ Commands:
     The second command will only be executed if the first one is successful.
     Eg.
         make && make install
+
+48) Breaking out of a terminal when ssh locks
+
+    At times an ssh connection times-out or disconnects and the current terminal locks.
+    Normal key combinations are forwarded over the ssh session, therefore no standard 
+    breaking keys will work.
+
+    Instead, use the escape sequences. To kill the current session hit: ↵, ~, ..
+    More of these escape sequences can be listed with ↵, ~, ?:
+
+    Supported escape sequences:
+        ~.  - terminate session
+        ~B  - send a BREAK to the remote system
+        ~R  - Request rekey (SSH protocol 2 only)
+        ~#  - list forwarded connections
+        ~?  - this message
+        ~~  - send the escape character
+
 
