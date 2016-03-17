@@ -79,7 +79,6 @@
         Configure Printer
 
 10) Important Installs or Plugins for VIM or NVIM:
-    - Install Tlist - for gvim
 
     Pathogen: (Manually installation)(Not Recommended)
     ---------
@@ -88,6 +87,7 @@
     Vundle:
     -------
     . Vundle.vim -> Github VundleVim
+    . Tist
     . vim-colorschemes -> GitHub flazz (:colo Blacksea) -> Gets millions of color schemes for gvim
     . ultisnips -> GitHub SirVir -> to get code snippets
     . syntastic -> GitHub scrooloose -> to get the systactic errors when saving the file
@@ -114,3 +114,11 @@
     sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
     now symobilc link zshrc_shreyas in dotfiles/ to ~/.zshrc
+
+12) Install Fish Shell
+    sudo apt-get install fish
+
+    Symbolic Link Fish folder to shreyas_fish in dotfiles/
+
+    To Delete the Symbolic Link, use the following command
+    unlink <link folder>

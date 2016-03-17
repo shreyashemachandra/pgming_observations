@@ -96,3 +96,6 @@ Setting up UserName and EmailAddress: (Holds good for GitHub also Updating the n
 If Global Declaration has to be done,
 - git config --global user.email <your email>
 - git config --global user.name <userName> 
+
+Setting Editor
+- git config --global core.editor <EDITOR>

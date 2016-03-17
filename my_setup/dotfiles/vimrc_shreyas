@@ -28,6 +28,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdtree'
 " vim-tmux-navigator
 Plugin 'christoomey/vim-tmux-navigator'
+" Tlist
+Plugin 'vim-scripts/taglist.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
