@@ -118,7 +118,7 @@
 12) Install Fish Shell
     sudo apt-get install fish
 
-    Symbolic Link Fish folder to shreyas_fish in dotfiles/
+    Symbolic Link .config/fish folder to shreyas_fish in dotfiles/
 
     To Delete the Symbolic Link, use the following command
     unlink <link folder>
