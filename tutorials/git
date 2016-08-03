@@ -68,6 +68,13 @@ General:
     changing the same document in the same line in 2 commits. You might have to
     resolve it, "git add" and then again "git rebase --continue".
 
+- Stashing the Changes
+    - git stash --> Used to Stash the Tracked files to a list.
+    - git stash pop --> Used to unstash the latest Stash
+
+    - git stash save <name of the stash> --> used to Stash with a Description
+    - 
+
 
 Remote:
 --------

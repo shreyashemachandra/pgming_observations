@@ -21,12 +21,7 @@ Commands:
     tail +10 <file name>  --> To output the last 10 lines of the file
 
 6) head:
-    head +10 <file Name>   --> To output the first 10 lines of the file
-
-7) Linking file: ln Command
-    1) ln <ActualFile> <LinkFileName> ---> To create a Hard Link
-    Note: We cannot create a Hard Link for a Directory
-
+    head +10 <file Name>   --> To output the first 10 lines of the file 7) Linking file: ln Command 1) ln <ActualFile> <LinkFileName> ---> To create a Hard Link Note: We cannot create a Hard Link for a Directory 
     2) ln -s <ActualFile> <SymbolicFileName> ---> To Crete a symbolic link
 
 8)  find . -name "*vpu*.c"
@@ -84,6 +79,18 @@ Commands:
         locate -b '\NAME'
 
     To update locate, update mlocate package
+    -----------------------------------------------------
+    Keeping repos updated with cron
+
+    It is good practice to keep your repositories updated. This reduces update time when upgrades are required.
+    To update them every day via cron, start by opening your crontab file by doing:
+
+    crontab -e
+
+    Append:
+        1 1 * * * apt-get update
+    This will only update the repos, leaving the system ready to be updated.
+
 
 22) Emptying the file without changing the permission of the file
     rm -rf exm.txt && touch exm.txt
@@ -391,5 +398,159 @@ Commands:
         ~#  - list forwarded connections
         ~?  - this message
         ~~  - send the escape character
+
+49) We can get a list of all the installed packages on Ubuntu using:
+        dpkg --get-selections
+
+    List Available packages in RPM based systems:
+        yum list available
+    
+50) Install a debiab package (.deb)
+        sudo dpkg -i DEB_PACKAGE
+
+    If dpkg reports an error due to dependency problems, run:
+        sudo apt-get install -f
+
+    To remove the package:
+        sudo dpkg -r PACKAGE_NAME
+
+51) Removing PPAs
+    Using the --remove flag:
+        add-apt-repository --remove ppa:name/ppa
+
+    Or, as a safer alternative, you can install ppa-purge:
+        apt-get install ppa-purge
+
+    And then remove the PPA while gracefully downgrading packages 
+    it provided to packages provided by official repositories:
+        ppa-purge ppa_name
+
+    This will remove the PPA but it will not uninstall packages that were 
+    installed through it. If you want to remove them, you should use apt:
+        apt-get purge package_name
+
+    You can also remove PPAs by deleting the .list files from /etc/apt/sources.list.d 
+    directory and then updating the repositories by:
+        apt-get update
+
+52) Prevent updating a specific package
+    There are several ways of holding back a package (thus preventing it from update).
+
+    Here is how we do it using apt/aptitude.
+
+    Using apt
+        You can hold a package using:
+            sudo apt-mark hold package_name
+        and remove the hold with:
+            sudo apt-mark un-hold package_name
+
+    Using aptitude
+
+        You can hold a package using:
+            sudo aptitude hold package_name
+        and remove the hold with:
+            sudo aptitude unhold package_name
+
+53) Setting up password-free authentication
+    To set up password-free authentication start by generating a pair of keys:
+    ssh-keygen
+    
+    Then:
+    ssh-copy-id -i root@ip_address
+
+    This copies the public key into the authorized_hosts of the other machine. 
+    It will ask for the password of the host system.
+    
+    Now, enter the remote system directly with:
+    $ ssh root@ip_address
+
+54) Get real network statistics with slurm
+    Slurm is a command line tool that displays real-time data about the specified network interface:
+    `-Current RX and TX Speed`
+    `-Graph Top RX and TX Speed` 
+    `-MBytes Received and Transmitted` 
+
+    You can check this utility directly by using:
+        slurm -i <interface_name>
+
+55) Useful ssh client optimizations
+    It can alway be useful to make a few optimizations on your ssh client configuration (~/.ssh/config).
+
+    The options below enable us to boost our client performance by using compression 
+    (which is helpful with scp over low-bandwidth connections) avoiding dropped connections in certain 
+    network environments and multiplexing channels to the same server with a local control file.
+
+    TCPKeepAlive=yes
+    ServerAliveInterval=15
+    ServerAliveCountMax=6
+    Compression=yes
+    ControlMaster auto
+    ControlPath /tmp/%r@%h:%p
+    ControlPersist yes
+
+    For more info on additional options check
+        man ssh_config
+
+56) Check the version of a package on a deb based system
+    dpkg --list <package>
+
+    The 'ii' means thats installed. Other statuses are shown below:
+    Not
+    Inst
+    Conf-files
+    Unpacked
+    halF-conf
+    Half-inst
+    trig-aWait
+    Trig-pend
+
+57) Get apt to use a mirror / faster mirror
+    apt-get now supports a 'mirror' method that will automatically select a good mirror based 
+    on your location.
+
+    The format is (in one line):
+        deb
+        <repo link>
+        <distro>
+        <selection1,2..n>
+
+    Putting the following lines one by one would be:
+        deb mirror://mirrors.ubuntu.com/mirrors.txt 
+        precise 
+        main restricted universe multiverse
+
+        deb mirror://mirrors.ubuntu.com/mirrors.txt 
+        precise-updates 
+        main restricted universe multiverse
+
+        deb mirror://mirrors.ubuntu.com/mirrors.txt 
+        precise-backports 
+        main restricted universe multiverse
+
+        deb mirror://mirrors.ubuntu.com/mirrors.txt 
+        precise-security 
+        main restricted universe multiverse
+
+    on the top in your /etc/apt/sources.list file should be all that is needed to make it automatically pick a
+    mirror for you based on your geographical location.
+    Lucid (10.04), Maverick (10.10), Natty (11.04), And Oneiric (11.10) users can replace precise with the 
+    appropriate name.
+
+58) Downgrade a package via apt-get
+
+    You can downgrade a package via apt-get. If you have the version number, or the target release, apt-get 
+    allows you to make a selection.
+
+    Use either:
+        apt-get install <pkg-name>=<pkg-version>
+
+    Or:
+        apt-get -t=<release> install <pkg-name>
+
+    You can list all available versions with:
+        apt-cache showpkg <package-name>
+
+    In addition, you can 'hold' a package at the current version and prevent automatic updates using:
+        apt-mark hold <package-name>
 
 
