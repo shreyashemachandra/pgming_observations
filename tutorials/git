@@ -73,7 +73,14 @@ General:
     - git stash pop --> Used to unstash the latest Stash
 
     - git stash save <name of the stash> --> used to Stash with a Description
-    - 
+    - git stash list -> Lists all the stashed items
+    - git stash show stash@{0..n} -> Shows changes in the particular Shash
+
+- How to tag or untag a Commit.
+    - Adding the Tag
+    git tag -a <TAG_NAME> -m "Message"
+    - Deleting the Tag
+    get tag -d <TAG_NAME>
 
 
 Remote:
@@ -82,10 +89,18 @@ Remote:
     git push origin --delete <branchname>
         (or)
     git push origin :<branchname>
+
 - Pushing a new commit to the remote Branch:
     Checkout to the <branch>
     then,
     git push origin <branch>
+
+- Push Tags to the remote server
+    - Adding the Tag to the Server
+    git push <REMOTE_NAME> --tags
+    - Deleting the Tag from the Server
+    git tag -d :refs/tags/<TAG_NAME>
+    git push --tags
 
 Config:
 ------
