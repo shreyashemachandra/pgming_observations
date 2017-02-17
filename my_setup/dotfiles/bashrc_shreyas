@@ -86,6 +86,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias sl='ls'
+alias l.='ls -d .* --color=auto' # Lists only the Hidden folders
 
 # Work Space Shortcut
 alias git_repo='cd ~/Dropbox/git_repo/'
@@ -104,6 +105,14 @@ alias xt='xterm -fa 'Monospace' -fs 9 -maximized &'
 # pushd and popd aliases
 alias Pd='pushd'
 alias pd='popd'
+
+# mkdir
+alias mkdir='mkdir -pv' # Verbose 
+
+# confirmation #
+alias mv='mv -i' 
+alias cp='cp -i' 
+alias ln='ln -i'
 
 # cd aliases
 alias ..='cd ..'

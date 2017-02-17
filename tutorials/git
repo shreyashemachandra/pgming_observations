@@ -82,6 +82,24 @@ General:
     - Deleting the Tag
     get tag -d <TAG_NAME>
 
+- Function History
+    git log -L :<Function Name>:<File name>
+
+- Git Bundling
+    - Create Bundle:
+    git bundle create <Bundle Name> HEAD master
+
+    - Extract Bundle:
+    git clone <Bundle Name> <Folder Name>
+    cd <Folder Name>
+
+    - Verify the Bundle
+    git bundle <Bundle Name>
+
+- Blame
+    git blame <file name>
+    -> Find the line that caused the bug
+
 
 Remote:
 --------
@@ -99,6 +117,7 @@ Remote:
     - Adding the Tag to the Server
     git push <REMOTE_NAME> --tags
     - Deleting the Tag from the Server
+    Firstly remove the local intended tag,if present.
     git tag -d :refs/tags/<TAG_NAME>
     git push --tags
 
