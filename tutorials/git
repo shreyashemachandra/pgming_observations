@@ -118,7 +118,7 @@ Remote:
     git push <REMOTE_NAME> --tags
     - Deleting the Tag from the Server
     Firstly remove the local intended tag,if present.
-    git tag -d :refs/tags/<TAG_NAME>
+    git push <remote_name> :refs/tags/<TAG_NAME>
     git push --tags
 
 Config:
