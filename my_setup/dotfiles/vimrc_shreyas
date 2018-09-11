@@ -47,7 +47,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 "
 " To install plugins from command line:
-" vim +PluginInstall +qall 
+" vim +PluginInstall +qall
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => xpdf -> to view pdf in vim
@@ -110,6 +110,9 @@ set so=7
 " Turn on the WiLd menu
 set wildmenu
 
+" Column Color
+set colorcolumn=80
+
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
 
@@ -129,7 +132,7 @@ set whichwrap+=<,>,h,l
 " Ignore case when searching
 set ignorecase
 
-" When searching try to be smart about cases 
+" When searching try to be smart about cases
 set smartcase
 
 " Highlight search results
@@ -258,7 +261,7 @@ map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
-" Specify the behavior when switching between buffers 
+" Specify the behavior when switching between buffers
 try
   set switchbuf=useopen,usetab,newtab
   set stal=2
@@ -303,14 +306,21 @@ if has("mac") || has("macunix")
   vmap <D-k> <M-k>
 endif
 
-" Delete trailing white space on save, useful for Python and CoffeeScript ;)
+" Delete trailing white space on save
 func! DeleteTrailingWS()
   exe "normal mz"
   %s/\s\+$//ge
   exe "normal `z"
 endfunc
-autocmd BufWrite *.py :call DeleteTrailingWS()
-autocmd BufWrite *.coffee :call DeleteTrailingWS()
+autocmd BufWrite * :call DeleteTrailingWS()
+
+" Delete TabSpaces and replace it with normal Spaces
+func! ReplaceTab2Space()
+    exec "normal mz"
+    %s/\t/ /ge
+    exec "normal `z"
+endfunc
+"autocmd BufWrite * :call ReplaceTab2Space()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
