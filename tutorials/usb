@@ -1,0 +1,13 @@
+*******************************************************************************
+*                                   USB                                       *
+*******************************************************************************
+
+- USB is Host controlled.
+- There can ony be 1 host per bus.
+- 
+
+- USB Uses DP/DM as Differential lines for data transfer. ie, The Data is the
+Difference betweent DP and DM lines. 
+    Differential 1 is DP 200mv greater than DM.
+    Differential 0 is DP 200mv less than DM.
+

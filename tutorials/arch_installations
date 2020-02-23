@@ -1,0 +1,8 @@
+Pre - Installation:
+===================
+- Only for i686 Copatible machines.
+- Min 256MB Ram and 800MB Disk Space.
+- Download the Arch Image from "https://wiki.archlinux.org/index.php/Category:Getting_and_installing_Arch" 
+- You will be logged in as Root and given Zsh Shell prompt.
+- Internet Connections is required, since the installation packages are in the remote server.
+- 
