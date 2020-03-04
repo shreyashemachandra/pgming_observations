@@ -2,3 +2,7 @@ mkdir bin;
 cd bin
 cmake ../ -> Cmake installs all the files to bin folder.
 make -> to compile the source
+
+
+ cmake ../ -DCMAKE_VERBOSE_MAKEFILE=ON -> Option prints out the command before
+                                          executing it. Helps debugging.
