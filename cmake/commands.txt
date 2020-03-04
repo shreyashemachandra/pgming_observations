@@ -1,0 +1,4 @@
+mkdir bin;
+cd bin
+cmake ../ -> Cmake installs all the files to bin folder.
+make -> to compile the source
