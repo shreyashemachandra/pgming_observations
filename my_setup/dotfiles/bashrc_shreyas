@@ -107,11 +107,11 @@ alias Pd='pushd'
 alias pd='popd'
 
 # mkdir
-alias mkdir='mkdir -pv' # Verbose 
+alias mkdir='mkdir -pv' # Verbose
 
 # confirmation #
-alias mv='mv -i' 
-alias cp='cp -i' 
+alias mv='mv -i'
+alias cp='cp -i'
 alias ln='ln -i'
 
 # cd aliases
@@ -152,3 +152,7 @@ fi
 
 #install fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+cd /local/mnt/workspace/ws/
+
+source /local/mnt/workspace/venv/bin/activate
