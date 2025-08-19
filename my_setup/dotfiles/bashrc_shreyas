@@ -54,9 +54,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='[\t] [${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]] [\[\033[01;34m\]$PWD\[\033[00m\]]\n> '
+    PS1='[\t] [${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]] [\[\033[01;34m\]$PWD\[\033[00m\]]$(__git_ps1 " (%s)")\[\033[00m\]\n> '
 else
-    PS1='[\t] [${debian_chroot:+($debian_chroot)}\u@\h] [$PWD]\n> '
+    PS1='[\t] [${debian_chroot:+($debian_chroot)}\u@\h] [$PWD]$(__git_ps1 " (%s)")\[\033[00m\]\n> '
 fi
 unset color_prompt force_color_prompt
 
@@ -80,6 +80,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
+alias grepc='grep -irn --include=\*.{c,h,config,dts,dtsi,conf} --include=Kconfig'
 
 # some more ls aliases
 alias ll='ls -alF'
@@ -89,18 +90,13 @@ alias sl='ls'
 alias l.='ls -d .* --color=auto' # Lists only the Hidden folders
 
 # Work Space Shortcut
-alias git_repo='cd ~/Dropbox/git_repo/'
-alias l_repo='cd ~/My_Passport/git_ripo'
-alias nsi='cd /home/shreyas/My_Passport/nsi_vpu/'
-alias otg='cd /home/shreyas/My_Passport/otg/'
-alias sshlpc='ssh -X allgo@172.16.0.161'
-alias git_off='cd ~/Dropbox/git_off/'
-alias lpc='cd /mnt/labpc/'
 
 # App Shorcuts
 alias gi='gvim'
 alias v='vim'
+alias vim='nvim'
 alias xt='xterm -fa 'Monospace' -fs 9 -maximized &'
+alias cat='batcat'
 
 # pushd and popd aliases
 alias Pd='pushd'
@@ -128,7 +124,21 @@ alias ..4='cd ../../../../'
 alias G='git'
 alias Gs='git status'
 alias Gba='git branch -a'
-alias Gl='git log'
+alias Gb='git branch'
+alias Gl='git log --decorate --color | less -R'
+alias Gl1='git log --pretty=oneline --abbrev-commit --decorate --color | less -R'
+alias Ggraph='git log --oneline --graph --decorate' # $Ggraph <branch1> <branch2>   (or) $Ggraph --all
+
+# T32 License Exports
+export RLM_LICENSE=27999@license-wan-sd1.qualcomm.com
+export ARMLMD_LICENSE_FILE=7117@license-wan-20-sd.qualcomm.com
+export ARMLM_ONDEMAND_ACTIVATION=HWSKT-PRE0@http://license-pdlm-1-encnaa.qualcomm.com:7070
+#export DISPLAY=:10.0
+export DISPLAY=localhost:11.0
+#export QT_QPA_PLATFORM=wayland
+
+# C tags
+alias ctg='ctags -R --exclude=.git --exclude=modules --exclude=zephyr --exclude=buid --exclude=*.js --exclude=*.sh --exclude=*.cmake --exclude=CMakeLists.txt'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -151,8 +161,11 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 #install fzf
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash && FZF_DEFAULT_OPS="--extended"
+export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!{.git,tags}"'
 
 cd /local/mnt/workspace/ws/
-
 source /local/mnt/workspace/venv/bin/activate
+
+# parasoft exports
+export PATH=/local/mnt/workspace/ws/parasoft/cpptest/bin/:$PATH
